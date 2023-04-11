@@ -11,9 +11,9 @@ class FozFormInput extends StatelessWidget {
   final Widget? icon;
   final bool isBackPage;
   final void Function()? onTap;
+  final void Function(String value)? onChanged;
 
   const FozFormInput({
-    super.key,
     required this.hint,
     this.controller,
     this.keyboardType,
@@ -21,6 +21,8 @@ class FozFormInput extends StatelessWidget {
     this.icon,
     this.isBackPage = false,
     this.onTap,
+    this.onChanged,
+    super.key,
   });
 
   @override
@@ -32,6 +34,7 @@ class FozFormInput extends StatelessWidget {
         keyboardType: keyboardType,
         validator: validator,
         enabled: onTap != null ? false : true,
+        onChanged: onChanged,
         decoration: InputDecoration(
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),

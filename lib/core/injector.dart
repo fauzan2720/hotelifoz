@@ -5,6 +5,7 @@ import 'package:hotelifoz/features/home/domain/repositories/hotel_repository.dar
 import 'package:hotelifoz/features/home/domain/usecases/get_hotels.dart';
 import 'package:hotelifoz/features/home/presentation/cubit/hotel_cubit.dart';
 import 'package:hotelifoz/features/home/presentation/cubit/page_cubit.dart';
+import 'package:hotelifoz/features/home/presentation/cubit/search_cubit.dart';
 
 final locator = GetIt.instance;
 
@@ -12,6 +13,7 @@ void init() {
   // state management
   locator.registerFactory(() => PageCubit());
   locator.registerFactory(() => HotelCubit(locator()));
+  locator.registerFactory(() => SearchCubit(locator()));
 
   // usecase
   locator.registerLazySingleton(() => GetHotels(locator()));

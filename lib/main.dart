@@ -5,6 +5,7 @@ import 'package:hotelifoz/core/injector.dart' as di;
 import 'package:hotelifoz/core/themes/colors.dart';
 import 'package:hotelifoz/features/home/presentation/cubit/hotel_cubit.dart';
 import 'package:hotelifoz/features/home/presentation/cubit/page_cubit.dart';
+import 'package:hotelifoz/features/home/presentation/cubit/search_cubit.dart';
 import 'package:hotelifoz/features/launch/presentation/pages/splash_page.dart';
 import 'package:hotelifoz/routes/routes.dart';
 
@@ -38,5 +39,6 @@ class MyApp extends StatelessWidget {
   static final List<BlocProvider> _providers = [
     BlocProvider<PageCubit>(create: (ctx) => di.locator<PageCubit>()),
     BlocProvider<HotelCubit>(create: (ctx) => di.locator<HotelCubit>()),
+    BlocProvider<SearchCubit>(create: (ctx) => di.locator<SearchCubit>()),
   ];
 }
