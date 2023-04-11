@@ -1743,279 +1743,267 @@
     "displayType": "INVENTORY_LIST",
     "contentType": "POPULAR_PICK",
     "data": {
-        "inventoryList": [
+        "id": "9000000134708",
+        "name": "OYO 995 Alice's Homestay Syariah",
+        "displayName": "OYO 995 Alice's Homestay Syariah",
+        "address": null,
+        "region": "Patrang, Jember",
+        "starRating": "1.0",
+        "userRating": "8.7",
+        "numReviews": "261",
+        "userRatingInfo": "Mengesankan",
+        "latitude": "-8.1688422",
+        "longitude": "113.70469419999995",
+        "lowRate": "188395",
+        "highRate": null,
+        "showedFacilityTypes": ["WIFI_PUBLIC_AREA"],
+        "hotelFeatures": [
         {
-            "id": "9000000134708",
-            "name": "OYO 995 Alice's Homestay Syariah",
-            "displayName": "OYO 995 Alice's Homestay Syariah",
-            "address": null,
-            "region": "Patrang, Jember",
-            "starRating": "1.0",
-            "userRating": "8.7",
-            "numReviews": "261",
-            "userRatingInfo": "Mengesankan",
-            "latitude": "-8.1688422",
-            "longitude": "113.70469419999995",
-            "lowRate": "188395",
-            "highRate": null,
-            "showedFacilityTypes": ["WIFI_PUBLIC_AREA"],
-            "hotelFeatures": [
-            {
-                "text": "Bayar saat Check-in",
-                "backgroundColor": "#F2F3F3",
-                "textColor": "#03121A",
-                "icon": null,
-                "type": "FEATURES"
-            },
-            {
-                "text": "Check-out ekspress",
-                "backgroundColor": "#F2F3F3",
-                "textColor": "#03121A",
-                "icon": null,
-                "type": "FEATURES"
-            }
-            ],
-            "propertyListing": null,
-            "inventoryUnitDisplay": null,
-            "imageUrl":
-                "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-1ef24a16bdfb61761690d8e336e3f034.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "imageUrls": [
+            "text": "Bayar saat Check-in",
+            "backgroundColor": "#F2F3F3",
+            "textColor": "#03121A",
+            "icon": null,
+            "type": "FEATURES"
+        },
+        {
+            "text": "Check-out ekspress",
+            "backgroundColor": "#F2F3F3",
+            "textColor": "#03121A",
+            "icon": null,
+            "type": "FEATURES"
+        }
+        ],
+        "propertyListing": null,
+        "inventoryUnitDisplay": null,
+        "imageUrl":
             "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-1ef24a16bdfb61761690d8e336e3f034.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-0f5c98eb30d8473cde82dc83e287ceea.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-1890a74ebb3591057de13cc6049b1dd8.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-88597742d953e2141a791f60db7dfa5e.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-2b075e791d8b991a77d0e34507e5ed0c.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-8813075d23474bd5afd8b9e0d4b66b65.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-36e77c76a4b79e3b12dbd94ee5dc945c.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-0f4e7ab549623bfd5ab680a1a8a9d2f7.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-4701b9d1d3431f144e16409eca6b2ec0.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-be259a1ecc2b12b1d596f28b2804b96d.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-5a50c84ac2a1a3d016856f29eb3f8456.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-e233778d96ef053ac5991346ab8552b5.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-6f46164015b3d38b374ce9175678297c.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-2b99cc9849ff99aeffbc5e9b3fb3897f.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-7108596213eb37c15e58be8eb976aff1.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-221b41d7d56cec510d8ef08d313f42f2.jpeg?tr=q-40,w-135,h-135&_src=imagekit"
-            ],
-            "hotelSeoUrl":
-                "hotel/indonesia/oyo-995-alices-homestay-syariah-9000000134708",
-            "extraInfos": [],
-            "hotelInventorySummary": {
-            "cheapestRateDisplay": {
-                "baseFare": {
-                "currency": "IDR",
-                "amount": "155698",
-                "nullOrEmpty": false
-                },
-                "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
-                "taxes": {
-                "currency": "IDR",
-                "amount": "32697",
-                "nullOrEmpty": false
-                },
-                "totalFare": {
-                "currency": "IDR",
-                "amount": "188395",
-                "nullOrEmpty": false
-                },
-                "numOfDecimalPoint": "0"
+        "imageUrls": [
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-1ef24a16bdfb61761690d8e336e3f034.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-0f5c98eb30d8473cde82dc83e287ceea.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-1890a74ebb3591057de13cc6049b1dd8.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-88597742d953e2141a791f60db7dfa5e.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-2b075e791d8b991a77d0e34507e5ed0c.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-8813075d23474bd5afd8b9e0d4b66b65.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-36e77c76a4b79e3b12dbd94ee5dc945c.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-0f4e7ab549623bfd5ab680a1a8a9d2f7.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-4701b9d1d3431f144e16409eca6b2ec0.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-be259a1ecc2b12b1d596f28b2804b96d.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-5a50c84ac2a1a3d016856f29eb3f8456.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-e233778d96ef053ac5991346ab8552b5.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-6f46164015b3d38b374ce9175678297c.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-2b99cc9849ff99aeffbc5e9b3fb3897f.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-7108596213eb37c15e58be8eb976aff1.jpeg?tr=q-40,w-135,h-135&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20024637-221b41d7d56cec510d8ef08d313f42f2.jpeg?tr=q-40,w-135,h-135&_src=imagekit"
+        ],
+        "hotelSeoUrl":
+            "hotel/indonesia/oyo-995-alices-homestay-syariah-9000000134708",
+        "extraInfos": [],
+        "hotelInventorySummary": {
+        "cheapestRateDisplay": {
+            "baseFare": {
+            "currency": "IDR",
+            "amount": "155698",
+            "nullOrEmpty": false
             },
-            "originalRateDisplay": {
-                "baseFare": {
-                "currency": "IDR",
-                "amount": "199613",
-                "nullOrEmpty": false
-                },
-                "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
-                "taxes": {
-                "currency": "IDR",
-                "amount": "41919",
-                "nullOrEmpty": false
-                },
-                "totalFare": {
-                "currency": "IDR",
-                "amount": "241532",
-                "nullOrEmpty": false
-                },
-                "numOfDecimalPoint": "0"
+            "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
+            "taxes": {
+            "currency": "IDR",
+            "amount": "32697",
+            "nullOrEmpty": false
             },
-            "strikethroughRateDisplay": {
-                "baseFare": {
-                "currency": "IDR",
-                "amount": "199613",
-                "nullOrEmpty": false
-                },
-                "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
-                "taxes": {
-                "currency": "IDR",
-                "amount": "41919",
-                "nullOrEmpty": false
-                },
-                "totalFare": {
-                "currency": "IDR",
-                "amount": "241532",
-                "nullOrEmpty": false
-                },
-                "numOfDecimalPoint": "0"
+            "totalFare": {
+            "currency": "IDR",
+            "amount": "188395",
+            "nullOrEmpty": false
             },
-            "propertyCurrencyRateDisplay": {
-                "baseFare": {
-                "currency": "IDR",
-                "amount": "155698",
-                "nullOrEmpty": false
-                },
-                "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
-                "taxes": {
-                "currency": "IDR",
-                "amount": "32697",
-                "nullOrEmpty": false
-                },
-                "totalFare": {
-                "currency": "IDR",
-                "amount": "188395",
-                "nullOrEmpty": false
-                },
-                "numOfDecimalPoint": "0"
+            "numOfDecimalPoint": "0"
+        },
+        "originalRateDisplay": {
+            "baseFare": {
+            "currency": "IDR",
+            "amount": "199613",
+            "nullOrEmpty": false
             },
-            "propertyCurrencyOriginalRateDisplay": {
-                "baseFare": {
-                "currency": "IDR",
-                "amount": "199613",
-                "nullOrEmpty": false
-                },
-                "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
-                "taxes": {
-                "currency": "IDR",
-                "amount": "41919",
-                "nullOrEmpty": false
-                },
-                "totalFare": {
-                "currency": "IDR",
-                "amount": "241532",
-                "nullOrEmpty": false
-                },
-                "numOfDecimalPoint": "0"
+            "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
+            "taxes": {
+            "currency": "IDR",
+            "amount": "41919",
+            "nullOrEmpty": false
             },
-            "rescheduleRateDisplay": null,
-            "bundledRateDisplay": null,
-            "providerId":
-                "ne/QK3P8TsAFtiOOAyeot6dK3Q99NUDjaZVT5bjaW/NN8J/FATzsicrjQNJdzudZq+s68Ns/EFC6vE0uaq7Pvg==",
-            "hotelPromoType": {
-                "promoType": "LAST_MINUTE",
-                "promoDescription": "Deal menit terakhir - diskon 22%!"
+            "totalFare": {
+            "currency": "IDR",
+            "amount": "241532",
+            "nullOrEmpty": false
             },
-            "labelDisplayData": {
-                "iconId": "-1",
-                "shortDescription": "Deal menit terakhir - diskon 2...",
-                "longDescription": "Deal menit terakhir - diskon 22%!",
-                "overrideProviderLabel": false,
-                "iconUrl":
-                    "https://ik.imagekit.io/tvlk/image/imageResource/2018/04/03/1522754232742-552d078378e134fb3df3b659a7d527f4.png?tr=q-75",
-                "shortFormattedDescription":
-                    "<font color=\"#8f8f8f\">Deal menit terakhir - diskon 2...</font>",
-                "longFormattedDescription":
-                    "<font color=\"#8f8f8f\">Deal menit terakhir - diskon 22%!</font>",
-                "backgroundColor": null,
-                "action": null,
-                "fontColor": null
+            "numOfDecimalPoint": "0"
+        },
+        "strikethroughRateDisplay": {
+            "baseFare": {
+            "currency": "IDR",
+            "amount": "199613",
+            "nullOrEmpty": false
             },
-            "availableRateTypes": ["PAY_AT_PROPERTY", "PAY_NOW"],
-            "hotelRibbonDisplay": {"url": null, "label": null},
-            "strikethroughDisplayFlag": true,
-            "isCashback": null,
-            "hotelRoomCCGuaranteeRequirementDisplay": {
-                "ccRequired": true,
-                "csTokenRequired": true,
-                "supportedCCTypes": ["MASTER_CARD", "VISA"]
+            "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
+            "taxes": {
+            "currency": "IDR",
+            "amount": "41919",
+            "nullOrEmpty": false
             },
-            "extraBedSearchSummary": null,
-            "inventoryLabelDisplay": {
-                "label": "Bayar saat Check-in Tersedia",
-                "description":
-                    "Memberikan fleksibilitas yang Anda butuhkan: TIDAK ADA pembayaran di awal untuk memesan kamar! Anda dapat mengunci harga terbaik saat itu dan bayar dengan uang tunai atau kartu ketika check-in.",
-                "tagline":
-                    "Ekstra fleksibel: Pesan kamar ini TANPA membayar terlebih dahulu!",
-                "icon": ""
+            "totalFare": {
+            "currency": "IDR",
+            "amount": "241532",
+            "nullOrEmpty": false
             },
-            "accomPreferenceDisplay": null,
-            "hotelPreferredPartnerDisplay": {
-                "name": "All-star Accommodation",
-                "iconUrl":
-                    "https://ik.imagekit.io/tvlk/image/imageResource/2023/01/09/1673253241773-aa2095df357cfd1fcfee9434643c2666.png?tr=q-75",
-                "backgroundColor": "",
-                "textColor": ""
+            "numOfDecimalPoint": "0"
+        },
+        "propertyCurrencyRateDisplay": {
+            "baseFare": {
+            "currency": "IDR",
+            "amount": "155698",
+            "nullOrEmpty": false
             },
-            "hotelSpecialPlacementDisplay": null,
-            "discountRateSummaryDisplay": {"text": null, "textColor": null},
-            "accomInventoryCardDisplay": null,
-            "hasFreeCancellationRooms": false,
-            "hasRefundGuarantee": false,
-            "hasExtraBenefit": false,
-            "inventoryFeatureDisplay": []
+            "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
+            "taxes": {
+            "currency": "IDR",
+            "amount": "32697",
+            "nullOrEmpty": false
             },
-            "thirdPartyHotelRatingInfoMap": {},
-            "loyaltyAmount": "0",
-            "hotelLoyaltyDisplay": {
-            "display": "<font color=\"#687176\">0 Priority Points</font>",
-            "amount": "0"
+            "totalFare": {
+            "currency": "IDR",
+            "amount": "188395",
+            "nullOrEmpty": false
             },
-            "accomLoyaltyEligibilityStatus": "USER_NOT_ELIGIBLE",
-            "accomPropertyType": "Guest House",
-            "insiderDisplay": {
-            "text": null,
+            "numOfDecimalPoint": "0"
+        },
+        "propertyCurrencyOriginalRateDisplay": {
+            "baseFare": {
+            "currency": "IDR",
+            "amount": "199613",
+            "nullOrEmpty": false
+            },
+            "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
+            "taxes": {
+            "currency": "IDR",
+            "amount": "41919",
+            "nullOrEmpty": false
+            },
+            "totalFare": {
+            "currency": "IDR",
+            "amount": "241532",
+            "nullOrEmpty": false
+            },
+            "numOfDecimalPoint": "0"
+        },
+        "rescheduleRateDisplay": null,
+        "bundledRateDisplay": null,
+        "providerId":
+            "ne/QK3P8TsAFtiOOAyeot6dK3Q99NUDjaZVT5bjaW/NN8J/FATzsicrjQNJdzudZq+s68Ns/EFC6vE0uaq7Pvg==",
+        "hotelPromoType": {
+            "promoType": "LAST_MINUTE",
+            "promoDescription": "Deal menit terakhir - diskon 22%!"
+        },
+        "labelDisplayData": {
+            "iconId": "-1",
+            "shortDescription": "Deal menit terakhir - diskon 2...",
+            "longDescription": "Deal menit terakhir - diskon 22%!",
+            "overrideProviderLabel": false,
+            "iconUrl":
+                "https://ik.imagekit.io/tvlk/image/imageResource/2018/04/03/1522754232742-552d078378e134fb3df3b659a7d527f4.png?tr=q-75",
+            "shortFormattedDescription":
+                "<font color=\"#8f8f8f\">Deal menit terakhir - diskon 2...</font>",
+            "longFormattedDescription":
+                "<font color=\"#8f8f8f\">Deal menit terakhir - diskon 22%!</font>",
             "backgroundColor": null,
-            "backgroundImage": null,
-            "fontColor": null,
-            "icon": null,
-            "type": null,
-            "capsuleValue": null,
-            "capsuleBackgroundColor": null,
-            "capsuleFontColor": null
-            },
-            "hotelCardHeaderDisplay": {
-            "icon": null,
-            "content": null,
-            "additionalText": null,
-            "backgroundColor": null,
-            "fontColor": null,
-            "type": null,
-            "miniContainerContentIcon": null,
-            "miniContainerContentBgColor": null,
-            "miniContainerContentFontColor": null,
-            "miniContainerContentCountdown": null,
-            "miniContainerLabelFontColor": null,
-            "miniContainerLabel": null
-            },
-            "accomCardHighlightDisplay": {
-            "icon": null,
-            "text": null,
-            "backgroundColor": null,
+            "action": null,
             "fontColor": null
-            },
-            "hotelPreferredPartnerDisplay": {
+        },
+        "availableRateTypes": ["PAY_AT_PROPERTY", "PAY_NOW"],
+        "hotelRibbonDisplay": {"url": null, "label": null},
+        "strikethroughDisplayFlag": true,
+        "isCashback": null,
+        "hotelRoomCCGuaranteeRequirementDisplay": {
+            "ccRequired": true,
+            "csTokenRequired": true,
+            "supportedCCTypes": ["MASTER_CARD", "VISA"]
+        },
+        "extraBedSearchSummary": null,
+        "inventoryLabelDisplay": {
+            "label": "Bayar saat Check-in Tersedia",
+            "description":
+                "Memberikan fleksibilitas yang Anda butuhkan: TIDAK ADA pembayaran di awal untuk memesan kamar! Anda dapat mengunci harga terbaik saat itu dan bayar dengan uang tunai atau kartu ketika check-in.",
+            "tagline":
+                "Ekstra fleksibel: Pesan kamar ini TANPA membayar terlebih dahulu!",
+            "icon": ""
+        },
+        "accomPreferenceDisplay": null,
+        "hotelPreferredPartnerDisplay": {
             "name": "All-star Accommodation",
             "iconUrl":
                 "https://ik.imagekit.io/tvlk/image/imageResource/2023/01/09/1673253241773-aa2095df357cfd1fcfee9434643c2666.png?tr=q-75",
             "backgroundColor": "",
             "textColor": ""
-            },
-            "addOns": [],
-            "indexPosition": null,
-            "ads": null,
-            "contexts": {
-            "inventoryRateKey":
-                "povEwB3ZzsU2C6pd+6MdU13LUNuufACdbU0usK5vg0dM0tKsNUio4Rxug1zOzHJilcvZa8YdqqIySdppe7dolTIewZlxfjiOGz6oXLTucMvN0+gQ3yZPvZcoHwUFNN+Zpcr//Na8o9ElfN8zOYhzzZeg0X586laFpeUViPi9rxBHeAF8qyYS4GkBakgXNeZAmhLDdV0WLeT/FKfQ0QL8LH02Dvlx/8PjYogEE5yzx6g6yOKyKeIDf7jO3GM45O1o1hmSkmz3HiZNSbS8gXb3CDW9nmlhkqLKa4lLkAkZpAHy2H0H4RxmeLIJxyAouUWpOwEn7PD824d//bLT2Fhb2Mx2hCJHuICygbvfdzPcu/MY/9a+aEvjsG8XYBsdK7oI1dhCTwTG6Mn8J41BmySHYkDNbYRRjW2wSL6hx0fqenxkEx7Ae+QZ3tYyBiqixbCLj896Mv0D6qt8WEjz02JqJE26LlSNscE+HO87G7kGosqX1dDUGS/TX0nr+nUIvn9xXxqoMEdgKQHsNi4BjCuILB1hKOzq4iKwniBYx4U0dCOBtbp+/5lG0lMiWhGFrX/1G55KkpZSw9RBLZ/AJ6qpfTbJMdMzCxySIcUPzSDPwNhORaHxOhh4J4LzeS1iZWMrQOtwq1srrw8/op9m2AX4qt9/WdzTbHMqhSkcVUoJ8II="
-            }
-        }
-        ],
-        "titleDisplay": {
-        "title": "Pilihan Populer",
-        "subtitle": null,
-        "fontColor": "#1BA0E2"
         },
-        "backgroundColor": "#f6f6f6",
-        "outlineColor": null,
-        "detailDisplay": null
+        "hotelSpecialPlacementDisplay": null,
+        "discountRateSummaryDisplay": {"text": null, "textColor": null},
+        "accomInventoryCardDisplay": null,
+        "hasFreeCancellationRooms": false,
+        "hasRefundGuarantee": false,
+        "hasExtraBenefit": false,
+        "inventoryFeatureDisplay": []
+        },
+        "thirdPartyHotelRatingInfoMap": {},
+        "loyaltyAmount": "0",
+        "hotelLoyaltyDisplay": {
+        "display": "<font color=\"#687176\">0 Priority Points</font>",
+        "amount": "0"
+        },
+        "accomLoyaltyEligibilityStatus": "USER_NOT_ELIGIBLE",
+        "accomPropertyType": "Guest House",
+        "insiderDisplay": {
+        "text": null,
+        "backgroundColor": null,
+        "backgroundImage": null,
+        "fontColor": null,
+        "icon": null,
+        "type": null,
+        "capsuleValue": null,
+        "capsuleBackgroundColor": null,
+        "capsuleFontColor": null
+        },
+        "hotelCardHeaderDisplay": {
+        "icon": null,
+        "content": null,
+        "additionalText": null,
+        "backgroundColor": null,
+        "fontColor": null,
+        "type": null,
+        "miniContainerContentIcon": null,
+        "miniContainerContentBgColor": null,
+        "miniContainerContentFontColor": null,
+        "miniContainerContentCountdown": null,
+        "miniContainerLabelFontColor": null,
+        "miniContainerLabel": null
+        },
+        "accomCardHighlightDisplay": {
+        "icon": null,
+        "text": null,
+        "backgroundColor": null,
+        "fontColor": null
+        },
+        "hotelPreferredPartnerDisplay": {
+        "name": "All-star Accommodation",
+        "iconUrl":
+            "https://ik.imagekit.io/tvlk/image/imageResource/2023/01/09/1673253241773-aa2095df357cfd1fcfee9434643c2666.png?tr=q-75",
+        "backgroundColor": "",
+        "textColor": ""
+        },
+        "addOns": [],
+        "indexPosition": null,
+        "ads": null,
+        "contexts": {
+        "inventoryRateKey":
+            "povEwB3ZzsU2C6pd+6MdU13LUNuufACdbU0usK5vg0dM0tKsNUio4Rxug1zOzHJilcvZa8YdqqIySdppe7dolTIewZlxfjiOGz6oXLTucMvN0+gQ3yZPvZcoHwUFNN+Zpcr//Na8o9ElfN8zOYhzzZeg0X586laFpeUViPi9rxBHeAF8qyYS4GkBakgXNeZAmhLDdV0WLeT/FKfQ0QL8LH02Dvlx/8PjYogEE5yzx6g6yOKyKeIDf7jO3GM45O1o1hmSkmz3HiZNSbS8gXb3CDW9nmlhkqLKa4lLkAkZpAHy2H0H4RxmeLIJxyAouUWpOwEn7PD824d//bLT2Fhb2Mx2hCJHuICygbvfdzPcu/MY/9a+aEvjsG8XYBsdK7oI1dhCTwTG6Mn8J41BmySHYkDNbYRRjW2wSL6hx0fqenxkEx7Ae+QZ3tYyBiqixbCLj896Mv0D6qt8WEjz02JqJE26LlSNscE+HO87G7kGosqX1dDUGS/TX0nr+nUIvn9xXxqoMEdgKQHsNi4BjCuILB1hKOzq4iKwniBYx4U0dCOBtbp+/5lG0lMiWhGFrX/1G55KkpZSw9RBLZ/AJ6qpfTbJMdMzCxySIcUPzSDPwNhORaHxOhh4J4LzeS1iZWMrQOtwq1srrw8/op9m2AX4qt9/WdzTbHMqhSkcVUoJ8II="
+        }
     }
     },
     {
@@ -2270,313 +2258,305 @@
     "displayType": "INVENTORY_LIST",
     "contentType": "BOOST",
     "data": {
-        "inventoryList": [
+        "id": "9000000925842",
+        "name": "Java Lotus Hotel Jember",
+        "displayName": "Java Lotus Hotel Jember",
+        "address": null,
+        "region": "Kaliwates, Jember",
+        "starRating": "4.0",
+        "userRating": "8.3",
+        "numReviews": "612",
+        "userRatingInfo": "Mengesankan",
+        "latitude": "-8.1724453",
+        "longitude": "113.6994862",
+        "lowRate": "456000",
+        "highRate": null,
+        "showedFacilityTypes": ["WIFI_PUBLIC_AREA", "CARPARK", "BAR"],
+        "hotelFeatures": [
         {
-            "id": "9000000925842",
-            "name": "Java Lotus Hotel Jember",
-            "displayName": "Java Lotus Hotel Jember",
-            "address": null,
-            "region": "Kaliwates, Jember",
-            "starRating": "4.0",
-            "userRating": "8.3",
-            "numReviews": "612",
-            "userRatingInfo": "Mengesankan",
-            "latitude": "-8.1724453",
-            "longitude": "113.6994862",
-            "lowRate": "456000",
-            "highRate": null,
-            "showedFacilityTypes": ["WIFI_PUBLIC_AREA", "CARPARK", "BAR"],
-            "hotelFeatures": [
-            {
-                "text": "Tennis meja",
-                "backgroundColor": "#F2F3F3",
-                "textColor": "#03121A",
-                "icon": null,
-                "type": "FEATURES"
-            },
-            {
-                "text": "Sewa mobil",
-                "backgroundColor": "#F2F3F3",
-                "textColor": "#03121A",
-                "icon": null,
-                "type": "FEATURES"
-            },
-            {
-                "text": "Layanan pijat",
-                "backgroundColor": "#F2F3F3",
-                "textColor": "#03121A",
-                "icon": null,
-                "type": "FEATURES"
-            },
-            {
-                "text": "Pusat kebugaran",
-                "backgroundColor": "#F2F3F3",
-                "textColor": "#03121A",
-                "icon": null,
-                "type": "FEATURES"
-            },
-            {
-                "text": "Bar di kolam renang",
-                "backgroundColor": "#F2F3F3",
-                "textColor": "#03121A",
-                "icon": null,
-                "type": "FEATURES"
-            },
-            {
-                "text": "Spa",
-                "backgroundColor": "#F2F3F3",
-                "textColor": "#03121A",
-                "icon": null,
-                "type": "FEATURES"
-            },
-            {
-                "text": "Pusat kebugaran",
-                "backgroundColor": "#F2F3F3",
-                "textColor": "#03121A",
-                "icon": null,
-                "type": "FEATURES"
-            },
-            {
-                "text": "Bar",
-                "backgroundColor": "#F2F3F3",
-                "textColor": "#03121A",
-                "icon": null,
-                "type": "FEATURES"
-            }
-            ],
-            "propertyListing": null,
-            "inventoryUnitDisplay": null,
-            "imageUrl":
-                "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-258c2e71ba0710ef55d89bc31c0fa8b2.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "imageUrls": [
+            "text": "Tennis meja",
+            "backgroundColor": "#F2F3F3",
+            "textColor": "#03121A",
+            "icon": null,
+            "type": "FEATURES"
+        },
+        {
+            "text": "Sewa mobil",
+            "backgroundColor": "#F2F3F3",
+            "textColor": "#03121A",
+            "icon": null,
+            "type": "FEATURES"
+        },
+        {
+            "text": "Layanan pijat",
+            "backgroundColor": "#F2F3F3",
+            "textColor": "#03121A",
+            "icon": null,
+            "type": "FEATURES"
+        },
+        {
+            "text": "Pusat kebugaran",
+            "backgroundColor": "#F2F3F3",
+            "textColor": "#03121A",
+            "icon": null,
+            "type": "FEATURES"
+        },
+        {
+            "text": "Bar di kolam renang",
+            "backgroundColor": "#F2F3F3",
+            "textColor": "#03121A",
+            "icon": null,
+            "type": "FEATURES"
+        },
+        {
+            "text": "Spa",
+            "backgroundColor": "#F2F3F3",
+            "textColor": "#03121A",
+            "icon": null,
+            "type": "FEATURES"
+        },
+        {
+            "text": "Pusat kebugaran",
+            "backgroundColor": "#F2F3F3",
+            "textColor": "#03121A",
+            "icon": null,
+            "type": "FEATURES"
+        },
+        {
+            "text": "Bar",
+            "backgroundColor": "#F2F3F3",
+            "textColor": "#03121A",
+            "icon": null,
+            "type": "FEATURES"
+        }
+        ],
+        "propertyListing": null,
+        "inventoryUnitDisplay": null,
+        "imageUrl":
             "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-258c2e71ba0710ef55d89bc31c0fa8b2.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-668ad5561a47626d78a3a216c9db7fa1.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-fa5126efe523e7e3477ba12991582435.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-833baf2650b174d40a86bd7d8284709f.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-2e32c343d752c6b273d365eb973f2273.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-db4412629179652b501c06c4c0a51046.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-7fead882418b9f77086e8f9983bc663c.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-2555b2ebb3e6339fd75ba7deb225c7f4.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-749b6f446106ec5c3fafbbc65db7eedc.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-3dd98bcc4cec3db017e88831f098dad4.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-c9d8b1f27a4e710668c80c34118f86ad.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-ced1dabf837e56cf6c5b5f611c4d8927.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-be34e370658f1e6eab07b521e5bfa16d.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-62221f07508c49cfbe09b9a7c6a01511.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-3bb621633ba0bdaed3960ed1833bd672.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-d53ec86c55ff6fcc70c05c3d314fb3a9.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-30b8c215485209be77df895808405021.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-8505e9c917529a7ab8f6718b186e0ed3.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-573e07ba1ff8f520dcae85f5c264d382.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-a9aee932486f5ead4e83f5f5a1efcd0f.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-5b6a839c52e01af46efdcb5b02aa020b.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-8207e5bc441e27cf7a9599ca0abdb45c.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-06d450bf65e5188de81867b8b0cf1454.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-f936da99db94c1b80017bb159249034e.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-85f166e5de5e724e10ed80f1e215070d.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-a6a51e78823d5cd960a1e6adfe05dd35.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-9251662b91e65216b2a6bef37546163c.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-f6810d1fe6c8fce84af1586f254cc671.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-50847e33a00c02e11774ac4c2ac3dcd7.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-472cba3e4572a74f8591e7ac76e2090c.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-81e16c97a799d7f7b1d0a7f71d27b39a.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-f0cc1278adca3b03d10f634bef5c283f.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-1e96ee4e1f9651f96a890e55bb11ccb7.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-598fdb05197a15df6d8870585666a3e3.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-e376201cff0eebf4e3efa91d0a62708c.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-adb5ebf5c81b71bc9fbb0d8b63e99813.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
-            "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-fa2bfbaf72bece07f7ae8425da85e7e8.jpeg?tr=q-40,w-300,h-300&_src=imagekit"
-            ],
-            "hotelSeoUrl":
-                "hotel/indonesia/java-lotus-hotel-jember-9000000925842",
-            "extraInfos": [],
-            "hotelInventorySummary": {
-            "cheapestRateDisplay": {
-                "baseFare": {
-                "currency": "IDR",
-                "amount": "376860",
-                "nullOrEmpty": false
-                },
-                "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
-                "taxes": {
-                "currency": "IDR",
-                "amount": "79140",
-                "nullOrEmpty": false
-                },
-                "totalFare": {
-                "currency": "IDR",
-                "amount": "456000",
-                "nullOrEmpty": false
-                },
-                "numOfDecimalPoint": "0"
+        "imageUrls": [
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-258c2e71ba0710ef55d89bc31c0fa8b2.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-668ad5561a47626d78a3a216c9db7fa1.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-fa5126efe523e7e3477ba12991582435.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-833baf2650b174d40a86bd7d8284709f.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-2e32c343d752c6b273d365eb973f2273.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-db4412629179652b501c06c4c0a51046.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-7fead882418b9f77086e8f9983bc663c.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-2555b2ebb3e6339fd75ba7deb225c7f4.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-749b6f446106ec5c3fafbbc65db7eedc.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-3dd98bcc4cec3db017e88831f098dad4.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-c9d8b1f27a4e710668c80c34118f86ad.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-ced1dabf837e56cf6c5b5f611c4d8927.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-be34e370658f1e6eab07b521e5bfa16d.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-62221f07508c49cfbe09b9a7c6a01511.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-3bb621633ba0bdaed3960ed1833bd672.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-d53ec86c55ff6fcc70c05c3d314fb3a9.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-30b8c215485209be77df895808405021.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-8505e9c917529a7ab8f6718b186e0ed3.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-573e07ba1ff8f520dcae85f5c264d382.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-a9aee932486f5ead4e83f5f5a1efcd0f.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-5b6a839c52e01af46efdcb5b02aa020b.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-8207e5bc441e27cf7a9599ca0abdb45c.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-06d450bf65e5188de81867b8b0cf1454.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-f936da99db94c1b80017bb159249034e.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-85f166e5de5e724e10ed80f1e215070d.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-a6a51e78823d5cd960a1e6adfe05dd35.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-9251662b91e65216b2a6bef37546163c.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-f6810d1fe6c8fce84af1586f254cc671.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-50847e33a00c02e11774ac4c2ac3dcd7.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-472cba3e4572a74f8591e7ac76e2090c.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-81e16c97a799d7f7b1d0a7f71d27b39a.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-f0cc1278adca3b03d10f634bef5c283f.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-1e96ee4e1f9651f96a890e55bb11ccb7.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-598fdb05197a15df6d8870585666a3e3.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-e376201cff0eebf4e3efa91d0a62708c.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-adb5ebf5c81b71bc9fbb0d8b63e99813.jpeg?tr=q-40,w-300,h-300&_src=imagekit",
+        "https://ik.imagekit.io/tvlk/apr-asset/dgXfoyh24ryQLRcGq00cIdKHRmotrWLNlvG-TxlcLxGkiDwaUSggleJNPRgIHCX6/hotel/asset/20044885-fa2bfbaf72bece07f7ae8425da85e7e8.jpeg?tr=q-40,w-300,h-300&_src=imagekit"
+        ],
+        "hotelSeoUrl":
+            "hotel/indonesia/java-lotus-hotel-jember-9000000925842",
+        "extraInfos": [],
+        "hotelInventorySummary": {
+        "cheapestRateDisplay": {
+            "baseFare": {
+            "currency": "IDR",
+            "amount": "376860",
+            "nullOrEmpty": false
             },
-            "originalRateDisplay": {
-                "baseFare": {
-                "currency": "IDR",
-                "amount": "502480",
-                "nullOrEmpty": false
-                },
-                "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
-                "taxes": {
-                "currency": "IDR",
-                "amount": "105520",
-                "nullOrEmpty": false
-                },
-                "totalFare": {
-                "currency": "IDR",
-                "amount": "608000",
-                "nullOrEmpty": false
-                },
-                "numOfDecimalPoint": "0"
+            "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
+            "taxes": {
+            "currency": "IDR",
+            "amount": "79140",
+            "nullOrEmpty": false
             },
-            "strikethroughRateDisplay": {
-                "baseFare": {
-                "currency": "IDR",
-                "amount": "502480",
-                "nullOrEmpty": false
-                },
-                "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
-                "taxes": {
-                "currency": "IDR",
-                "amount": "105520",
-                "nullOrEmpty": false
-                },
-                "totalFare": {
-                "currency": "IDR",
-                "amount": "608000",
-                "nullOrEmpty": false
-                },
-                "numOfDecimalPoint": "0"
+            "totalFare": {
+            "currency": "IDR",
+            "amount": "456000",
+            "nullOrEmpty": false
             },
-            "propertyCurrencyRateDisplay": {
-                "baseFare": {
-                "currency": "IDR",
-                "amount": "376860",
-                "nullOrEmpty": false
-                },
-                "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
-                "taxes": {
-                "currency": "IDR",
-                "amount": "79140",
-                "nullOrEmpty": false
-                },
-                "totalFare": {
-                "currency": "IDR",
-                "amount": "456000",
-                "nullOrEmpty": false
-                },
-                "numOfDecimalPoint": "0"
+            "numOfDecimalPoint": "0"
+        },
+        "originalRateDisplay": {
+            "baseFare": {
+            "currency": "IDR",
+            "amount": "502480",
+            "nullOrEmpty": false
             },
-            "propertyCurrencyOriginalRateDisplay": {
-                "baseFare": {
-                "currency": "IDR",
-                "amount": "376860",
-                "nullOrEmpty": false
-                },
-                "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
-                "taxes": {
-                "currency": "IDR",
-                "amount": "79140",
-                "nullOrEmpty": false
-                },
-                "totalFare": {
-                "currency": "IDR",
-                "amount": "456000",
-                "nullOrEmpty": false
-                },
-                "numOfDecimalPoint": "0"
+            "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
+            "taxes": {
+            "currency": "IDR",
+            "amount": "105520",
+            "nullOrEmpty": false
             },
-            "rescheduleRateDisplay": null,
-            "bundledRateDisplay": null,
-            "providerId": "z41p/NzGzfpjLkaDJsujd0BSsKNKy0iAA70HJsVajT4=",
-            "hotelPromoType": null,
-            "labelDisplayData": null,
-            "availableRateTypes": ["PAY_NOW"],
-            "hotelRibbonDisplay": {"url": null, "label": null},
-            "strikethroughDisplayFlag": true,
-            "isCashback": null,
-            "hotelRoomCCGuaranteeRequirementDisplay": null,
-            "extraBedSearchSummary": null,
-            "inventoryLabelDisplay": null,
-            "accomPreferenceDisplay": null,
-            "hotelPreferredPartnerDisplay": {
-                "name": null,
-                "iconUrl": null,
-                "backgroundColor": null,
-                "textColor": null
+            "totalFare": {
+            "currency": "IDR",
+            "amount": "608000",
+            "nullOrEmpty": false
             },
-            "hotelSpecialPlacementDisplay": {
-                "iconUrl":
-                    "https://ik.imagekit.io/tvlk/image/imageResource/2020/06/29/1593398865168-c0f10f3333ab3e58051649830610b613.png?tr=q-75",
-                "showIcon": true,
-                "text": null
+            "numOfDecimalPoint": "0"
+        },
+        "strikethroughRateDisplay": {
+            "baseFare": {
+            "currency": "IDR",
+            "amount": "502480",
+            "nullOrEmpty": false
             },
-            "discountRateSummaryDisplay": {"text": null, "textColor": null},
-            "accomInventoryCardDisplay": null,
-            "hasFreeCancellationRooms": false,
-            "hasRefundGuarantee": true,
-            "hasExtraBenefit": false,
-            "inventoryFeatureDisplay": []
+            "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
+            "taxes": {
+            "currency": "IDR",
+            "amount": "105520",
+            "nullOrEmpty": false
             },
-            "thirdPartyHotelRatingInfoMap": {},
-            "loyaltyAmount": "0",
-            "hotelLoyaltyDisplay": {
-            "display": "<font color=\"#687176\">0 Priority Points</font>",
-            "amount": "0"
+            "totalFare": {
+            "currency": "IDR",
+            "amount": "608000",
+            "nullOrEmpty": false
             },
-            "accomLoyaltyEligibilityStatus": "USER_NOT_ELIGIBLE",
-            "accomPropertyType": "Hotel",
-            "insiderDisplay": {
-            "text": null,
-            "backgroundColor": null,
-            "backgroundImage": null,
-            "fontColor": null,
-            "icon": null,
-            "type": null,
-            "capsuleValue": null,
-            "capsuleBackgroundColor": null,
-            "capsuleFontColor": null
+            "numOfDecimalPoint": "0"
+        },
+        "propertyCurrencyRateDisplay": {
+            "baseFare": {
+            "currency": "IDR",
+            "amount": "376860",
+            "nullOrEmpty": false
             },
-            "hotelCardHeaderDisplay": {
-            "icon": null,
-            "content": null,
-            "additionalText": null,
-            "backgroundColor": null,
-            "fontColor": null,
-            "type": null,
-            "miniContainerContentIcon": null,
-            "miniContainerContentBgColor": null,
-            "miniContainerContentFontColor": null,
-            "miniContainerContentCountdown": null,
-            "miniContainerLabelFontColor": null,
-            "miniContainerLabel": null
+            "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
+            "taxes": {
+            "currency": "IDR",
+            "amount": "79140",
+            "nullOrEmpty": false
             },
-            "accomCardHighlightDisplay": {
-            "icon":
-                "https://ik.imagekit.io/tvlk/image/imageResource/2020/10/02/1601618823791-f58fa022303570ddd90bc0157c23bf95.png?tr=q-75",
-            "text": "Opsi Jaminan Refund tersedia",
-            "backgroundColor": "#ECF8FF",
-            "fontColor": "#1BA0E2"
+            "totalFare": {
+            "currency": "IDR",
+            "amount": "456000",
+            "nullOrEmpty": false
             },
-            "hotelPreferredPartnerDisplay": {
+            "numOfDecimalPoint": "0"
+        },
+        "propertyCurrencyOriginalRateDisplay": {
+            "baseFare": {
+            "currency": "IDR",
+            "amount": "376860",
+            "nullOrEmpty": false
+            },
+            "fees": {"currency": "IDR", "amount": "0", "nullOrEmpty": true},
+            "taxes": {
+            "currency": "IDR",
+            "amount": "79140",
+            "nullOrEmpty": false
+            },
+            "totalFare": {
+            "currency": "IDR",
+            "amount": "456000",
+            "nullOrEmpty": false
+            },
+            "numOfDecimalPoint": "0"
+        },
+        "rescheduleRateDisplay": null,
+        "bundledRateDisplay": null,
+        "providerId": "z41p/NzGzfpjLkaDJsujd0BSsKNKy0iAA70HJsVajT4=",
+        "hotelPromoType": null,
+        "labelDisplayData": null,
+        "availableRateTypes": ["PAY_NOW"],
+        "hotelRibbonDisplay": {"url": null, "label": null},
+        "strikethroughDisplayFlag": true,
+        "isCashback": null,
+        "hotelRoomCCGuaranteeRequirementDisplay": null,
+        "extraBedSearchSummary": null,
+        "inventoryLabelDisplay": null,
+        "accomPreferenceDisplay": null,
+        "hotelPreferredPartnerDisplay": {
             "name": null,
             "iconUrl": null,
             "backgroundColor": null,
             "textColor": null
-            },
-            "addOns": [],
-            "indexPosition": "0",
-            "ads": {"clickUrl": null, "viewUrl": null},
-            "contexts": {
-            "inventoryRateKey":
-                "povEwB3ZzsU2C6pd+6MdU13LUNuufACdbU0usK5vg0dM0tKsNUio4Rxug1zOzHJilcvZa8YdqqIySdppe7dolTIewZlxfjiOGz6oXLTucMvN0+gQ3yZPvZcoHwUFNN+Zpcr//Na8o9ElfN8zOYhzzZeg0X586laFpeUViPi9rxCSom3CMVVbFZ4Q5wiv/UramhLDdV0WLeT/FKfQ0QL8LH02Dvlx/8PjYogEE5yzx6g6yOKyKeIDf7jO3GM45O1o1hmSkmz3HiZNSbS8gXb3CDW9nmlhkqLKa4lLkAkZpAHy2H0H4RxmeLIJxyAouUWpOwEn7PD824d//bLT2Fhb2Mx2hCJHuICygbvfdzPcu/MY/9a+aEvjsG8XYBsdK7oI1dhCTwTG6Mn8J41BmySHYkDNbYRRjW2wSL6hx0fqenxkEx7Ae+QZ3tYyBiqixbCLj896Mv0D6qt8WEjz02JqJE26LlSNscE+HO87G7kGosqX1dDUGS/TX0nr+nUIvn9xXxqoMEdgKQHsNi4BjCuILB1hKOzq4iKwniBYx4U0dCOBtbp+/5lG0lMiWhGFrX/1G55KkpZSw9RBLZ/AJ6qpfTbJMdMzCxySIcUPzSDPwNhORaHxOhh4J4LzeS1iZWMrQOtwq1srrw8/op9m2AX4qt9/WdzTbHMqhSkcVUoJ8II="
-            }
-        }
-        ],
-        "titleDisplay": null,
+        },
+        "hotelSpecialPlacementDisplay": {
+            "iconUrl":
+                "https://ik.imagekit.io/tvlk/image/imageResource/2020/06/29/1593398865168-c0f10f3333ab3e58051649830610b613.png?tr=q-75",
+            "showIcon": true,
+            "text": null
+        },
+        "discountRateSummaryDisplay": {"text": null, "textColor": null},
+        "accomInventoryCardDisplay": null,
+        "hasFreeCancellationRooms": false,
+        "hasRefundGuarantee": true,
+        "hasExtraBenefit": false,
+        "inventoryFeatureDisplay": []
+        },
+        "thirdPartyHotelRatingInfoMap": {},
+        "loyaltyAmount": "0",
+        "hotelLoyaltyDisplay": {
+        "display": "<font color=\"#687176\">0 Priority Points</font>",
+        "amount": "0"
+        },
+        "accomLoyaltyEligibilityStatus": "USER_NOT_ELIGIBLE",
+        "accomPropertyType": "Hotel",
+        "insiderDisplay": {
+        "text": null,
+        "backgroundColor": null,
+        "backgroundImage": null,
+        "fontColor": null,
+        "icon": null,
+        "type": null,
+        "capsuleValue": null,
+        "capsuleBackgroundColor": null,
+        "capsuleFontColor": null
+        },
+        "hotelCardHeaderDisplay": {
+        "icon": null,
+        "content": null,
+        "additionalText": null,
+        "backgroundColor": null,
+        "fontColor": null,
+        "type": null,
+        "miniContainerContentIcon": null,
+        "miniContainerContentBgColor": null,
+        "miniContainerContentFontColor": null,
+        "miniContainerContentCountdown": null,
+        "miniContainerLabelFontColor": null,
+        "miniContainerLabel": null
+        },
+        "accomCardHighlightDisplay": {
+        "icon":
+            "https://ik.imagekit.io/tvlk/image/imageResource/2020/10/02/1601618823791-f58fa022303570ddd90bc0157c23bf95.png?tr=q-75",
+        "text": "Opsi Jaminan Refund tersedia",
         "backgroundColor": "#ECF8FF",
-        "outlineColor": null,
-        "detailDisplay": null
+        "fontColor": "#1BA0E2"
+        },
+        "hotelPreferredPartnerDisplay": {
+        "name": null,
+        "iconUrl": null,
+        "backgroundColor": null,
+        "textColor": null
+        },
+        "addOns": [],
+        "indexPosition": "0",
+        "ads": {"clickUrl": null, "viewUrl": null},
+        "contexts": {
+        "inventoryRateKey":
+            "povEwB3ZzsU2C6pd+6MdU13LUNuufACdbU0usK5vg0dM0tKsNUio4Rxug1zOzHJilcvZa8YdqqIySdppe7dolTIewZlxfjiOGz6oXLTucMvN0+gQ3yZPvZcoHwUFNN+Zpcr//Na8o9ElfN8zOYhzzZeg0X586laFpeUViPi9rxCSom3CMVVbFZ4Q5wiv/UramhLDdV0WLeT/FKfQ0QL8LH02Dvlx/8PjYogEE5yzx6g6yOKyKeIDf7jO3GM45O1o1hmSkmz3HiZNSbS8gXb3CDW9nmlhkqLKa4lLkAkZpAHy2H0H4RxmeLIJxyAouUWpOwEn7PD824d//bLT2Fhb2Mx2hCJHuICygbvfdzPcu/MY/9a+aEvjsG8XYBsdK7oI1dhCTwTG6Mn8J41BmySHYkDNbYRRjW2wSL6hx0fqenxkEx7Ae+QZ3tYyBiqixbCLj896Mv0D6qt8WEjz02JqJE26LlSNscE+HO87G7kGosqX1dDUGS/TX0nr+nUIvn9xXxqoMEdgKQHsNi4BjCuILB1hKOzq4iKwniBYx4U0dCOBtbp+/5lG0lMiWhGFrX/1G55KkpZSw9RBLZ/AJ6qpfTbJMdMzCxySIcUPzSDPwNhORaHxOhh4J4LzeS1iZWMrQOtwq1srrw8/op9m2AX4qt9/WdzTbHMqhSkcVUoJ8II="
+        }
     }
     },
     {
