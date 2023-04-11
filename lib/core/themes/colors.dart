@@ -8,4 +8,5 @@ class AppColors {
   static const Color dark = Color(0xff101010);
   static const Color stroke = Color(0xffD6D6D6);
   static const Color yellow = Color(0xffFFD33C);
+  static const Color card = Color(0xffF5F5FF);
 }

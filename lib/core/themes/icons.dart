@@ -12,4 +12,5 @@ class AppIcons {
   static const close = AssetImage("assets/icons/close.png");
   static const notSaved = AssetImage("assets/icons/not_saved.png");
   static const saved = AssetImage("assets/icons/saved.png");
+  static const check = AssetImage("assets/icons/check.png");
 }

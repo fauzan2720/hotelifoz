@@ -54,7 +54,7 @@ class NearbyCard extends StatelessWidget {
                 borderRadius: const BorderRadius.vertical(
                   bottom: Radius.circular(AppSizes.radius),
                 ),
-                boxShadow: AppBoxShadow.bottom,
+                boxShadow: AppBoxShadow.primary,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,

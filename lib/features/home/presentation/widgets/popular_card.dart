@@ -28,7 +28,7 @@ class PopularCard extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppSizes.radius),
-          boxShadow: AppBoxShadow.bottom,
+          boxShadow: AppBoxShadow.primary,
           color: AppColors.white,
         ),
         child: Row(

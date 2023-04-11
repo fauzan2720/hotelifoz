@@ -47,7 +47,7 @@ class MainPage extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24.0),
               color: AppColors.white,
-              boxShadow: AppBoxShadow.bottom,
+              boxShadow: AppBoxShadow.primary,
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

@@ -34,7 +34,7 @@ class SeeAllHotelCard extends StatelessWidget {
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(AppSizes.radius),
-          boxShadow: AppBoxShadow.bottom,
+          boxShadow: AppBoxShadow.primary,
         ),
         child: Column(
           children: [

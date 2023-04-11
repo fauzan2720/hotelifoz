@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hotelifoz/core/themes/colors.dart';
 
 class AppBoxShadow {
-  static List<BoxShadow> bottom = [
+  static List<BoxShadow> primary = [
     BoxShadow(
       color: AppColors.dark.withOpacity(0.06),
       spreadRadius: 2,

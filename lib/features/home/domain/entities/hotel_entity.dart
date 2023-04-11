@@ -7,6 +7,9 @@ class HotelEntity {
   final double rating;
   final int totalReviews;
   final String imageUrl;
+  final List<String> facilities;
+  final List<String> features;
+  final List<String> images;
 
   HotelEntity({
     required this.name,
@@ -15,6 +18,9 @@ class HotelEntity {
     required this.rating,
     required this.totalReviews,
     required this.imageUrl,
+    required this.facilities,
+    required this.features,
+    required this.images,
   });
 
   String get currencyFormat => price.currencyFormatIDR;

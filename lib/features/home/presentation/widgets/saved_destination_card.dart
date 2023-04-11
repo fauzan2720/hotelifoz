@@ -29,7 +29,7 @@ class SavedDestinationCard extends StatelessWidget {
           decoration: BoxDecoration(
             color: AppColors.white,
             borderRadius: BorderRadius.circular(AppSizes.radius),
-            boxShadow: AppBoxShadow.bottom,
+            boxShadow: AppBoxShadow.primary,
           ),
           child: Row(
             children: [

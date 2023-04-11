@@ -40,6 +40,9 @@ class SavedDestinationsPage extends StatelessWidget {
                   rating: 4.2,
                   imageUrl: "https://picsum.photos/1000",
                   totalReviews: 60229,
+                  facilities: [],
+                  features: [],
+                  images: [],
                 ),
                 onSelectedItem: (item) {},
               );

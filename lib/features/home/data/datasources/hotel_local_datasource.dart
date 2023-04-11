@@ -10,11 +10,11 @@ abstract class HotelLocalDatasource {
 class HotelLocalDatasourceImpl implements HotelLocalDatasource {
   @override
   Future<List<HotelResponseModel>> getHotels() async {
-    const String path = 'assets/dataset/tiket.json';
+    const String path = 'assets/dataset/traveloka.json';
     final String response = await rootBundle.loadString(path);
     List<HotelResponseModel> data = [];
     for (Map<String, dynamic> item in jsonDecode(response)) {
-      data.add(HotelResponseModel.fromJson(item));
+      data.add(HotelResponseModel.fromJson(item["data"]));
     }
     return data;
   }

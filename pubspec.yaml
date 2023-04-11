@@ -27,6 +27,6 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   assets:
-    - assets/dataset/tiket.json
+    - assets/dataset/traveloka.json
     - assets/images/
     - assets/icons/
