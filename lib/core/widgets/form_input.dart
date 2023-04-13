@@ -10,6 +10,7 @@ class FozFormInput extends StatelessWidget {
   final String? Function(String?)? validator;
   final Widget? icon;
   final bool isBackPage;
+  final bool autofocus;
   final void Function()? onTap;
   final void Function(String value)? onChanged;
 
@@ -20,6 +21,7 @@ class FozFormInput extends StatelessWidget {
     this.validator,
     this.icon,
     this.isBackPage = false,
+    this.autofocus = false,
     this.onTap,
     this.onChanged,
     super.key,
@@ -34,6 +36,7 @@ class FozFormInput extends StatelessWidget {
         keyboardType: keyboardType,
         validator: validator,
         enabled: onTap != null ? false : true,
+        autofocus: autofocus,
         onChanged: onChanged,
         decoration: InputDecoration(
           contentPadding:

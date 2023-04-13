@@ -38,6 +38,7 @@ class SearchHotelPage extends StatelessWidget {
               color: AppColors.secondary,
             ),
             isBackPage: true,
+            autofocus: true,
             onChanged: (value) {
               context.read<SearchCubit>().searchHotel(value);
             },
