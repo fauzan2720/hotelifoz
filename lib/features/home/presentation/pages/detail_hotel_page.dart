@@ -57,14 +57,15 @@ class DetailHotelPage extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "Features",
-                  style: TextStyle(
-                    fontWeight: FW.bold,
-                    color: AppColors.dark,
+                if (item.features.isNotEmpty)
+                  const Text(
+                    "Features",
+                    style: TextStyle(
+                      fontWeight: FW.bold,
+                      color: AppColors.dark,
+                    ),
                   ),
-                ),
-                12.0.height,
+                if (item.features.isNotEmpty) 12.0.height,
                 GridView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
@@ -93,7 +94,7 @@ class DetailHotelPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                24.0.height,
+                if (item.features.isNotEmpty) 24.0.height,
                 const Text(
                   "Preview",
                   style: TextStyle(
