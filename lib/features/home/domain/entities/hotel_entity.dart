@@ -24,5 +24,5 @@ class HotelEntity {
   });
 
   String get currencyFormat => price.currencyFormatIDR;
-  String get totalReviewsFormat => price.numberFormat;
+  String get totalReviewsFormat => totalReviews.numberFormat;
 }
