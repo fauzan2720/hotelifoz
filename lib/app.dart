@@ -8,7 +8,7 @@ import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_c
 import 'package:hotelifoz/features/home/presentation/cubit/hotel_cubit.dart';
 import 'package:hotelifoz/features/home/presentation/cubit/page_cubit.dart';
 import 'package:hotelifoz/features/home/presentation/cubit/search_cubit.dart';
-import 'package:hotelifoz/features/launch/presentation/pages/splash_page.dart';
+import 'package:hotelifoz/features/launch/view/pages/splash_page.dart';
 import 'package:hotelifoz/routes/routes.dart';
 
 class App extends StatelessWidget {
