@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:hotelifoz/core/extensions/build_context_ext.dart';
 import 'package:hotelifoz/core/extensions/double_ext.dart';
-import 'package:hotelifoz/core/themes/font_weight.dart';
-import 'package:hotelifoz/core/themes/images.dart';
-import 'package:hotelifoz/core/themes/sizes.dart';
+import 'package:hotelifoz/core/constants/font_weight.dart';
+import 'package:hotelifoz/core/constants/images.dart';
+import 'package:hotelifoz/core/constants/sizes.dart';
 import 'package:hotelifoz/core/widgets/form_button.dart';
 import 'package:hotelifoz/features/home/presentation/pages/main_page.dart';
 

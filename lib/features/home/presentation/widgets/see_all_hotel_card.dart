@@ -2,11 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:hotelifoz/core/extensions/build_context_ext.dart';
 import 'package:hotelifoz/core/extensions/double_ext.dart';
-import 'package:hotelifoz/core/themes/box_shadows.dart';
-import 'package:hotelifoz/core/themes/colors.dart';
-import 'package:hotelifoz/core/themes/font_weight.dart';
-import 'package:hotelifoz/core/themes/icons.dart';
-import 'package:hotelifoz/core/themes/sizes.dart';
+import 'package:hotelifoz/core/constants/box_shadows.dart';
+import 'package:hotelifoz/core/constants/colors.dart';
+import 'package:hotelifoz/core/constants/font_weight.dart';
+import 'package:hotelifoz/core/constants/icons.dart';
+import 'package:hotelifoz/core/constants/sizes.dart';
 import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
 
 class SeeAllHotelCard extends StatelessWidget {

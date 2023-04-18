@@ -39,6 +39,7 @@ class HotelResponseModel {
 
   HotelEntity toEntity() {
     return HotelEntity(
+      id: id ?? '',
       name: name ?? '',
       address: region ?? '',
       price: int.parse(lowRate ?? "0"),

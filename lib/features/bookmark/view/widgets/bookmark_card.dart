@@ -2,20 +2,22 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:hotelifoz/core/extensions/build_context_ext.dart';
 import 'package:hotelifoz/core/extensions/double_ext.dart';
-import 'package:hotelifoz/core/themes/box_shadows.dart';
-import 'package:hotelifoz/core/themes/colors.dart';
-import 'package:hotelifoz/core/themes/font_weight.dart';
-import 'package:hotelifoz/core/themes/icons.dart';
-import 'package:hotelifoz/core/themes/sizes.dart';
+import 'package:hotelifoz/core/constants/box_shadows.dart';
+import 'package:hotelifoz/core/constants/colors.dart';
+import 'package:hotelifoz/core/constants/font_weight.dart';
+import 'package:hotelifoz/core/constants/icons.dart';
+import 'package:hotelifoz/core/constants/sizes.dart';
 import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
 
-class SavedDestinationCard extends StatelessWidget {
+class BookmarkCard extends StatelessWidget {
   final HotelEntity item;
   final void Function(HotelEntity item) onSelectedItem;
+  final void Function(HotelEntity item) onBookmarkTap;
 
-  const SavedDestinationCard({
+  const BookmarkCard({
     required this.item,
     required this.onSelectedItem,
+    required this.onBookmarkTap,
     super.key,
   });
 
@@ -112,17 +114,12 @@ class SavedDestinationCard extends StatelessWidget {
               ),
               const Spacer(),
               IconButton(
-                onPressed: () {},
+                onPressed: () => onBookmarkTap(item),
                 icon: const ImageIcon(
-                  AppIcons.notSaved,
+                  AppIcons.saved,
                   size: 18.0,
-                  color: AppColors.secondary,
+                  color: AppColors.primary,
                 ),
-                // icon: const ImageIcon(
-                //   AppIcons.saved,
-                //   size: 18.0,
-                //   color: AppColors.primary,
-                // ),
               ),
             ],
           ),

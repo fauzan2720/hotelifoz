@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '/core/extensions/build_context_ext.dart';
-import '/core/themes/colors.dart';
+import '../constants/colors.dart';
 
 class FozFormInput extends StatelessWidget {
   final String hint;

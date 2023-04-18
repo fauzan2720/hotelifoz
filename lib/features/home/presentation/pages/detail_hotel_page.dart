@@ -1,11 +1,14 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotelifoz/core/extensions/double_ext.dart';
-import 'package:hotelifoz/core/themes/colors.dart';
-import 'package:hotelifoz/core/themes/font_weight.dart';
-import 'package:hotelifoz/core/themes/icons.dart';
-import 'package:hotelifoz/core/themes/sizes.dart';
+import 'package:hotelifoz/core/constants/colors.dart';
+import 'package:hotelifoz/core/constants/font_weight.dart';
+import 'package:hotelifoz/core/constants/icons.dart';
+import 'package:hotelifoz/core/constants/sizes.dart';
 import 'package:hotelifoz/core/widgets/form_button.dart';
+import 'package:hotelifoz/features/bookmark/view_model/bookmark/bookmark_cubit.dart';
+import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_cubit.dart';
 import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
 import 'package:hotelifoz/features/home/presentation/widgets/header_detail_home.dart';
 
@@ -20,10 +23,18 @@ class DetailHotelPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    context.read<IsBookmarkCubit>().isBookmark(item);
+
     return Scaffold(
       body: ListView(
         children: [
-          HeaderDetailHome(item),
+          HeaderDetailHome(
+            item: item,
+            onSaved: (value) {
+              context.read<BookmarkCubit>().saveBookmark(value);
+              context.read<IsBookmarkCubit>().isBookmark(value);
+            },
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: AppSizes.primary),
             child: SizedBox(
