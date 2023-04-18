@@ -1,17 +1,25 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+
 import 'package:hotelifoz/core/extensions/build_context_ext.dart';
 import 'package:hotelifoz/core/extensions/double_ext.dart';
-import 'package:hotelifoz/core/themes/colors.dart';
-import 'package:hotelifoz/core/themes/font_weight.dart';
-import 'package:hotelifoz/core/themes/icons.dart';
-import 'package:hotelifoz/core/themes/sizes.dart';
+import 'package:hotelifoz/core/constants/colors.dart';
+import 'package:hotelifoz/core/constants/font_weight.dart';
+import 'package:hotelifoz/core/constants/icons.dart';
+import 'package:hotelifoz/core/constants/sizes.dart';
+import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_cubit.dart';
 import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
 
 class HeaderDetailHome extends StatelessWidget {
   final HotelEntity item;
+  final void Function(HotelEntity item) onSaved;
 
-  const HeaderDetailHome(this.item, {super.key});
+  const HeaderDetailHome({
+    required this.item,
+    required this.onSaved,
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -92,16 +100,16 @@ class HeaderDetailHome extends StatelessWidget {
                     SizedBox(
                       width: 40.0,
                       child: IconButton(
-                        onPressed: () {},
-                        // icon: const ImageIcon(
-                        //   AppIcons.notSaved,
-                        //   size: 18.0,
-                        //   color: AppColors.white,
-                        // ),
-                        icon: const ImageIcon(
-                          AppIcons.saved,
-                          size: 18.0,
-                          color: AppColors.primary,
+                        onPressed: () => onSaved(item),
+                        icon: BlocBuilder<IsBookmarkCubit, bool>(
+                          builder: (context, state) {
+                            return ImageIcon(
+                              state ? AppIcons.saved : AppIcons.notSaved,
+                              size: 18.0,
+                              color:
+                                  state ? AppColors.primary : AppColors.white,
+                            );
+                          },
                         ),
                       ),
                     ),

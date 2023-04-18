@@ -1,7 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:flutter/material.dart';
-import 'package:hotelifoz/core/themes/colors.dart';
+import 'package:hotelifoz/core/constants/colors.dart';
 import 'package:hotelifoz/features/home/presentation/cubit/page_cubit.dart';
 
 class BottomNavItem extends StatelessWidget {

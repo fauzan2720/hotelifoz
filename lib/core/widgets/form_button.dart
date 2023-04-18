@@ -1,6 +1,6 @@
-import 'package:hotelifoz/core/themes/sizes.dart';
+import 'package:hotelifoz/core/constants/sizes.dart';
 
-import '/core/themes/colors.dart';
+import '../constants/colors.dart';
 import 'package:flutter/material.dart';
 
 class FozFormButton extends StatelessWidget {

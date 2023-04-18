@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotelifoz/core/themes/box_shadows.dart';
-import 'package:hotelifoz/core/themes/colors.dart';
-import 'package:hotelifoz/core/themes/icons.dart';
-import 'package:hotelifoz/core/themes/sizes.dart';
+import 'package:hotelifoz/core/constants/box_shadows.dart';
+import 'package:hotelifoz/core/constants/colors.dart';
+import 'package:hotelifoz/core/constants/icons.dart';
+import 'package:hotelifoz/core/constants/sizes.dart';
+import 'package:hotelifoz/features/bookmark/view/pages/bookmark_page.dart';
 import 'package:hotelifoz/features/home/presentation/cubit/page_cubit.dart';
 import 'package:hotelifoz/features/home/presentation/pages/home_page.dart';
-import 'package:hotelifoz/features/home/presentation/pages/saved_destinations_page.dart';
 import 'package:hotelifoz/features/home/presentation/widgets/bottom_nav_item.dart';
 
 class MainPage extends StatelessWidget {
@@ -22,7 +22,7 @@ class MainPage extends StatelessWidget {
           child: Text("Maps Page"),
         );
       case 2:
-        return const SavedDestinationsPage();
+        return const BookmarkPage();
       case 3:
         return const Center(
           child: Text("Info Page"),
