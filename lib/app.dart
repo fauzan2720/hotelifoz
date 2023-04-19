@@ -37,7 +37,9 @@ class App extends StatelessWidget {
     BlocProvider<PageCubit>(create: (context) => di.locator<PageCubit>()),
     BlocProvider<HotelCubit>(create: (context) => di.locator<HotelCubit>()),
     BlocProvider<SearchCubit>(create: (context) => di.locator<SearchCubit>()),
-    BlocProvider<BookmarkCubit>(create: (context) => BookmarkCubit()),
-    BlocProvider<IsBookmarkCubit>(create: (context) => IsBookmarkCubit()),
+    BlocProvider<BookmarkCubit>(
+        create: (context) => di.locator<BookmarkCubit>()),
+    BlocProvider<IsBookmarkCubit>(
+        create: (context) => di.locator<IsBookmarkCubit>()),
   ];
 }

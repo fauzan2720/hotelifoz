@@ -32,7 +32,7 @@ class DetailHotelPage extends StatelessWidget {
             item: item,
             onSaved: (value) {
               context.read<BookmarkCubit>().saveBookmark(value);
-              context.read<IsBookmarkCubit>().isBookmark(value);
+              context.read<IsBookmarkCubit>().isBookmark(item);
             },
           ),
           Padding(

@@ -4,9 +4,9 @@ import 'package:hotelifoz/features/bookmark/model/services/bookmark_local_servic
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 
 class IsBookmarkCubit extends Cubit<bool> {
-  final BookmarkLocalService _service = BookmarkLocalService();
+  final BookmarkLocalServiceImpl _service;
 
-  IsBookmarkCubit() : super(false);
+  IsBookmarkCubit(this._service) : super(false);
 
   void isBookmark(HotelModel hotel) {
     try {

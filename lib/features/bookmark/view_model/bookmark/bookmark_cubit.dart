@@ -7,10 +7,9 @@ import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 part 'bookmark_state.dart';
 
 class BookmarkCubit extends Cubit<BookmarkState> {
-  final BookmarkLocalService _service = BookmarkLocalService();
-  List<HotelModel> _bookmarks = [];
+  final BookmarkLocalServiceImpl _service;
 
-  BookmarkCubit() : super(BookmarkInitial()) {
+  BookmarkCubit(this._service) : super(BookmarkInitial()) {
     initData();
   }
 
@@ -19,10 +18,7 @@ class BookmarkCubit extends Cubit<BookmarkState> {
     final response = await _service.getBookmarks();
     response.fold(
       (failed) => emit(BookmarkError(failed)),
-      (result) {
-        _bookmarks = result;
-        emit(BookmarkSuccess(_bookmarks));
-      },
+      (result) => emit(BookmarkSuccess(result)),
     );
   }
 
@@ -30,9 +26,7 @@ class BookmarkCubit extends Cubit<BookmarkState> {
     final response = await _service.saveBookmark(hotel);
     response.fold(
       (failed) => emit(BookmarkError(failed)),
-      (result) {
-        initData();
-      },
+      (result) => initData(),
     );
   }
 }
