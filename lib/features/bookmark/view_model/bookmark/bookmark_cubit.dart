@@ -2,13 +2,13 @@ import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'package:hotelifoz/features/bookmark/model/services/bookmark_local_service.dart';
-import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
+import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 
 part 'bookmark_state.dart';
 
 class BookmarkCubit extends Cubit<BookmarkState> {
   final BookmarkLocalService _service = BookmarkLocalService();
-  List<HotelEntity> _bookmarks = [];
+  List<HotelModel> _bookmarks = [];
 
   BookmarkCubit() : super(BookmarkInitial()) {
     initData();
@@ -26,7 +26,7 @@ class BookmarkCubit extends Cubit<BookmarkState> {
     );
   }
 
-  void saveBookmark(HotelEntity hotel) async {
+  void saveBookmark(HotelModel hotel) async {
     final response = await _service.saveBookmark(hotel);
     response.fold(
       (failed) => emit(BookmarkError(failed)),

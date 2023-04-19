@@ -9,13 +9,13 @@ import 'package:hotelifoz/core/constants/sizes.dart';
 import 'package:hotelifoz/core/widgets/error.dart';
 import 'package:hotelifoz/core/widgets/form_input.dart';
 import 'package:hotelifoz/core/widgets/loading.dart';
-import 'package:hotelifoz/features/home/presentation/cubit/hotel_cubit.dart';
-import 'package:hotelifoz/features/home/presentation/pages/detail_hotel_page.dart';
-import 'package:hotelifoz/features/home/presentation/pages/search_hotel_page.dart';
-import 'package:hotelifoz/features/home/presentation/pages/see_all_hotel_page.dart';
-import 'package:hotelifoz/features/home/presentation/widgets/nearby_card.dart';
-import 'package:hotelifoz/features/home/presentation/widgets/popular_card.dart';
-import 'package:hotelifoz/features/home/presentation/widgets/title_in_card.dart';
+import 'package:hotelifoz/features/home/view/pages/detail_hotel_page.dart';
+import 'package:hotelifoz/features/home/view/pages/search_hotel_page.dart';
+import 'package:hotelifoz/features/home/view/pages/see_all_hotel_page.dart';
+import 'package:hotelifoz/features/home/view/widgets/nearby_card.dart';
+import 'package:hotelifoz/features/home/view/widgets/popular_card.dart';
+import 'package:hotelifoz/features/home/view/widgets/title_in_card.dart';
+import 'package:hotelifoz/features/home/view_model/hotel/hotel_cubit.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

@@ -8,15 +8,15 @@ import 'package:hotelifoz/core/constants/font_weight.dart';
 import 'package:hotelifoz/core/constants/icons.dart';
 import 'package:hotelifoz/core/constants/sizes.dart';
 import 'package:hotelifoz/core/widgets/form_input.dart';
-import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
-import 'package:hotelifoz/features/home/presentation/pages/detail_hotel_page.dart';
-import 'package:hotelifoz/features/home/presentation/pages/search_hotel_page.dart';
-import 'package:hotelifoz/features/home/presentation/widgets/see_all_hotel_card.dart';
+import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
+import 'package:hotelifoz/features/home/view/pages/detail_hotel_page.dart';
+import 'package:hotelifoz/features/home/view/pages/search_hotel_page.dart';
+import 'package:hotelifoz/features/home/view/widgets/see_all_hotel_card.dart';
 
 class SeeAllHotelPage extends StatelessWidget {
   static const String routeName = 'see_all_page';
   final String title;
-  final List<HotelEntity> hotels;
+  final List<HotelModel> hotels;
 
   const SeeAllHotelPage({
     required this.title,

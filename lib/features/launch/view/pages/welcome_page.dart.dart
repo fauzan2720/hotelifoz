@@ -5,7 +5,7 @@ import 'package:hotelifoz/core/constants/font_weight.dart';
 import 'package:hotelifoz/core/constants/images.dart';
 import 'package:hotelifoz/core/constants/sizes.dart';
 import 'package:hotelifoz/core/widgets/form_button.dart';
-import 'package:hotelifoz/features/home/presentation/pages/main_page.dart';
+import 'package:hotelifoz/features/home/view/pages/main_page.dart';
 
 class WelcomePage extends StatelessWidget {
   static const routeName = 'welcome_page';

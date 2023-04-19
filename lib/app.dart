@@ -5,9 +5,9 @@ import 'package:hotelifoz/core/utils/injector.dart' as di;
 import 'package:hotelifoz/core/constants/colors.dart';
 import 'package:hotelifoz/features/bookmark/view_model/bookmark/bookmark_cubit.dart';
 import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_cubit.dart';
-import 'package:hotelifoz/features/home/presentation/cubit/hotel_cubit.dart';
-import 'package:hotelifoz/features/home/presentation/cubit/page_cubit.dart';
-import 'package:hotelifoz/features/home/presentation/cubit/search_cubit.dart';
+import 'package:hotelifoz/features/home/view_model/hotel/hotel_cubit.dart';
+import 'package:hotelifoz/features/home/view_model/page/page_cubit.dart';
+import 'package:hotelifoz/features/home/view_model/search/search_cubit.dart';
 import 'package:hotelifoz/features/launch/view/pages/splash_page.dart';
 import 'package:hotelifoz/routes/routes.dart';
 
@@ -34,7 +34,7 @@ class App extends StatelessWidget {
   }
 
   static final List<BlocProvider> _providers = [
-    BlocProvider<PageCubit>(create: (context) => PageCubit()),
+    BlocProvider<PageCubit>(create: (context) => di.locator<PageCubit>()),
     BlocProvider<HotelCubit>(create: (context) => di.locator<HotelCubit>()),
     BlocProvider<SearchCubit>(create: (context) => di.locator<SearchCubit>()),
     BlocProvider<BookmarkCubit>(create: (context) => BookmarkCubit()),

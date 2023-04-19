@@ -1,13 +1,13 @@
 import 'dart:convert';
 
 import 'package:flutter/services.dart';
-import 'package:hotelifoz/features/home/data/models/hotel_response_model.dart';
+import 'package:hotelifoz/features/home/model/models/hotel_response_model.dart';
 
-abstract class HotelLocalDatasource {
+abstract class HotelLocalService {
   Future<List<HotelResponseModel>> getHotels();
 }
 
-class HotelLocalDatasourceImpl implements HotelLocalDatasource {
+class HotelLocalServiceImpl implements HotelLocalService {
   @override
   Future<List<HotelResponseModel>> getHotels() async {
     const String path = 'assets/dataset/traveloka.json';

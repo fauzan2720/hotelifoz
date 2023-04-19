@@ -12,7 +12,7 @@ class BookmarkInitial extends BookmarkState {}
 class BookmarkLoading extends BookmarkState {}
 
 class BookmarkSuccess extends BookmarkState {
-  final List<HotelEntity> data;
+  final List<HotelModel> data;
 
   const BookmarkSuccess(this.data);
 

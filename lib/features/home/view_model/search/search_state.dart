@@ -14,7 +14,7 @@ class SearchLoading extends SearchState {}
 class SearchEmpty extends SearchState {}
 
 class SearchResult extends SearchState {
-  final List<HotelEntity> result;
+  final List<HotelModel> result;
 
   const SearchResult({
     required this.result,

@@ -1,6 +1,6 @@
 import 'package:hotelifoz/core/extensions/int_ext.dart';
 
-class HotelEntity {
+class HotelModel {
   final String id;
   final String name;
   final String address;
@@ -12,7 +12,7 @@ class HotelEntity {
   final List<String> features;
   final List<String> images;
 
-  HotelEntity({
+  HotelModel({
     required this.id,
     required this.name,
     required this.address,
@@ -28,8 +28,8 @@ class HotelEntity {
   String get currencyFormat => price.currencyFormatIDR;
   String get totalReviewsFormat => totalReviews.numberFormat;
 
-  factory HotelEntity.fromMap(Map<String, dynamic> map) {
-    return HotelEntity(
+  factory HotelModel.fromMap(Map<String, dynamic> map) {
+    return HotelModel(
       id: map['id'] ?? '',
       name: map['name'] ?? '',
       address: map['address'] ?? '',

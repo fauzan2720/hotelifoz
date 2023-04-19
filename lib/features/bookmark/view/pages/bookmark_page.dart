@@ -10,7 +10,7 @@ import 'package:hotelifoz/core/widgets/loading.dart';
 import 'package:hotelifoz/features/bookmark/view_model/bookmark/bookmark_cubit.dart';
 import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_cubit.dart';
 import 'package:hotelifoz/features/bookmark/view/widgets/bookmark_card.dart';
-import 'package:hotelifoz/features/home/presentation/pages/detail_hotel_page.dart';
+import 'package:hotelifoz/features/home/view/pages/detail_hotel_page.dart';
 
 class BookmarkPage extends StatelessWidget {
   const BookmarkPage({super.key});

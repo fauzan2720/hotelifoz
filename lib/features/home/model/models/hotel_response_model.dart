@@ -1,4 +1,4 @@
-import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
+import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 
 class HotelResponseModel {
   String? id;
@@ -37,8 +37,8 @@ class HotelResponseModel {
     this.hotelSeoUrl,
   });
 
-  HotelEntity toEntity() {
-    return HotelEntity(
+  HotelModel toEntity() {
+    return HotelModel(
       id: id ?? '',
       name: name ?? '',
       address: region ?? '',

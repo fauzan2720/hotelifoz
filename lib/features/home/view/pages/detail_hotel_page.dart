@@ -9,12 +9,12 @@ import 'package:hotelifoz/core/constants/sizes.dart';
 import 'package:hotelifoz/core/widgets/form_button.dart';
 import 'package:hotelifoz/features/bookmark/view_model/bookmark/bookmark_cubit.dart';
 import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_cubit.dart';
-import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
-import 'package:hotelifoz/features/home/presentation/widgets/header_detail_home.dart';
+import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
+import 'package:hotelifoz/features/home/view/widgets/header_detail_home.dart';
 
 class DetailHotelPage extends StatelessWidget {
   static const String routeName = 'detail_hotel_page';
-  final HotelEntity item;
+  final HotelModel item;
 
   const DetailHotelPage({
     required this.item,
