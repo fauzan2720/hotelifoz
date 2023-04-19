@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:dartz/dartz.dart';
 import 'package:hotelifoz/core/sessions/session.dart';
 import 'package:hotelifoz/features/bookmark/model/models/bookmark_query.dart';
-import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
+import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 
 class BookmarkLocalService {
   List _bookmarks = mainStorage.get("bookmarks") ?? [];
@@ -12,7 +12,7 @@ class BookmarkLocalService {
     await mainStorage.put("bookmarks", _bookmarks);
   }
 
-  isBookmark(HotelEntity hotel) {
+  isBookmark(HotelModel hotel) {
     if (_bookmarks.indexWhere((element) => element["id"] == hotel.id) == -1) {
       return false;
     } else {
@@ -20,7 +20,7 @@ class BookmarkLocalService {
     }
   }
 
-  Future<Either<String, List<HotelEntity>>> getBookmarks() async {
+  Future<Either<String, List<HotelModel>>> getBookmarks() async {
     try {
       List<Map<String, dynamic>> result = [];
 
@@ -30,13 +30,13 @@ class BookmarkLocalService {
       }
       _bookmarks = result;
 
-      return Right(_bookmarks.map((e) => HotelEntity.fromMap(e)).toList());
+      return Right(_bookmarks.map((e) => HotelModel.fromMap(e)).toList());
     } catch (e) {
       return Left(e.toString());
     }
   }
 
-  Future<Either<String, HotelEntity>> saveBookmark(HotelEntity hotel) async {
+  Future<Either<String, HotelModel>> saveBookmark(HotelModel hotel) async {
     try {
       if (!isBookmark(hotel)) {
         _bookmarks.add(BookmarkQuery(

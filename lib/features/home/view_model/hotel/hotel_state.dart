@@ -12,9 +12,9 @@ class HotelInitial extends HotelState {}
 class HotelLoading extends HotelState {}
 
 class HotelSuccess extends HotelState {
-  final List<HotelEntity> nearby;
-  final List<HotelEntity> popular;
-  final List<HotelEntity> lowBudget;
+  final List<HotelModel> nearby;
+  final List<HotelModel> popular;
+  final List<HotelModel> lowBudget;
 
   const HotelSuccess({
     required this.nearby,

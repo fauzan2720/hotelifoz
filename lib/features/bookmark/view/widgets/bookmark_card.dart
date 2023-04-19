@@ -7,12 +7,12 @@ import 'package:hotelifoz/core/constants/colors.dart';
 import 'package:hotelifoz/core/constants/font_weight.dart';
 import 'package:hotelifoz/core/constants/icons.dart';
 import 'package:hotelifoz/core/constants/sizes.dart';
-import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
+import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 
 class BookmarkCard extends StatelessWidget {
-  final HotelEntity item;
-  final void Function(HotelEntity item) onSelectedItem;
-  final void Function(HotelEntity item) onBookmarkTap;
+  final HotelModel item;
+  final void Function(HotelModel item) onSelectedItem;
+  final void Function(HotelModel item) onBookmarkTap;
 
   const BookmarkCard({
     required this.item,

@@ -9,11 +9,11 @@ import 'package:hotelifoz/core/constants/font_weight.dart';
 import 'package:hotelifoz/core/constants/icons.dart';
 import 'package:hotelifoz/core/constants/sizes.dart';
 import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_cubit.dart';
-import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
+import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 
 class HeaderDetailHome extends StatelessWidget {
-  final HotelEntity item;
-  final void Function(HotelEntity item) onSaved;
+  final HotelModel item;
+  final void Function(HotelModel item) onSaved;
 
   const HeaderDetailHome({
     required this.item,

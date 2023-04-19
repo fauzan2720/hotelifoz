@@ -5,9 +5,9 @@ import 'package:hotelifoz/core/constants/colors.dart';
 import 'package:hotelifoz/core/constants/icons.dart';
 import 'package:hotelifoz/core/constants/sizes.dart';
 import 'package:hotelifoz/features/bookmark/view/pages/bookmark_page.dart';
-import 'package:hotelifoz/features/home/presentation/cubit/page_cubit.dart';
-import 'package:hotelifoz/features/home/presentation/pages/home_page.dart';
-import 'package:hotelifoz/features/home/presentation/widgets/bottom_nav_item.dart';
+import 'package:hotelifoz/features/home/view/pages/home_page.dart';
+import 'package:hotelifoz/features/home/view/widgets/bottom_nav_item.dart';
+import 'package:hotelifoz/features/home/view_model/page/page_cubit.dart';
 
 class MainPage extends StatelessWidget {
   static const String routeName = 'main_page';

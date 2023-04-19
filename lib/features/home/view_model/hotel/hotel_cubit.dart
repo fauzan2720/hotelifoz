@@ -1,29 +1,26 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotelifoz/features/home/domain/entities/hotel_entity.dart';
-
-import 'package:hotelifoz/features/home/domain/usecases/get_hotels.dart';
+import 'package:hotelifoz/features/home/model/repositories/hotel_repository.dart';
+import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 
 part 'hotel_state.dart';
 
 class HotelCubit extends Cubit<HotelState> {
-  final GetHotels getHotelsCase;
+  final HotelRepository _repository;
 
-  HotelCubit(
-    this.getHotelsCase,
-  ) : super(HotelInitial()) {
+  HotelCubit(this._repository) : super(HotelInitial()) {
     initData();
   }
 
   void initData() async {
     emit(HotelLoading());
-    final response = await getHotelsCase.execute();
+    final response = await _repository.getHotels();
     response.fold(
       (failed) => emit(HotelError(failed)),
       (result) {
-        List<HotelEntity> nearby = result.toList();
-        List<HotelEntity> popular = result.toList();
-        List<HotelEntity> lowBudget = result.toList();
+        List<HotelModel> nearby = result.toList();
+        List<HotelModel> popular = result.toList();
+        List<HotelModel> lowBudget = result.toList();
 
         // nearby.sort((a, b) => b.rating.compareTo(a.rating));
         popular.sort((a, b) => b.rating.compareTo(a.rating));
