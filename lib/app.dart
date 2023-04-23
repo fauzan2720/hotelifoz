@@ -9,6 +9,10 @@ import 'package:hotelifoz/features/home/view_model/hotel/hotel_cubit.dart';
 import 'package:hotelifoz/features/home/view_model/page/page_cubit.dart';
 import 'package:hotelifoz/features/home/view_model/search/search_cubit.dart';
 import 'package:hotelifoz/features/launch/view/pages/splash_page.dart';
+import 'package:hotelifoz/features/reservation/view_model/checkout/checkout_cubit.dart';
+import 'package:hotelifoz/features/reservation/view_model/count_guest/count_guest_cubit.dart';
+import 'package:hotelifoz/features/reservation/view_model/length_of_stay/length_of_stay_cubit.dart';
+import 'package:hotelifoz/features/reservation/view_model/payment_selected/payment_selected_cubit.dart';
 import 'package:hotelifoz/routes/routes.dart';
 
 class App extends StatelessWidget {
@@ -41,5 +45,13 @@ class App extends StatelessWidget {
         create: (context) => di.locator<BookmarkCubit>()),
     BlocProvider<IsBookmarkCubit>(
         create: (context) => di.locator<IsBookmarkCubit>()),
+    BlocProvider<CountGuestCubit>(
+        create: (context) => di.locator<CountGuestCubit>()),
+    BlocProvider<LengthOfStayCubit>(
+        create: (context) => di.locator<LengthOfStayCubit>()),
+    BlocProvider<PaymentSelectedCubit>(
+        create: (context) => di.locator<PaymentSelectedCubit>()),
+    BlocProvider<CheckoutCubit>(
+        create: (context) => di.locator<CheckoutCubit>()),
   ];
 }

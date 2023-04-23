@@ -25,7 +25,8 @@ class HotelModel {
     required this.images,
   });
 
-  String get currencyFormat => price.currencyFormatIDR;
+  String get currencyFormatIDR => price.currencyFormatIDR;
+  String get currencyFormatRp => price.currencyFormatRp;
   String get totalReviewsFormat => totalReviews.numberFormat;
 
   factory HotelModel.fromMap(Map<String, dynamic> map) {

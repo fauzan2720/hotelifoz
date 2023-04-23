@@ -114,7 +114,7 @@ class NearbyCard extends StatelessWidget {
                   8.0.height,
                   Text.rich(
                     TextSpan(
-                      text: item.currencyFormat,
+                      text: item.currencyFormatIDR,
                       style: const TextStyle(
                         fontWeight: FW.semibold,
                         color: AppColors.primary,

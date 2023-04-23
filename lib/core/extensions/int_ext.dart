@@ -7,6 +7,12 @@ extension StringExt on int {
         decimalDigits: 0,
       ).format(this);
 
+  String get currencyFormatRp => NumberFormat.currency(
+        locale: 'id',
+        symbol: 'Rp ',
+        decimalDigits: 0,
+      ).format(this);
+
   String get numberFormat => NumberFormat.currency(
         locale: 'id',
         symbol: '',

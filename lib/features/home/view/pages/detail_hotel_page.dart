@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hotelifoz/core/extensions/build_context_ext.dart';
 import 'package:hotelifoz/core/extensions/double_ext.dart';
 import 'package:hotelifoz/core/constants/colors.dart';
 import 'package:hotelifoz/core/constants/font_weight.dart';
@@ -11,6 +12,7 @@ import 'package:hotelifoz/features/bookmark/view_model/bookmark/bookmark_cubit.d
 import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_cubit.dart';
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 import 'package:hotelifoz/features/home/view/widgets/header_detail_home.dart';
+import 'package:hotelifoz/features/reservation/view/pages/checkout_schedule.dart';
 
 class DetailHotelPage extends StatelessWidget {
   static const String routeName = 'detail_hotel_page';
@@ -153,7 +155,7 @@ class DetailHotelPage extends StatelessWidget {
               children: [
                 Text.rich(
                   TextSpan(
-                    text: item.currencyFormat,
+                    text: item.currencyFormatIDR,
                     style: const TextStyle(
                       fontWeight: FW.semibold,
                       color: AppColors.primary,
@@ -181,7 +183,9 @@ class DetailHotelPage extends StatelessWidget {
             ),
             FozFormButton(
               label: "Book Now",
-              onPressed: () {},
+              onPressed: () => context.push(CheckoutSchedule(
+                hotel: item,
+              )),
             ),
           ],
         ),

@@ -7,6 +7,10 @@ import 'package:hotelifoz/features/home/model/repositories/hotel_repository.dart
 import 'package:hotelifoz/features/home/view_model/hotel/hotel_cubit.dart';
 import 'package:hotelifoz/features/home/view_model/page/page_cubit.dart';
 import 'package:hotelifoz/features/home/view_model/search/search_cubit.dart';
+import 'package:hotelifoz/features/reservation/view_model/checkout/checkout_cubit.dart';
+import 'package:hotelifoz/features/reservation/view_model/count_guest/count_guest_cubit.dart';
+import 'package:hotelifoz/features/reservation/view_model/length_of_stay/length_of_stay_cubit.dart';
+import 'package:hotelifoz/features/reservation/view_model/payment_selected/payment_selected_cubit.dart';
 
 final locator = GetIt.instance;
 
@@ -17,6 +21,10 @@ void init() {
   locator.registerFactory(() => SearchCubit(locator()));
   locator.registerFactory(() => BookmarkCubit(locator()));
   locator.registerFactory(() => IsBookmarkCubit(locator()));
+  locator.registerFactory(() => CountGuestCubit());
+  locator.registerFactory(() => LengthOfStayCubit());
+  locator.registerFactory(() => PaymentSelectedCubit());
+  locator.registerFactory(() => CheckoutCubit());
 
   // repository
   locator.registerLazySingleton<HotelRepository>(

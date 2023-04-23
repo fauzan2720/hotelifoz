@@ -31,4 +31,5 @@ flutter:
   assets:
     - assets/dataset/traveloka.json
     - assets/images/
+    - assets/images/payment/
     - assets/icons/

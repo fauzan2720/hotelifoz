@@ -102,7 +102,7 @@ class SeeAllHotelCard extends StatelessWidget {
                   ),
                   Text.rich(
                     TextSpan(
-                      text: item.currencyFormat,
+                      text: item.currencyFormatIDR,
                       style: const TextStyle(
                         fontWeight: FW.semibold,
                         color: AppColors.primary,
