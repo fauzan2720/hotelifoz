@@ -1,4 +1,4 @@
-import 'package:hive/hive.dart';
+part of 'package:hotelifoz/core.dart';
 
 late Box mainStorage;
 

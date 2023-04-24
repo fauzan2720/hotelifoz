@@ -1,4 +1,4 @@
-import 'package:hotelifoz/core/extensions/int_ext.dart';
+import 'package:hotelifoz/core.dart';
 
 class HotelModel {
   final String id;

@@ -1,7 +1,4 @@
-import 'package:hotelifoz/core/constants/sizes.dart';
-
-import '../constants/colors.dart';
-import 'package:flutter/material.dart';
+part of 'package:hotelifoz/core.dart';
 
 class FozFormButton extends StatelessWidget {
   final String label;

@@ -1,21 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotelifoz/core/extensions/build_context_ext.dart';
-import 'package:hotelifoz/core/extensions/double_ext.dart';
-import 'package:hotelifoz/core/sessions/session.dart';
-import 'package:hotelifoz/core/constants/colors.dart';
-import 'package:hotelifoz/core/constants/icons.dart';
-import 'package:hotelifoz/core/constants/sizes.dart';
-import 'package:hotelifoz/core/widgets/error.dart';
-import 'package:hotelifoz/core/widgets/form_input.dart';
-import 'package:hotelifoz/core/widgets/loading.dart';
+import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/home/view/pages/detail_hotel_page.dart';
 import 'package:hotelifoz/features/home/view/pages/search_hotel_page.dart';
 import 'package:hotelifoz/features/home/view/pages/see_all_hotel_page.dart';
 import 'package:hotelifoz/features/home/view/widgets/nearby_card.dart';
 import 'package:hotelifoz/features/home/view/widgets/popular_card.dart';
 import 'package:hotelifoz/features/home/view/widgets/title_in_card.dart';
-import 'package:hotelifoz/features/home/view_model/hotel/hotel_cubit.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'package:hotelifoz/core.dart';
 
 class AppIcons {
   static const home = AssetImage("assets/icons/home.png");

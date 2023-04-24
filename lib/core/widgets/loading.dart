@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'package:hotelifoz/core.dart';
 
 class FozLoading extends StatelessWidget {
   const FozLoading({super.key});

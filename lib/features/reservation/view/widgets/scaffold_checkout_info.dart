@@ -1,13 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotelifoz/core/constants/colors.dart';
-import 'package:hotelifoz/core/constants/font_weight.dart';
-import 'package:hotelifoz/core/constants/sizes.dart';
-import 'package:hotelifoz/core/extensions/int_ext.dart';
-import 'package:hotelifoz/core/widgets/form_button.dart';
+import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
-import 'package:hotelifoz/features/reservation/view_model/count_guest/count_guest_cubit.dart';
-import 'package:hotelifoz/features/reservation/view_model/length_of_stay/length_of_stay_cubit.dart';
 
 class ScaffoldCheckoutInfo extends StatelessWidget {
   final HotelModel hotel;

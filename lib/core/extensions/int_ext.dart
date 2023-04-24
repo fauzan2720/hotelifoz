@@ -1,4 +1,4 @@
-import 'package:intl/intl.dart';
+part of 'package:hotelifoz/core.dart';
 
 extension StringExt on int {
   String get currencyFormatIDR => NumberFormat.currency(

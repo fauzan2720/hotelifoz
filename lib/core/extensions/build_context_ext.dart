@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'package:hotelifoz/core.dart';
 
 extension BuildContextExt on BuildContext {
   double get fullHeight => MediaQuery.of(this).size.height;

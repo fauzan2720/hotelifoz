@@ -1,24 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotelifoz/core/constants/colors.dart';
-import 'package:hotelifoz/core/constants/font_weight.dart';
-import 'package:hotelifoz/core/constants/sizes.dart';
-import 'package:hotelifoz/core/extensions/build_context_ext.dart';
-import 'package:hotelifoz/core/extensions/double_ext.dart';
-import 'package:hotelifoz/core/extensions/string_ext.dart';
-import 'package:hotelifoz/core/widgets/form_date_picker.dart';
+import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 import 'package:hotelifoz/features/reservation/view/pages/checkout_customer_detail.dart';
 import 'package:hotelifoz/features/reservation/view/widgets/scaffold_checkout_info.dart';
-import 'package:hotelifoz/features/reservation/view_model/count_guest/count_guest_cubit.dart';
-import 'package:hotelifoz/features/reservation/view_model/length_of_stay/length_of_stay_cubit.dart';
 
 class CheckoutSchedule extends StatelessWidget {
   final HotelModel hotel;
 
   const CheckoutSchedule({
-    required this.hotel,
     super.key,
+    required this.hotel,
   });
 
   @override

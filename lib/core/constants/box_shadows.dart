@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:hotelifoz/core/constants/colors.dart';
+part of 'package:hotelifoz/core.dart';
 
 class AppBoxShadow {
   static List<BoxShadow> primary = [

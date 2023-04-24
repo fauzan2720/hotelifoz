@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hotelifoz/core/constants/colors.dart';
-import 'package:hotelifoz/core/constants/sizes.dart';
-import 'package:hotelifoz/core/extensions/build_context_ext.dart';
-import 'package:hotelifoz/core/extensions/double_ext.dart';
-import 'package:hotelifoz/core/extensions/string_ext.dart';
-import 'package:hotelifoz/core/widgets/form_input.dart';
+import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 import 'package:hotelifoz/features/reservation/model/models/selecting_customer_status.dart';
 import 'package:hotelifoz/features/reservation/view/pages/checkout_payment.dart';
@@ -14,8 +9,8 @@ class CheckoutCustomerDetail extends StatelessWidget {
   final HotelModel hotel;
 
   const CheckoutCustomerDetail({
-    required this.hotel,
     super.key,
+    required this.hotel,
   });
 
   @override

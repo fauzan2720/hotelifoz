@@ -1,9 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:hotelifoz/core/constants/colors.dart';
-import 'package:hotelifoz/core/constants/font_weight.dart';
-import 'package:hotelifoz/core/constants/icons.dart';
-import 'package:hotelifoz/core/extensions/double_ext.dart';
-import 'package:intl/intl.dart';
+part of 'package:hotelifoz/core.dart';
 
 class FormDatePicker extends StatelessWidget {
   final String title;

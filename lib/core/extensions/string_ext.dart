@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:hotelifoz/core/constants/colors.dart';
+part of 'package:hotelifoz/core.dart';
 
 extension DialogExt on String {
   void succeedBar(BuildContext context) {

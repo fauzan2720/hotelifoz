@@ -1,18 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/core/utils/injector.dart' as di;
-import 'package:hotelifoz/core/constants/colors.dart';
-import 'package:hotelifoz/features/bookmark/view_model/bookmark/bookmark_cubit.dart';
-import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_cubit.dart';
-import 'package:hotelifoz/features/home/view_model/hotel/hotel_cubit.dart';
-import 'package:hotelifoz/features/home/view_model/page/page_cubit.dart';
-import 'package:hotelifoz/features/home/view_model/search/search_cubit.dart';
 import 'package:hotelifoz/features/launch/view/pages/splash_page.dart';
-import 'package:hotelifoz/features/reservation/view_model/checkout/checkout_cubit.dart';
-import 'package:hotelifoz/features/reservation/view_model/count_guest/count_guest_cubit.dart';
-import 'package:hotelifoz/features/reservation/view_model/length_of_stay/length_of_stay_cubit.dart';
-import 'package:hotelifoz/features/reservation/view_model/payment_selected/payment_selected_cubit.dart';
 import 'package:hotelifoz/routes/routes.dart';
 
 class App extends StatelessWidget {

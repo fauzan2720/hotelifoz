@@ -1,14 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotelifoz/core/extensions/build_context_ext.dart';
-import 'package:hotelifoz/core/extensions/double_ext.dart';
-import 'package:hotelifoz/core/constants/colors.dart';
-import 'package:hotelifoz/core/constants/font_weight.dart';
-import 'package:hotelifoz/core/constants/sizes.dart';
-import 'package:hotelifoz/core/widgets/error.dart';
-import 'package:hotelifoz/core/widgets/loading.dart';
-import 'package:hotelifoz/features/bookmark/view_model/bookmark/bookmark_cubit.dart';
-import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_cubit.dart';
+import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/bookmark/view/widgets/bookmark_card.dart';
 import 'package:hotelifoz/features/home/view/pages/detail_hotel_page.dart';
 

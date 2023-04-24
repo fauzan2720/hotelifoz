@@ -1,19 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotelifoz/core/constants/box_shadows.dart';
-import 'package:hotelifoz/core/constants/colors.dart';
-import 'package:hotelifoz/core/constants/icons.dart';
-import 'package:hotelifoz/core/constants/sizes.dart';
+import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/bookmark/view/pages/bookmark_page.dart';
 import 'package:hotelifoz/features/home/view/pages/home_page.dart';
 import 'package:hotelifoz/features/home/view/widgets/bottom_nav_item.dart';
-import 'package:hotelifoz/features/home/view_model/page/page_cubit.dart';
 
 class MainPage extends StatelessWidget {
   static const String routeName = 'main_page';
 
   const MainPage({super.key});
-  _handleBody(int currentIndex) {
+
+  Widget _handleBody(int currentIndex) {
     switch (currentIndex) {
       case 0:
         return const HomePage();

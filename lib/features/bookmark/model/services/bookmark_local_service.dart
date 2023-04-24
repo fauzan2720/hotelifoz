@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:dartz/dartz.dart';
-import 'package:hotelifoz/core/sessions/session.dart';
+import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/bookmark/model/models/bookmark_query.dart';
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
 

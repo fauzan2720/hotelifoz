@@ -1,19 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotelifoz/core/extensions/build_context_ext.dart';
-import 'package:hotelifoz/core/extensions/double_ext.dart';
-import 'package:hotelifoz/core/constants/colors.dart';
-import 'package:hotelifoz/core/constants/icons.dart';
-import 'package:hotelifoz/core/constants/sizes.dart';
-import 'package:hotelifoz/core/widgets/empty.dart';
-import 'package:hotelifoz/core/widgets/error.dart';
-import 'package:hotelifoz/core/widgets/form_input.dart';
-import 'package:hotelifoz/core/widgets/loading.dart';
+import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/home/view/pages/detail_hotel_page.dart';
 import 'package:hotelifoz/features/home/view/pages/see_all_hotel_page.dart';
-import 'package:hotelifoz/features/home/view_model/hotel/hotel_cubit.dart';
-import 'package:hotelifoz/features/home/view_model/search/search_cubit.dart';
 
 class SearchHotelPage extends StatelessWidget {
   static const String routeName = 'search_hotel_page';
