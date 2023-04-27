@@ -31,8 +31,4 @@ class ReservationCubit extends Cubit<ReservationState> {
 
   Future<bool> checkout(ReservationModel query) async =>
       await _service.checkout(query);
-
-  int taxesAndFees(int price) => (price * (10 / 100)).toInt();
-
-  int totalPayment(int price) => price + taxesAndFees(price);
 }

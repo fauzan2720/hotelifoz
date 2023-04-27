@@ -32,6 +32,9 @@ class ReservationModel {
     this.createdAt,
   });
 
+  int get taxesAndFees => (price * (10 / 100)).toInt();
+  int get totalPayment => price + taxesAndFees;
+
   Map<String, dynamic> toMap() {
     return {
       'id': id,
@@ -47,12 +50,14 @@ class ReservationModel {
       'paymentMethod': paymentMethod.toMap(),
       'price': price,
       'createdAt': DateTime.now(),
+      'taxesAndFees': taxesAndFees,
+      'totalPayment': totalPayment,
     };
   }
 
   @override
   String toString() {
-    return 'ReservationModel(id: $id, hotel: $hotel, checkIn: $checkIn, checkOut: $checkOut, duration: $duration, guest: $guest, customerStatus: $customerStatus, customerName: $customerName, customerPhone: $customerPhone, customerEmail: $customerEmail, paymentMethod: $paymentMethod, price: $price, createdAt: $createdAt)';
+    return 'ReservationModel(id: $id, hotel: $hotel, checkIn: $checkIn, checkOut: $checkOut, duration: $duration, guest: $guest, customerStatus: $customerStatus, customerName: $customerName, customerPhone: $customerPhone, customerEmail: $customerEmail, paymentMethod: $paymentMethod, price: $price, taxesAndFees: $taxesAndFees, totalPayment: $totalPayment, createdAt: $createdAt)';
   }
 
   factory ReservationModel.fromMap(Map<String, dynamic> map) {

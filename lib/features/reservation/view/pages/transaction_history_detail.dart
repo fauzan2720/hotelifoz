@@ -1,6 +1,5 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/reservation/model/models/reservation_model.dart';
 import 'package:hotelifoz/features/reservation/view/widgets/detail_info_card.dart';
@@ -200,10 +199,7 @@ class TransactionHistoryDetail extends StatelessWidget {
                           ),
                           DetailInfoCard(
                             label: "Taxes & Fees (10%)",
-                            value: context
-                                .read<ReservationCubit>()
-                                .taxesAndFees(history.price)
-                                .currencyFormatIDR,
+                            value: history.taxesAndFees.currencyFormatIDR,
                           ),
                         ],
                       ),
@@ -238,10 +234,7 @@ class TransactionHistoryDetail extends StatelessWidget {
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
-                                    context
-                                        .read<ReservationCubit>()
-                                        .totalPayment(history.price)
-                                        .currencyFormatIDR,
+                                    history.totalPayment.currencyFormatIDR,
                                     style: const TextStyle(
                                       fontSize: 18.0,
                                       fontWeight: FW.semibold,

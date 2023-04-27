@@ -179,10 +179,7 @@ class CheckoutDetail extends StatelessWidget {
                   ),
                   DetailInfoCard(
                     label: "Taxes & Fees (10%)",
-                    value: context
-                        .read<ReservationCubit>()
-                        .taxesAndFees(query.price)
-                        .currencyFormatIDR,
+                    value: query.taxesAndFees.currencyFormatIDR,
                   ),
                 ],
               ),
@@ -238,10 +235,7 @@ class CheckoutDetail extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            context
-                                .read<ReservationCubit>()
-                                .totalPayment(query.price)
-                                .currencyFormatIDR,
+                            query.totalPayment.currencyFormatIDR,
                             style: const TextStyle(
                               fontSize: 18.0,
                               fontWeight: FW.semibold,
