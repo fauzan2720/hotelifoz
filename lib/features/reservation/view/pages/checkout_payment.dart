@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
-import 'package:hotelifoz/features/reservation/model/models/checkout_query.dart';
+import 'package:hotelifoz/features/reservation/model/models/reservation_model.dart';
 import 'package:hotelifoz/features/reservation/model/models/payment_model.dart';
 import 'package:hotelifoz/features/reservation/view/pages/checkout_detail.dart';
 import 'package:hotelifoz/features/reservation/view/widgets/scaffold_checkout_info.dart';
@@ -60,7 +60,7 @@ class CheckoutPayment extends StatelessWidget {
       title: "Pembayaran",
       onNextTap: (state) {
         if (state > 0 && context.read<PaymentSelectedCubit>().state != -1) {
-          final CheckoutQuery query = CheckoutQuery(
+          final ReservationModel query = ReservationModel(
             id: const Uuid().v4(),
             hotel: hotel,
             checkIn: context.read<LengthOfStayCubit>().checkInSelected!,

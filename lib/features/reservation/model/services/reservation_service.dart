@@ -1,10 +1,14 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:hotelifoz/features/reservation/model/models/checkout_query.dart';
+import 'package:hotelifoz/features/reservation/model/models/reservation_model.dart';
 
 class ReservationService {
   FirebaseFirestore firestore = FirebaseFirestore.instance;
 
-  Future<bool> checkout(CheckoutQuery query) async {
+  Stream<QuerySnapshot> getReservationStream() {
+    return firestore.collection("reservations").snapshots();
+  }
+
+  Future<bool> checkout(ReservationModel query) async {
     try {
       firestore
           .collection('reservations')

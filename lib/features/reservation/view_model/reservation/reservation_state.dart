@@ -14,9 +14,7 @@ class ReservationLoading extends ReservationState {}
 class ReservationSuccess extends ReservationState {
   final List<ReservationModel> data;
 
-  const ReservationSuccess({
-    required this.data,
-  });
+  const ReservationSuccess(this.data);
 
   @override
   List<Object> get props => [data];

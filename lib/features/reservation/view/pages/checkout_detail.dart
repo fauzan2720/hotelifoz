@@ -2,11 +2,11 @@ import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotelifoz/core.dart';
-import 'package:hotelifoz/features/reservation/model/models/checkout_query.dart';
+import 'package:hotelifoz/features/reservation/model/models/reservation_model.dart';
 import 'package:hotelifoz/features/reservation/view/widgets/detail_info_card.dart';
 
 class CheckoutDetail extends StatelessWidget {
-  final CheckoutQuery query;
+  final ReservationModel query;
 
   const CheckoutDetail({
     super.key,
@@ -274,6 +274,7 @@ class CheckoutDetail extends StatelessWidget {
           if (response && context.mounted) {
             context.popToRoot();
             "Reservasi berhasil!".succeedBar(context);
+            context.read<PageCubit>().setPage(1);
           } else {
             "Oppss! ada yang salah".failedBar(context);
           }
