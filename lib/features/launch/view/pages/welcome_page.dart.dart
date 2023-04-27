@@ -71,6 +71,7 @@ class WelcomePage extends StatelessWidget {
                   label: "Get Started",
                   onPressed: () =>
                       context.pushReplacementNamed(MainPage.routeName),
+                  width: 200.0,
                 ),
               ],
             ),
