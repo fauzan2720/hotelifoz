@@ -20,10 +20,7 @@ class TransactionHistory extends StatelessWidget {
           return FozError(message: "Error: ${state.error}");
         } else if (state is ReservationSuccess) {
           if (state.data.isEmpty) {
-            return const Center(
-              heightFactor: 40.0,
-              child: Text("Data Kosong"),
-            );
+            return const FozEmpty();
           } else {
             return ListView.builder(
               itemCount: state.data.length,
