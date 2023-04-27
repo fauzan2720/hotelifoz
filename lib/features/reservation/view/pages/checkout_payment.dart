@@ -69,7 +69,8 @@ class CheckoutPayment extends StatelessWidget {
             customerName: customerName,
             customerPhone: customerPhone,
             customerEmail: customerEmail,
-            paymentMethod: paymentMethods[paymentMethodsIndex].name,
+            paymentMethod: paymentMethods[paymentMethodsIndex],
+            price: hotel.price * state,
           );
           context.push(CheckoutDetail(query: query));
         } else {

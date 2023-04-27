@@ -1,4 +1,5 @@
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
+import 'package:hotelifoz/features/reservation/model/models/payment_model.dart';
 
 class CheckoutQuery {
   final HotelModel hotel;
@@ -10,7 +11,8 @@ class CheckoutQuery {
   final String customerName;
   final String customerPhone;
   final String customerEmail;
-  final String paymentMethod;
+  final PaymentModel paymentMethod;
+  final int price;
 
   CheckoutQuery({
     required this.hotel,
@@ -23,10 +25,11 @@ class CheckoutQuery {
     required this.customerPhone,
     required this.customerEmail,
     required this.paymentMethod,
+    required this.price,
   });
 
   @override
   String toString() {
-    return 'CheckoutQuery(hotel: ${hotel.name}, checkIn: $checkIn, checkOut: $checkOut, duration: $duration, guest: $guest, customerStatus: $customerStatus, customerName: $customerName, customerPhone: $customerPhone, customerEmail: $customerEmail, paymentMethod: $paymentMethod)';
+    return 'CheckoutQuery(hotel: $hotel, checkIn: $checkIn, checkOut: $checkOut, duration: $duration, guest: $guest, customerStatus: $customerStatus, customerName: $customerName, customerPhone: $customerPhone, customerEmail: $customerEmail, paymentMethod: $paymentMethod, totalPayment: $price)';
   }
 }
