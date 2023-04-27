@@ -4,20 +4,34 @@ import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/bookmark/view/pages/bookmark_page.dart';
 import 'package:hotelifoz/features/home/view/pages/home_page.dart';
 import 'package:hotelifoz/features/home/view/widgets/bottom_nav_item.dart';
+import 'package:hotelifoz/features/reservation/view/pages/transaction_history.dart';
 
 class MainPage extends StatelessWidget {
   static const String routeName = 'main_page';
 
   const MainPage({super.key});
 
+  PreferredSizeWidget? _handleAppBar(int currentIndex) {
+    switch (currentIndex) {
+      case 1:
+        return AppBar(
+          title: const Text("My Booking"),
+        );
+      case 2:
+        return AppBar(
+          title: const Text("Saved Destinations"),
+        );
+      default:
+        return null;
+    }
+  }
+
   Widget _handleBody(int currentIndex) {
     switch (currentIndex) {
       case 0:
         return const HomePage();
       case 1:
-        return const Center(
-          child: Text("Maps Page"),
-        );
+        return const TransactionHistory();
       case 2:
         return const BookmarkPage();
       case 3:
@@ -34,6 +48,7 @@ class MainPage extends StatelessWidget {
     return BlocBuilder<PageCubit, int>(
       builder: (context, state) {
         return Scaffold(
+          appBar: _handleAppBar(state),
           body: Padding(
             padding: const EdgeInsets.only(bottom: 80.0),
             child: _handleBody(state),
