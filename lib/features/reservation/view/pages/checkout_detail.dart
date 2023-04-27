@@ -174,7 +174,7 @@ class CheckoutDetail extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   DetailInfoCard(
-                    label: "2 Malam",
+                    label: "${query.duration} Malam",
                     value: query.price.currencyFormatIDR,
                   ),
                   DetailInfoCard(

@@ -194,7 +194,7 @@ class TransactionHistoryDetail extends StatelessWidget {
                             value: "${history.guest} orang",
                           ),
                           DetailInfoCard(
-                            label: "2 Malam",
+                            label: "${history.duration} Malam",
                             value: history.price.currencyFormatIDR,
                           ),
                           DetailInfoCard(
