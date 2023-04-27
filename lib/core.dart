@@ -11,11 +11,11 @@ export 'package:hotelifoz/features/home/model/services/hotel_local_service.dart'
 export 'package:hotelifoz/features/home/view_model/hotel/hotel_cubit.dart';
 export 'package:hotelifoz/features/home/view_model/page/page_cubit.dart';
 export 'package:hotelifoz/features/home/view_model/search/search_cubit.dart';
-export 'package:hotelifoz/features/reservation/view_model/checkout/checkout_cubit.dart';
+export 'package:hotelifoz/features/reservation/model/services/reservation_service.dart';
+export 'package:hotelifoz/features/reservation/view_model/reservation/reservation_cubit.dart';
 export 'package:hotelifoz/features/reservation/view_model/count_guest/count_guest_cubit.dart';
 export 'package:hotelifoz/features/reservation/view_model/length_of_stay/length_of_stay_cubit.dart';
 export 'package:hotelifoz/features/reservation/view_model/payment_selected/payment_selected_cubit.dart';
-export 'package:hotelifoz/features/reservation/view_model/history/history_cubit.dart';
 
 part 'package:hotelifoz/core/constants/box_shadows.dart';
 part 'package:hotelifoz/core/constants/colors.dart';

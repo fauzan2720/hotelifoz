@@ -8,4 +8,12 @@ class PaymentModel {
     required this.name,
     required this.iconUrl,
   });
+
+  Map<String, dynamic> toMap() {
+    return {
+      'index': index,
+      'name': name,
+      'iconUrl': iconUrl,
+    };
+  }
 }

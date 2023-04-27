@@ -43,4 +43,19 @@ class HotelModel {
       images: List<String>.from(map['images']),
     );
   }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'address': address,
+      'price': price,
+      'rating': rating,
+      'totalReviews': totalReviews,
+      'imageUrl': imageUrl,
+      'facilities': facilities,
+      'features': features,
+      'images': images,
+    };
+  }
 }

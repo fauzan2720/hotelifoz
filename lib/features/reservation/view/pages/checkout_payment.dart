@@ -6,6 +6,7 @@ import 'package:hotelifoz/features/reservation/model/models/checkout_query.dart'
 import 'package:hotelifoz/features/reservation/model/models/payment_model.dart';
 import 'package:hotelifoz/features/reservation/view/pages/checkout_detail.dart';
 import 'package:hotelifoz/features/reservation/view/widgets/scaffold_checkout_info.dart';
+import 'package:uuid/uuid.dart';
 
 class CheckoutPayment extends StatelessWidget {
   final HotelModel hotel;
@@ -60,6 +61,7 @@ class CheckoutPayment extends StatelessWidget {
       onNextTap: (state) {
         if (state > 0 && context.read<PaymentSelectedCubit>().state != -1) {
           final CheckoutQuery query = CheckoutQuery(
+            id: const Uuid().v4(),
             hotel: hotel,
             checkIn: context.read<LengthOfStayCubit>().checkInSelected!,
             checkOut: context.read<LengthOfStayCubit>().checkOutSelected!,

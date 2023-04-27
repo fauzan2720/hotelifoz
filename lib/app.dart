@@ -42,7 +42,7 @@ class App extends StatelessWidget {
         create: (context) => di.locator<LengthOfStayCubit>()),
     BlocProvider<PaymentSelectedCubit>(
         create: (context) => di.locator<PaymentSelectedCubit>()),
-    BlocProvider<CheckoutCubit>(
-        create: (context) => di.locator<CheckoutCubit>()),
+    BlocProvider<ReservationCubit>(
+        create: (context) => di.locator<ReservationCubit>()),
   ];
 }

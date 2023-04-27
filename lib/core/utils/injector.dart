@@ -12,14 +12,14 @@ void init() {
   locator.registerFactory(() => CountGuestCubit());
   locator.registerFactory(() => LengthOfStayCubit());
   locator.registerFactory(() => PaymentSelectedCubit());
-  locator.registerFactory(() => CheckoutCubit());
-  locator.registerFactory(() => HistoryCubit());
+  locator.registerFactory(() => ReservationCubit(locator()));
 
   // repository
   locator.registerLazySingleton<HotelRepository>(
       () => HotelRepositoryImpl(locator()));
 
   // remote service
+  locator.registerLazySingleton<ReservationService>(() => ReservationService());
 
   // local service
   locator

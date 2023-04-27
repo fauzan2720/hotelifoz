@@ -1,5 +1,6 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/reservation/model/models/checkout_query.dart';
 import 'package:hotelifoz/features/reservation/view/widgets/detail_info_card.dart';
@@ -14,9 +15,6 @@ class CheckoutDetail extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    int taxesAndFees = (query.price * (10 / 100)).toInt();
-    int totalPayment = query.price + taxesAndFees;
-
     return Scaffold(
       body: Padding(
         padding: const EdgeInsets.all(AppSizes.primary),
@@ -181,7 +179,10 @@ class CheckoutDetail extends StatelessWidget {
                   ),
                   DetailInfoCard(
                     label: "Taxes & Fees (10%)",
-                    value: taxesAndFees.currencyFormatIDR,
+                    value: context
+                        .read<ReservationCubit>()
+                        .taxesAndFees(query.price)
+                        .currencyFormatIDR,
                   ),
                 ],
               ),
@@ -237,7 +238,10 @@ class CheckoutDetail extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            totalPayment.currencyFormatIDR,
+                            context
+                                .read<ReservationCubit>()
+                                .totalPayment(query.price)
+                                .currencyFormatIDR,
                             style: const TextStyle(
                               fontSize: 18.0,
                               fontWeight: FW.semibold,
@@ -264,7 +268,16 @@ class CheckoutDetail extends StatelessWidget {
       ),
       bottomNavigationBar: FozFormButton(
         label: "Selesaikan Pesanan",
-        onPressed: () {},
+        onPressed: () async {
+          final bool response =
+              await context.read<ReservationCubit>().checkout(query);
+          if (response && context.mounted) {
+            context.popToRoot();
+            "Reservasi berhasil!".succeedBar(context);
+          } else {
+            "Oppss! ada yang salah".failedBar(context);
+          }
+        },
         width: context.fullWidth,
       ),
     );
