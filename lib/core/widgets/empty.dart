@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'package:hotelifoz/core.dart';
 
 class FozEmpty extends StatelessWidget {
   final String? message;

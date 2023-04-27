@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hotelifoz/core/constants/colors.dart';
-import 'package:hotelifoz/core/constants/font_weight.dart';
-import 'package:hotelifoz/core/constants/sizes.dart';
+import 'package:hotelifoz/core.dart';
 
 class TitleInCard extends StatelessWidget {
   final String title;

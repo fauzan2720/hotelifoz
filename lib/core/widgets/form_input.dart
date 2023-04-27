@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-
-import '/core/extensions/build_context_ext.dart';
-import '../constants/colors.dart';
+part of 'package:hotelifoz/core.dart';
 
 class FozFormInput extends StatelessWidget {
   final String hint;
@@ -15,6 +12,7 @@ class FozFormInput extends StatelessWidget {
   final void Function(String value)? onChanged;
 
   const FozFormInput({
+    super.key,
     required this.hint,
     this.controller,
     this.keyboardType,
@@ -24,7 +22,6 @@ class FozFormInput extends StatelessWidget {
     this.autofocus = false,
     this.onTap,
     this.onChanged,
-    super.key,
   });
 
   @override

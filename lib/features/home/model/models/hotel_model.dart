@@ -1,4 +1,4 @@
-import 'package:hotelifoz/core/extensions/int_ext.dart';
+import 'package:hotelifoz/core.dart';
 
 class HotelModel {
   final String id;
@@ -25,7 +25,8 @@ class HotelModel {
     required this.images,
   });
 
-  String get currencyFormat => price.currencyFormatIDR;
+  String get currencyFormatIDR => price.currencyFormatIDR;
+  String get currencyFormatRp => price.currencyFormatRp;
   String get totalReviewsFormat => totalReviews.numberFormat;
 
   factory HotelModel.fromMap(Map<String, dynamic> map) {
@@ -41,5 +42,20 @@ class HotelModel {
       features: List<String>.from(map['features']),
       images: List<String>.from(map['images']),
     );
+  }
+
+  Map<String, dynamic> toMap() {
+    return {
+      'id': id,
+      'name': name,
+      'address': address,
+      'price': price,
+      'rating': rating,
+      'totalReviews': totalReviews,
+      'imageUrl': imageUrl,
+      'facilities': facilities,
+      'features': features,
+      'images': images,
+    };
   }
 }

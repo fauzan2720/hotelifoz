@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'package:hotelifoz/core.dart';
 
 extension DoubleExt on double {
   SizedBox get width => SizedBox(width: this);

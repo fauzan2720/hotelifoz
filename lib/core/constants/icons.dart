@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+part of 'package:hotelifoz/core.dart';
 
 class AppIcons {
   static const home = AssetImage("assets/icons/home.png");
@@ -13,4 +13,5 @@ class AppIcons {
   static const notSaved = AssetImage("assets/icons/not_saved.png");
   static const saved = AssetImage("assets/icons/saved.png");
   static const check = AssetImage("assets/icons/check.png");
+  static const calendar = AssetImage("assets/icons/calendar.png");
 }

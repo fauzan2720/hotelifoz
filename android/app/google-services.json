@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "89107206066",
+    "project_id": "hotelifoz",
+    "storage_bucket": "hotelifoz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:89107206066:android:a4b3805fbb7371da561eab",
+        "android_client_info": {
+          "package_name": "com.fauzan.hotelifoz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "89107206066-saemp9n7oua9q982vk5fr70rugin67mg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1-vlD-SojAKayDHUU65x4yHCjOyl-z-0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "89107206066-ltlu1ofjg8n4h3ststttr205ddr4a73p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

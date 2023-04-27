@@ -1,12 +1,4 @@
-import 'package:get_it/get_it.dart';
-import 'package:hotelifoz/features/bookmark/model/services/bookmark_local_service.dart';
-import 'package:hotelifoz/features/bookmark/view_model/bookmark/bookmark_cubit.dart';
-import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_cubit.dart';
-import 'package:hotelifoz/features/home/model/services/hotel_local_service.dart';
-import 'package:hotelifoz/features/home/model/repositories/hotel_repository.dart';
-import 'package:hotelifoz/features/home/view_model/hotel/hotel_cubit.dart';
-import 'package:hotelifoz/features/home/view_model/page/page_cubit.dart';
-import 'package:hotelifoz/features/home/view_model/search/search_cubit.dart';
+import 'package:hotelifoz/core.dart';
 
 final locator = GetIt.instance;
 
@@ -17,12 +9,17 @@ void init() {
   locator.registerFactory(() => SearchCubit(locator()));
   locator.registerFactory(() => BookmarkCubit(locator()));
   locator.registerFactory(() => IsBookmarkCubit(locator()));
+  locator.registerFactory(() => CountGuestCubit());
+  locator.registerFactory(() => LengthOfStayCubit());
+  locator.registerFactory(() => PaymentSelectedCubit());
+  locator.registerFactory(() => ReservationCubit(locator()));
 
   // repository
   locator.registerLazySingleton<HotelRepository>(
       () => HotelRepositoryImpl(locator()));
 
   // remote service
+  locator.registerLazySingleton<ReservationService>(() => ReservationService());
 
   // local service
   locator

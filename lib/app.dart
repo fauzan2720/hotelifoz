@@ -1,13 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/core/utils/injector.dart' as di;
-import 'package:hotelifoz/core/constants/colors.dart';
-import 'package:hotelifoz/features/bookmark/view_model/bookmark/bookmark_cubit.dart';
-import 'package:hotelifoz/features/bookmark/view_model/is_bookmark/is_bookmark_cubit.dart';
-import 'package:hotelifoz/features/home/view_model/hotel/hotel_cubit.dart';
-import 'package:hotelifoz/features/home/view_model/page/page_cubit.dart';
-import 'package:hotelifoz/features/home/view_model/search/search_cubit.dart';
 import 'package:hotelifoz/features/launch/view/pages/splash_page.dart';
 import 'package:hotelifoz/routes/routes.dart';
 
@@ -41,5 +36,13 @@ class App extends StatelessWidget {
         create: (context) => di.locator<BookmarkCubit>()),
     BlocProvider<IsBookmarkCubit>(
         create: (context) => di.locator<IsBookmarkCubit>()),
+    BlocProvider<CountGuestCubit>(
+        create: (context) => di.locator<CountGuestCubit>()),
+    BlocProvider<LengthOfStayCubit>(
+        create: (context) => di.locator<LengthOfStayCubit>()),
+    BlocProvider<PaymentSelectedCubit>(
+        create: (context) => di.locator<PaymentSelectedCubit>()),
+    BlocProvider<ReservationCubit>(
+        create: (context) => di.locator<ReservationCubit>()),
   ];
 }
