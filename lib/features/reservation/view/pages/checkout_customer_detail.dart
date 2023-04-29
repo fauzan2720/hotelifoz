@@ -98,7 +98,7 @@ class CheckoutCustomerDetail extends StatelessWidget {
                   if (value!.isEmpty) {
                     return 'Inputan wajib diisi';
                   } else if (value.isValidPhoneNumber()) {
-                    return 'Nomor telepon harus valid';
+                    return 'Nomor telepon harus berawalan 62';
                   } else {
                     return null;
                   }
