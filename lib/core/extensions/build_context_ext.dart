@@ -52,4 +52,27 @@ extension BuildContextExt on BuildContext {
       arguments: args,
     );
   }
+
+  void loading({String? message}) {
+    showDialog(
+      context: this,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Dialog(
+          backgroundColor: AppColors.card,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const CircularProgressIndicator(),
+                const SizedBox(width: 16),
+                Text(message ?? "Mohon tunggu"),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
 }

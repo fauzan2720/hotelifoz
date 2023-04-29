@@ -4,6 +4,7 @@ final locator = GetIt.instance;
 
 void init() {
   // state management
+  locator.registerFactory(() => AuthCubit(locator(), locator()));
   locator.registerFactory(() => PageCubit());
   locator.registerFactory(() => HotelCubit(locator()));
   locator.registerFactory(() => SearchCubit(locator()));
@@ -20,6 +21,9 @@ void init() {
 
   // remote service
   locator.registerLazySingleton<ReservationService>(() => ReservationService());
+  locator
+      .registerLazySingleton<FirebaseAuthService>(() => FirebaseAuthService());
+  locator.registerLazySingleton<UserService>(() => UserService());
 
   // local service
   locator

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotelifoz/core.dart';
-import 'package:hotelifoz/features/home/view/pages/main_page.dart';
 
 class WelcomePage extends StatelessWidget {
   static const routeName = 'welcome_page';
@@ -70,7 +70,7 @@ class WelcomePage extends StatelessWidget {
                 FozFormButton(
                   label: "Get Started",
                   onPressed: () =>
-                      context.pushReplacementNamed(MainPage.routeName),
+                      context.read<AuthCubit>().doLoginWithGoogle(context),
                   width: 200.0,
                 ),
               ],

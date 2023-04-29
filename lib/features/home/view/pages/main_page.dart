@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/bookmark/view/pages/bookmark_page.dart';
 import 'package:hotelifoz/features/home/view/pages/home_page.dart';
+import 'package:hotelifoz/features/home/view/pages/profile_page.dart';
 import 'package:hotelifoz/features/home/view/widgets/bottom_nav_item.dart';
 import 'package:hotelifoz/features/reservation/view/pages/transaction_history.dart';
 
@@ -35,9 +36,7 @@ class MainPage extends StatelessWidget {
       case 2:
         return const BookmarkPage();
       case 3:
-        return const Center(
-          child: Text("Info Page"),
-        );
+        return const ProfilePage();
       default:
         return const HomePage();
     }
