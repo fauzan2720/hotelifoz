@@ -35,6 +35,7 @@ class App extends StatelessWidget {
             } else if (snapshot.connectionState == ConnectionState.done ||
                 snapshot.connectionState == ConnectionState.active) {
               if (snapshot.hasData) {
+                context.read<AuthCubit>().initData();
                 return const MainPage();
               } else {
                 return const SplashPage();

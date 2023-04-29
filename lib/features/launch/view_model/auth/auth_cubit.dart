@@ -11,6 +11,7 @@ part 'auth_state.dart';
 class AuthCubit extends Cubit<AuthState> {
   final UserService _userService;
   final FirebaseAuthService _firebaseAuthService;
+  UserModel? user;
 
   AuthCubit(
     this._userService,
@@ -23,7 +24,8 @@ class AuthCubit extends Cubit<AuthState> {
       final response = await _userService.getUserStream().first;
       final UserModel result =
           UserModel.fromMap(response.data() as Map<String, dynamic>);
-      emit(AuthSuccess(result));
+      user = result;
+      emit(AuthSuccess(user!));
     } catch (e) {
       emit(AuthError(e.toString()));
     }

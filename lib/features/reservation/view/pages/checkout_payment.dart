@@ -62,6 +62,7 @@ class CheckoutPayment extends StatelessWidget {
         if (state > 0 && context.read<PaymentSelectedCubit>().state != -1) {
           final ReservationModel query = ReservationModel(
             id: const Uuid().v4(),
+            user: context.read<AuthCubit>().user!,
             hotel: hotel,
             checkIn: context.read<LengthOfStayCubit>().checkInSelected!,
             checkOut: context.read<LengthOfStayCubit>().checkOutSelected!,
