@@ -5,6 +5,8 @@ class AppImages {
   static const String logoDark = 'assets/images/logo_dark.png';
 
   static const String splash = 'assets/images/splash.png';
+  static const String empty = 'assets/images/empty.png';
+  static const String error = 'assets/images/error.png';
 
   static const String dana = 'assets/images/payment/dana.png';
   static const String gopay = 'assets/images/payment/gopay.png';
