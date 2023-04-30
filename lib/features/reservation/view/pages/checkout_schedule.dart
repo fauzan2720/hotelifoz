@@ -62,11 +62,11 @@ class CheckoutSchedule extends StatelessWidget {
               ],
             ),
             20.0.height,
-            const Text(
+            Text(
               "Tamu",
               style: TextStyle(
                 fontWeight: FW.medium,
-                color: AppColors.dark,
+                color: context.color.textPrimary,
               ),
             ),
             8.0.height,
@@ -96,7 +96,7 @@ class CheckoutSchedule extends StatelessWidget {
                           child: const Icon(
                             Icons.remove,
                             size: 24.0,
-                            color: Colors.white,
+                            color: AppColors.white,
                           ),
                         ),
                       ),
@@ -106,7 +106,7 @@ class CheckoutSchedule extends StatelessWidget {
                         width: 36.0,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(5.0),
-                          color: AppColors.white,
+                          color: context.color.background,
                           border: Border.all(
                             color: AppColors.primary,
                           ),
@@ -114,8 +114,8 @@ class CheckoutSchedule extends StatelessWidget {
                         child: Center(
                           child: Text(
                             state.toString(),
-                            style: const TextStyle(
-                              color: AppColors.dark,
+                            style: TextStyle(
+                              color: context.color.textPrimary,
                               fontSize: 16.0,
                             ),
                           ),
@@ -135,7 +135,7 @@ class CheckoutSchedule extends StatelessWidget {
                           child: const Icon(
                             Icons.add,
                             size: 24.0,
-                            color: Colors.white,
+                            color: AppColors.white,
                           ),
                         ),
                       ),

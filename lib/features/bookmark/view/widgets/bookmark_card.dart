@@ -23,9 +23,9 @@ class BookmarkCard extends StatelessWidget {
         onTap: () => onSelectedItem(item),
         child: Container(
           decoration: BoxDecoration(
-            color: AppColors.white,
+            color: context.color.background,
             borderRadius: BorderRadius.circular(AppSizes.radius),
-            boxShadow: AppBoxShadow.primary,
+            boxShadow: AppBoxShadow.primary(context),
           ),
           child: Row(
             children: [
@@ -88,9 +88,9 @@ class BookmarkCard extends StatelessWidget {
                       4.0.width,
                       Text(
                         item.rating.toString().substring(0, 3),
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FW.bold,
-                          color: AppColors.dark,
+                          color: context.color.textPrimary,
                           fontSize: 12.0,
                         ),
                       ),

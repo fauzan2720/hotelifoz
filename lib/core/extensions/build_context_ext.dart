@@ -5,13 +5,15 @@ extension BuildContextExt on BuildContext {
 
   double get fullWidth => MediaQuery.of(this).size.width;
 
+  MyColors get color => Theme.of(this).extension<MyColors>()!;
+
   void loading({String? message}) {
     showDialog(
       context: this,
       barrierDismissible: false,
       builder: (BuildContext context) {
         return Dialog(
-          backgroundColor: AppColors.card,
+          backgroundColor: context.color.background,
           child: Padding(
             padding: const EdgeInsets.all(16.0),
             child: Row(
@@ -19,7 +21,12 @@ extension BuildContextExt on BuildContext {
               children: [
                 const CircularProgressIndicator(),
                 const SizedBox(width: 16),
-                Text(message ?? "Mohon tunggu"),
+                Text(
+                  message ?? "Mohon tunggu",
+                  style: TextStyle(
+                    color: context.color.textPrimary,
+                  ),
+                ),
               ],
             ),
           ),

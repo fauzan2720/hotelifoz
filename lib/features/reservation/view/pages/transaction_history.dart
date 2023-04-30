@@ -37,8 +37,8 @@ class TransactionHistory extends StatelessWidget {
                     padding: const EdgeInsets.all(12.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(AppSizes.radius),
-                      boxShadow: AppBoxShadow.primary,
-                      color: AppColors.white,
+                      boxShadow: AppBoxShadow.primary(context),
+                      color: context.color.background,
                     ),
                     child: Row(
                       children: [
@@ -62,11 +62,11 @@ class TransactionHistory extends StatelessWidget {
                                 child: Container(
                                   height: 30.0,
                                   width: 45.0,
-                                  decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.only(
+                                  decoration: BoxDecoration(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(12.0),
                                     ),
-                                    color: AppColors.white,
+                                    color: context.color.background,
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -83,9 +83,9 @@ class TransactionHistory extends StatelessWidget {
                                         history.hotel.rating
                                             .toString()
                                             .substring(0, 3),
-                                        style: const TextStyle(
+                                        style: TextStyle(
                                           fontWeight: FW.bold,
-                                          color: AppColors.dark,
+                                          color: context.color.textPrimary,
                                           fontSize: 12.0,
                                         ),
                                       ),
@@ -104,9 +104,9 @@ class TransactionHistory extends StatelessWidget {
                               width: context.fullWidth - 188.0,
                               child: Text(
                                 history.hotel.name,
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontWeight: FW.bold,
-                                  color: AppColors.dark,
+                                  color: context.color.textPrimary,
                                 ),
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,

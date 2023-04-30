@@ -26,8 +26,8 @@ class CheckoutDetail extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(AppSizes.radius),
-                boxShadow: AppBoxShadow.primary,
-                color: AppColors.white,
+                boxShadow: AppBoxShadow.primary(context),
+                color: context.color.background,
               ),
               child: Row(
                 children: [
@@ -51,11 +51,11 @@ class CheckoutDetail extends StatelessWidget {
                           child: Container(
                             height: 30.0,
                             width: 45.0,
-                            decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.only(
+                            decoration: BoxDecoration(
+                              borderRadius: const BorderRadius.only(
                                 bottomLeft: Radius.circular(12.0),
                               ),
-                              color: AppColors.white,
+                              color: context.color.background,
                             ),
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -69,9 +69,9 @@ class CheckoutDetail extends StatelessWidget {
                                 4.0.width,
                                 Text(
                                   query.hotel.rating.toString().substring(0, 3),
-                                  style: const TextStyle(
+                                  style: TextStyle(
                                     fontWeight: FW.bold,
-                                    color: AppColors.dark,
+                                    color: context.color.textPrimary,
                                     fontSize: 12.0,
                                   ),
                                 ),
@@ -90,9 +90,9 @@ class CheckoutDetail extends StatelessWidget {
                         width: context.fullWidth - 164.0,
                         child: Text(
                           query.hotel.name,
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontWeight: FW.bold,
-                            color: AppColors.dark,
+                            color: context.color.textPrimary,
                           ),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
@@ -133,18 +133,18 @@ class CheckoutDetail extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(AppSizes.radius),
-                boxShadow: AppBoxShadow.primary,
-                color: AppColors.white,
+                boxShadow: AppBoxShadow.primary(context),
+                color: context.color.background,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     "Detail Reservasi",
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FW.semibold,
-                      color: AppColors.dark,
+                      color: context.color.textPrimary,
                     ),
                   ),
                   DetailInfoCard(
@@ -167,8 +167,8 @@ class CheckoutDetail extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(AppSizes.radius),
-                boxShadow: AppBoxShadow.primary,
-                color: AppColors.white,
+                boxShadow: AppBoxShadow.primary(context),
+                color: context.color.background,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,8 +191,8 @@ class CheckoutDetail extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(AppSizes.radius),
-                boxShadow: AppBoxShadow.primary,
-                color: AppColors.white,
+                boxShadow: AppBoxShadow.primary(context),
+                color: context.color.background,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -200,12 +200,12 @@ class CheckoutDetail extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "Detail Pembayaran",
                         style: TextStyle(
                           fontSize: 16.0,
                           fontWeight: FW.semibold,
-                          color: AppColors.dark,
+                          color: context.color.textPrimary,
                         ),
                       ),
                       InkWell(

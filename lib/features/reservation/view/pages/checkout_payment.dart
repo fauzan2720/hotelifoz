@@ -127,9 +127,9 @@ class _PaymentCard extends StatelessWidget {
               12.0.width,
               Text(
                 payment.name,
-                style: const TextStyle(
+                style: TextStyle(
                   fontWeight: FW.medium,
-                  color: AppColors.dark,
+                  color: context.color.textPrimary,
                 ),
               ),
               const Spacer(),

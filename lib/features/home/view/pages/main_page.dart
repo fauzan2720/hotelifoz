@@ -57,8 +57,8 @@ class MainPage extends StatelessWidget {
             margin: const EdgeInsets.symmetric(horizontal: AppSizes.primary),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24.0),
-              color: AppColors.white,
-              boxShadow: AppBoxShadow.primary,
+              color: context.color.background,
+              boxShadow: AppBoxShadow.primary(context),
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,

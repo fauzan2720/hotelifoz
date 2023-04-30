@@ -6,6 +6,7 @@ void init() {
   // state management
   locator.registerFactory(() => AuthCubit(locator(), locator()));
   locator.registerFactory(() => PageCubit());
+  locator.registerFactory(() => ThemeModeCubit(locator()));
   locator.registerFactory(() => HotelCubit(locator()));
   locator.registerFactory(() => SearchCubit(locator()));
   locator.registerFactory(() => BookmarkCubit(locator()));
@@ -26,6 +27,7 @@ void init() {
   locator.registerLazySingleton<UserService>(() => UserService());
 
   // local service
+  locator.registerLazySingleton<ChangeThemeMode>(() => ChangeThemeMode());
   locator
       .registerLazySingleton<HotelLocalService>(() => HotelLocalServiceImpl());
   locator.registerLazySingleton<BookmarkLocalServiceImpl>(
