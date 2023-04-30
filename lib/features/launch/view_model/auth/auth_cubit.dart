@@ -34,7 +34,7 @@ class AuthCubit extends Cubit<AuthState> {
     if (await _firebaseAuthService.signInWithGoogle()) {
       await _userService.createUserIfNotExists();
       if (context.mounted) {
-        context.pushReplacementNamed(MainPage.routeName);
+        context.pushNamedAndRemoveUntil(MainPage.routeName, (route) => false);
         "Yeay! Login berhasil".succeedBar(context);
         context.read<PageCubit>().setPage(0);
       }
