@@ -47,7 +47,6 @@ class AuthCubit extends Cubit<AuthState> {
   }
 
   void doLogout(BuildContext context) {
-    mainStorage.clear();
     _firebaseAuthService.signOut();
     context.pushNamedAndRemoveUntil(SplashPage.routeName, (route) => false);
   }
