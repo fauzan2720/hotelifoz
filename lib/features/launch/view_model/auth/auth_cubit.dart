@@ -21,10 +21,8 @@ class AuthCubit extends Cubit<AuthState> {
   void initData() async {
     emit(AuthLoading());
     try {
-      final response = await _userService.getUserStream().first;
-      final UserModel result =
-          UserModel.fromMap(response.data() as Map<String, dynamic>);
-      user = result;
+      final UserModel response = await _userService.getUser().first;
+      user = response;
       emit(AuthSuccess(user!));
     } catch (e) {
       emit(AuthError(e.toString()));
@@ -38,6 +36,7 @@ class AuthCubit extends Cubit<AuthState> {
       if (context.mounted) {
         context.pushReplacementNamed(MainPage.routeName);
         "Yeay! Login berhasil".succeedBar(context);
+        context.read<PageCubit>().setPage(0);
       }
     } else {
       if (context.mounted) {
@@ -50,6 +49,6 @@ class AuthCubit extends Cubit<AuthState> {
   void doLogout(BuildContext context) {
     mainStorage.clear();
     _firebaseAuthService.signOut();
-    context.pushReplacementNamed(SplashPage.routeName);
+    context.pushNamedAndRemoveUntil(SplashPage.routeName, (route) => false);
   }
 }

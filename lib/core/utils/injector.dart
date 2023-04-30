@@ -13,7 +13,7 @@ void init() {
   locator.registerFactory(() => CountGuestCubit());
   locator.registerFactory(() => LengthOfStayCubit());
   locator.registerFactory(() => PaymentSelectedCubit());
-  locator.registerFactory(() => ReservationCubit(locator()));
+  locator.registerFactory(() => ReservationCubit(locator(), locator()));
 
   // repository
   locator.registerLazySingleton<HotelRepository>(
