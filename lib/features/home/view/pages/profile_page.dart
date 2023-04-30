@@ -13,7 +13,7 @@ class ProfilePage extends StatelessWidget {
 
     return Padding(
       padding: const EdgeInsets.symmetric(
-          horizontal: AppSizes.primary, vertical: 50.0),
+          horizontal: AppSizes.primary, vertical: 20.0),
       child: BlocBuilder<AuthCubit, AuthState>(
         builder: (context, state) {
           if (state is AuthLoading) {
@@ -24,7 +24,7 @@ class ProfilePage extends StatelessWidget {
             return Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                50.0.height,
+                60.0.height,
                 CircleAvatar(
                   radius: 50,
                   backgroundImage: NetworkImage(state.data.photo),
