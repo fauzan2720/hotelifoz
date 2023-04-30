@@ -1,8 +1,10 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/core/utils/injector.dart' as di;
+import 'package:hotelifoz/features/home/view/pages/main_page.dart';
 import 'package:hotelifoz/features/launch/view/pages/splash_page.dart';
 import 'package:hotelifoz/routes/routes.dart';
 
@@ -22,13 +24,35 @@ class App extends StatelessWidget {
             Theme.of(context).textTheme,
           ),
         ),
-        initialRoute: SplashPage.routeName,
         onGenerateRoute: Routes.generateRoute,
+        home: StreamBuilder<User?>(
+          stream: FirebaseAuthService().authState,
+          builder: (context, snapshot) {
+            if (snapshot.connectionState == ConnectionState.waiting) {
+              return const Center(
+                child: CircularProgressIndicator(),
+              );
+            } else if (snapshot.connectionState == ConnectionState.done ||
+                snapshot.connectionState == ConnectionState.active) {
+              if (snapshot.hasData) {
+                context.read<AuthCubit>().initData();
+                return const MainPage();
+              } else {
+                return const SplashPage();
+              }
+            } else {
+              return Center(
+                child: Text('State: ${snapshot.connectionState}'),
+              );
+            }
+          },
+        ),
       ),
     );
   }
 
   static final List<BlocProvider> _providers = [
+    BlocProvider<AuthCubit>(create: (context) => di.locator<AuthCubit>()),
     BlocProvider<PageCubit>(create: (context) => di.locator<PageCubit>()),
     BlocProvider<HotelCubit>(create: (context) => di.locator<HotelCubit>()),
     BlocProvider<SearchCubit>(create: (context) => di.locator<SearchCubit>()),

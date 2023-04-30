@@ -1,8 +1,10 @@
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
+import 'package:hotelifoz/features/launch/model/models/user_model.dart';
 import 'package:hotelifoz/features/reservation/model/models/payment_model.dart';
 
 class ReservationModel {
   final String id;
+  final UserModel user;
   final HotelModel hotel;
   final String checkIn;
   final String checkOut;
@@ -18,6 +20,7 @@ class ReservationModel {
 
   ReservationModel({
     required this.id,
+    required this.user,
     required this.hotel,
     required this.checkIn,
     required this.checkOut,
@@ -38,6 +41,7 @@ class ReservationModel {
   Map<String, dynamic> toMap() {
     return {
       'id': id,
+      'user': user.toMap(),
       'hotel': hotel.toMap(),
       'checkIn': checkIn,
       'checkOut': checkOut,
@@ -57,12 +61,13 @@ class ReservationModel {
 
   @override
   String toString() {
-    return 'ReservationModel(id: $id, hotel: $hotel, checkIn: $checkIn, checkOut: $checkOut, duration: $duration, guest: $guest, customerStatus: $customerStatus, customerName: $customerName, customerPhone: $customerPhone, customerEmail: $customerEmail, paymentMethod: $paymentMethod, price: $price, taxesAndFees: $taxesAndFees, totalPayment: $totalPayment, createdAt: $createdAt)';
+    return 'ReservationModel(id: $id, user: $user, hotel: $hotel, checkIn: $checkIn, checkOut: $checkOut, duration: $duration, guest: $guest, customerStatus: $customerStatus, customerName: $customerName, customerPhone: $customerPhone, customerEmail: $customerEmail, paymentMethod: $paymentMethod, price: $price, taxesAndFees: $taxesAndFees, totalPayment: $totalPayment, createdAt: $createdAt)';
   }
 
   factory ReservationModel.fromMap(Map<String, dynamic> map) {
     return ReservationModel(
       id: map['id'] ?? '',
+      user: UserModel.fromMap(map['user']),
       hotel: HotelModel.fromMap(map['hotel']),
       checkIn: map['checkIn'] ?? '',
       checkOut: map['checkOut'] ?? '',

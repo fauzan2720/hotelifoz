@@ -5,11 +5,36 @@ extension BuildContextExt on BuildContext {
 
   double get fullWidth => MediaQuery.of(this).size.width;
 
+  void loading({String? message}) {
+    showDialog(
+      context: this,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+        return Dialog(
+          backgroundColor: AppColors.card,
+          child: Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                const CircularProgressIndicator(),
+                const SizedBox(width: 16),
+                Text(message ?? "Mohon tunggu"),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+}
+
+extension NavigatorExt on BuildContext {
   void pop<T extends Object>([T? result]) {
     Navigator.pop(this, result);
   }
 
-  void popToRoot<T extends Object>([T? result]) {
+  void popToRoot<T extends Object>() {
     Navigator.popUntil(this, (route) => route.isFirst);
   }
 
@@ -49,6 +74,17 @@ extension BuildContextExt on BuildContext {
     return Navigator.pushReplacementNamed<T, TO>(
       this,
       routeName,
+      arguments: args,
+    );
+  }
+
+  Future<T?> pushNamedAndRemoveUntil<T extends Object>(
+      String routeName, bool Function(Route<dynamic> route) predicate,
+      [Object? args]) async {
+    return Navigator.pushNamedAndRemoveUntil<T>(
+      this,
+      routeName,
+      predicate,
       arguments: args,
     );
   }
