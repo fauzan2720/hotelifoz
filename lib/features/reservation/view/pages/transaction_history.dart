@@ -137,7 +137,10 @@ class TransactionHistory extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const Icon(Icons.chevron_right),
+                        Icon(
+                          Icons.chevron_right,
+                          color: context.color.textPrimary,
+                        ),
                       ],
                     ),
                   ),
