@@ -33,7 +33,7 @@ class TransactionHistoryDetail extends StatelessWidget {
                     BoxShadow(
                       blurRadius: 16,
                       spreadRadius: 2,
-                      color: context.color.background == AppColors.dark
+                      color: AppThemes.isDarkMode(context)
                           ? Colors.grey.shade800
                           : Colors.grey.shade300,
                     ),

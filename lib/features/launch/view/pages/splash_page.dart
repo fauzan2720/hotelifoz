@@ -17,7 +17,7 @@ class SplashPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Image.asset(
-          context.color.background == AppColors.dark
+          AppThemes.isDarkMode(context)
               ? AppImages.logoDark
               : AppImages.logoLight,
           width: 200.0,

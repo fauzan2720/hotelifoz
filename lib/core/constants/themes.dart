@@ -1,6 +1,9 @@
 part of 'package:hotelifoz/core.dart';
 
 class AppThemes {
+  static bool isDarkMode(BuildContext context) =>
+      context.color.background == AppColors.dark;
+
   static ThemeData lightTheme(BuildContext context) => ThemeData(
         useMaterial3: true,
         scaffoldBackgroundColor: AppColors.white,
