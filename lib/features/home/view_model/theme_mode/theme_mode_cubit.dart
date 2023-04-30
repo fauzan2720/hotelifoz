@@ -1,13 +1,18 @@
+import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hotelifoz/app.dart';
 import 'package:hotelifoz/core.dart';
 
-class ThemeModeCubit extends Cubit<bool> {
+class ThemeModeCubit extends Cubit<ThemeMode> {
   final ChangeThemeMode _themeMode;
 
-  ThemeModeCubit(this._themeMode) : super(_themeMode.isDark);
+  ThemeModeCubit(
+    this._themeMode,
+  ) : super(_themeMode.myTheme);
 
-  void change() {
-    _themeMode.dark();
-    emit(_themeMode.isDark);
+  Future<void> change() async {
+    await _themeMode.change();
+    emit(_themeMode.myTheme);
+    App.themeNotifier.value = _themeMode.myTheme;
   }
 }

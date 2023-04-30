@@ -9,7 +9,7 @@ import 'package:hotelifoz/routes/routes.dart';
 
 class App extends StatelessWidget {
   static final ValueNotifier<ThemeMode> themeNotifier =
-      ValueNotifier(ThemeMode.light);
+      ValueNotifier(ChangeThemeMode().myTheme);
 
   const App({super.key});
 

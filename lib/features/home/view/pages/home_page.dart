@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotelifoz/app.dart';
 import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/home/view/pages/detail_hotel_page.dart';
 import 'package:hotelifoz/features/home/view/pages/search_hotel_page.dart';
@@ -50,14 +49,17 @@ class HomePage extends StatelessWidget {
                   ),
                 ],
               ),
-              IconButton(
-                onPressed: () => App.themeNotifier.value =
-                    App.themeNotifier.value == ThemeMode.light
-                        ? ThemeMode.dark
-                        : ThemeMode.light,
-                icon: App.themeNotifier.value != ThemeMode.light
-                    ? const Icon(Icons.dark_mode)
-                    : const Icon(Icons.light_mode),
+              BlocBuilder<ThemeModeCubit, ThemeMode>(
+                builder: (context, state) {
+                  return IconButton(
+                    onPressed: () async {
+                      await context.read<ThemeModeCubit>().change();
+                    },
+                    icon: state != ThemeMode.light
+                        ? const Icon(Icons.dark_mode)
+                        : const Icon(Icons.light_mode),
+                  );
+                },
               ),
             ],
           ),
