@@ -53,6 +53,17 @@ extension BuildContextExt on BuildContext {
     );
   }
 
+  Future<T?> pushNamedAndRemoveUntil<T extends Object>(
+      String routeName, bool Function(Route<dynamic> route) predicate,
+      [Object? args]) async {
+    return Navigator.pushNamedAndRemoveUntil<T>(
+      this,
+      routeName,
+      predicate,
+      arguments: args,
+    );
+  }
+
   void loading({String? message}) {
     showDialog(
       context: this,
