@@ -28,17 +28,20 @@ class NearbyCard extends StatelessWidget {
               borderRadius: const BorderRadius.vertical(
                 top: Radius.circular(AppSizes.radius),
               ),
-              child: CachedNetworkImage(
-                imageUrl: item.imageUrl,
-                width: context.fullWidth,
-                height: 200.0,
-                fit: BoxFit.cover,
-                placeholder: (context, url) => Container(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 80.0, horizontal: 100.0),
-                  child: const CircularProgressIndicator(),
+              child: Hero(
+                tag: item.id,
+                child: CachedNetworkImage(
+                  imageUrl: item.imageUrl,
+                  width: context.fullWidth,
+                  height: 200.0,
+                  fit: BoxFit.cover,
+                  placeholder: (context, url) => Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 80.0, horizontal: 100.0),
+                    child: const CircularProgressIndicator(),
+                  ),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
                 ),
-                errorWidget: (context, url, error) => const Icon(Icons.error),
               ),
             ),
             Container(

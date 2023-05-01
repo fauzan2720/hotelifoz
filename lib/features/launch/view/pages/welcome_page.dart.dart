@@ -48,7 +48,7 @@ class WelcomePage extends StatelessWidget {
                     fontWeight: FW.semibold,
                     color: Colors.white,
                   ),
-                ),
+                ).animate(delay: 500.ms).scale(),
                 const Text(
                   "Hotelifoz",
                   style: TextStyle(
@@ -56,7 +56,7 @@ class WelcomePage extends StatelessWidget {
                     fontWeight: FW.bold,
                     color: Colors.white,
                   ),
-                ),
+                ).animate(delay: 750.ms).scale(),
                 14.0.height,
                 const Text(
                   "Stop membuang banyak waktu\npada tempat yang tidak habitable",
@@ -65,14 +65,14 @@ class WelcomePage extends StatelessWidget {
                     fontWeight: FW.light,
                     color: Colors.white,
                   ),
-                ),
+                ).animate(delay: 1000.ms).scale(),
                 20.0.height,
                 FozFormButton(
                   label: "Get Started",
                   onPressed: () =>
                       context.read<AuthCubit>().doLoginWithGoogle(context),
                   width: 200.0,
-                ),
+                ).animate(delay: 1250.ms).scale(),
               ],
             ),
           ),

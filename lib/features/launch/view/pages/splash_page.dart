@@ -22,7 +22,7 @@ class SplashPage extends StatelessWidget {
               ? AppImages.logoDark
               : AppImages.logoLight,
           width: 200.0,
-        ),
+        ).animate(delay: 500.ms).fadeIn(),
       ),
     );
   }

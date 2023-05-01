@@ -275,6 +275,6 @@ class CheckoutDetail extends StatelessWidget {
         },
         width: context.fullWidth,
       ),
-    );
+    ).animate(delay: 500.ms).scale();
   }
 }

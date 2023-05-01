@@ -46,15 +46,18 @@ class TransactionHistory extends StatelessWidget {
                           borderRadius: BorderRadius.circular(4.0),
                           child: Stack(
                             children: [
-                              CachedNetworkImage(
-                                imageUrl: history.hotel.imageUrl,
-                                width: 84.0,
-                                height: 84.0,
-                                fit: BoxFit.cover,
-                                placeholder: (context, url) =>
-                                    const CircularProgressIndicator(),
-                                errorWidget: (context, url, error) =>
-                                    const Icon(Icons.error),
+                              Hero(
+                                tag: history.id,
+                                child: CachedNetworkImage(
+                                  imageUrl: history.hotel.imageUrl,
+                                  width: 84.0,
+                                  height: 84.0,
+                                  fit: BoxFit.cover,
+                                  placeholder: (context, url) =>
+                                      const CircularProgressIndicator(),
+                                  errorWidget: (context, url, error) =>
+                                      const Icon(Icons.error),
+                                ),
                               ),
                               Container(
                                 alignment: Alignment.topRight,
@@ -143,7 +146,7 @@ class TransactionHistory extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ),
+                  ).animate(delay: 300.ms).fadeIn(),
                 );
               },
             );

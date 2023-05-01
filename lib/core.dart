@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:hive/hive.dart';
 import 'package:intl/intl.dart';
 
+export 'package:flutter_animate/flutter_animate.dart';
 export 'package:get_it/get_it.dart';
 export 'package:hotelifoz/features/bookmark/model/services/bookmark_local_service.dart';
 export 'package:hotelifoz/features/bookmark/view_model/bookmark/bookmark_cubit.dart';

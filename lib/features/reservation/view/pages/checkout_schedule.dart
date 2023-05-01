@@ -146,7 +146,7 @@ class CheckoutSchedule extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      ).animate(delay: 500.ms).scale(),
     );
   }
 }
