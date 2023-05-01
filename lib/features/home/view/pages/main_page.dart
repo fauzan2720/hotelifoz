@@ -16,12 +16,11 @@ class MainPage extends StatelessWidget {
     switch (currentIndex) {
       case 1:
         return AppBar(
-          title: const Text("My Booking").animate(delay: 300.ms).fadeIn(),
+          title: const Text("My Booking").animate().fadeIn(),
         );
       case 2:
         return AppBar(
-          title:
-              const Text("Saved Destinations").animate(delay: 300.ms).fadeIn(),
+          title: const Text("Saved Destinations").animate().fadeIn(),
         );
       default:
         return null;

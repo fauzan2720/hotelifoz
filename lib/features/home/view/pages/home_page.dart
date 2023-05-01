@@ -63,7 +63,7 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-        ).animate(delay: 800.ms).fadeIn(),
+        ).animate().fadeIn(),
         24.0.height,
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSizes.primary),
@@ -75,7 +75,7 @@ class HomePage extends StatelessWidget {
             ),
             onTap: () => context.pushNamed(SearchHotelPage.routeName),
           ),
-        ).animate(delay: 800.ms).fadeIn(),
+        ).animate().fadeIn(),
         30.0.height,
         BlocBuilder<HotelCubit, HotelState>(
           builder: (context, state) {
@@ -122,7 +122,7 @@ class HomePage extends StatelessWidget {
               return Container();
             }
           },
-        ).animate(delay: 800.ms).fadeIn(),
+        ).animate().fadeIn(),
         24.0.height,
         BlocBuilder<HotelCubit, HotelState>(
           builder: (context, state) {
@@ -166,7 +166,7 @@ class HomePage extends StatelessWidget {
               return Container();
             }
           },
-        ).animate(delay: 800.ms).fadeIn(),
+        ).animate().fadeIn(),
       ],
     );
   }

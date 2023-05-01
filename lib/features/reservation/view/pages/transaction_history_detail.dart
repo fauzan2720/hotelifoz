@@ -277,7 +277,7 @@ class TransactionHistoryDetail extends StatelessWidget {
             ],
           ),
         ),
-      ).animate(delay: 500.ms).scale(),
+      ).animate().fadeIn(),
     );
   }
 }
