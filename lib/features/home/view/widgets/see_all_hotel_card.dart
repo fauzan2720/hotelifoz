@@ -38,11 +38,14 @@ class SeeAllHotelCard extends StatelessWidget {
               ),
               child: Stack(
                 children: [
-                  CachedNetworkImage(
-                    imageUrl: item.imageUrl,
-                    fit: BoxFit.cover,
-                    width: context.fullWidth,
-                    height: height - 50.0,
+                  Hero(
+                    tag: item.id,
+                    child: CachedNetworkImage(
+                      imageUrl: item.imageUrl,
+                      fit: BoxFit.cover,
+                      width: context.fullWidth,
+                      height: height - 50.0,
+                    ),
                   ),
                   Container(
                     alignment: Alignment.topRight,
