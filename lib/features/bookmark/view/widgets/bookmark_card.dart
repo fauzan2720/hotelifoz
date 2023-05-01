@@ -31,14 +31,18 @@ class BookmarkCard extends StatelessWidget {
             children: [
               ClipRRect(
                 borderRadius: BorderRadius.circular(AppSizes.radius),
-                child: CachedNetworkImage(
-                  imageUrl: item.imageUrl,
-                  width: 84.0,
-                  height: 84.0,
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) =>
-                      const CircularProgressIndicator(),
-                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                child: Hero(
+                  tag: item.id,
+                  child: CachedNetworkImage(
+                    imageUrl: item.imageUrl,
+                    width: 84.0,
+                    height: 84.0,
+                    fit: BoxFit.cover,
+                    placeholder: (context, url) =>
+                        const CircularProgressIndicator(),
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.error),
+                  ),
                 ),
               ),
               16.0.width,
@@ -119,6 +123,6 @@ class BookmarkCard extends StatelessWidget {
           ),
         ),
       ),
-    ).animate(delay: 300.ms).fadeIn();
+    ).animate().fadeIn();
   }
 }

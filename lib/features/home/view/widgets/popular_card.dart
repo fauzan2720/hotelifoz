@@ -139,7 +139,7 @@ class PopularCard extends StatelessWidget {
             ),
           ],
         ),
-      ).animate(delay: 800.ms).fadeIn(),
+      ).animate().fadeIn(),
     );
   }
 }

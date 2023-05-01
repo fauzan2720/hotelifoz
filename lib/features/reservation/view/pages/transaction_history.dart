@@ -146,7 +146,7 @@ class TransactionHistory extends StatelessWidget {
                         ),
                       ],
                     ),
-                  ).animate(delay: 300.ms).fadeIn(),
+                  ).animate().fadeIn(),
                 );
               },
             );
