@@ -115,8 +115,18 @@ class SearchHotelPage extends StatelessWidget {
                                   imageUrl: item.imageUrl,
                                 ),
                               ),
-                              title: Text(item.name),
-                              subtitle: Text(item.address),
+                              title: Text(
+                                item.name,
+                                style: TextStyle(
+                                  color: context.color.textPrimary,
+                                ),
+                              ),
+                              subtitle: Text(
+                                item.address,
+                                style: const TextStyle(
+                                  color: AppColors.secondary,
+                                ),
+                              ),
                             ),
                           ))
                       .toList(),

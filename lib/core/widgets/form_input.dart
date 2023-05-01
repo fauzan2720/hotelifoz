@@ -35,6 +35,9 @@ class FozFormInput extends StatelessWidget {
         enabled: onTap != null ? false : true,
         autofocus: autofocus,
         onChanged: onChanged,
+        style: TextStyle(
+          color: context.color.textPrimary,
+        ),
         decoration: InputDecoration(
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
@@ -43,6 +46,10 @@ class FozFormInput extends StatelessWidget {
             borderSide: const BorderSide(color: AppColors.primary),
           ),
           enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(8.0),
+            borderSide: const BorderSide(color: AppColors.stroke),
+          ),
+          disabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(8.0),
             borderSide: const BorderSide(color: AppColors.stroke),
           ),

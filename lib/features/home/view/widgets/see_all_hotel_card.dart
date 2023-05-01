@@ -26,9 +26,9 @@ class SeeAllHotelCard extends StatelessWidget {
         width: width,
         height: height,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: context.color.background,
           borderRadius: BorderRadius.circular(AppSizes.radius),
-          boxShadow: AppBoxShadow.primary,
+          boxShadow: AppBoxShadow.primary(context),
         ),
         child: Column(
           children: [
@@ -49,11 +49,11 @@ class SeeAllHotelCard extends StatelessWidget {
                     child: Container(
                       height: 30.0,
                       width: 45.0,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
+                      decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(12.0),
                         ),
-                        color: AppColors.white,
+                        color: context.color.background,
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -67,9 +67,9 @@ class SeeAllHotelCard extends StatelessWidget {
                           4.0.width,
                           Text(
                             item.rating.toString().substring(0, 3),
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontWeight: FW.bold,
-                              color: AppColors.dark,
+                              color: context.color.textPrimary,
                               fontSize: 12.0,
                             ),
                           ),
@@ -88,9 +88,9 @@ class SeeAllHotelCard extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     item.name,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontWeight: FW.semibold,
-                      color: AppColors.dark,
+                      color: context.color.textPrimary,
                     ),
                     overflow: TextOverflow.ellipsis,
                   ),

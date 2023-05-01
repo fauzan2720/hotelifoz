@@ -15,7 +15,7 @@ class TransactionHistoryDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFE5E5E5),
+      backgroundColor: context.color.background,
       appBar: AppBar(
         title: const Text("Transaction Detail"),
       ),
@@ -27,13 +27,15 @@ class TransactionHistoryDetail extends StatelessWidget {
             children: [
               Container(
                 decoration: BoxDecoration(
-                  color: AppColors.white,
+                  color: context.color.background,
                   borderRadius: BorderRadius.circular(8),
                   boxShadow: [
                     BoxShadow(
                       blurRadius: 16,
                       spreadRadius: 2,
-                      color: Colors.grey.shade300,
+                      color: AppThemes.isDarkMode(context)
+                          ? Colors.grey.shade800
+                          : Colors.grey.shade300,
                     ),
                   ],
                 ),
@@ -64,11 +66,11 @@ class TransactionHistoryDetail extends StatelessWidget {
                                 child: Container(
                                   height: 30.0,
                                   width: 45.0,
-                                  decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.only(
+                                  decoration: BoxDecoration(
+                                    borderRadius: const BorderRadius.only(
                                       bottomLeft: Radius.circular(12.0),
                                     ),
-                                    color: AppColors.white,
+                                    color: context.color.background,
                                   ),
                                   child: Row(
                                     mainAxisAlignment: MainAxisAlignment.center,
@@ -85,9 +87,9 @@ class TransactionHistoryDetail extends StatelessWidget {
                                         history.hotel.rating
                                             .toString()
                                             .substring(0, 3),
-                                        style: const TextStyle(
+                                        style: TextStyle(
                                           fontWeight: FW.bold,
-                                          color: AppColors.dark,
+                                          color: context.color.textPrimary,
                                           fontSize: 12.0,
                                         ),
                                       ),
@@ -106,9 +108,9 @@ class TransactionHistoryDetail extends StatelessWidget {
                               width: context.fullWidth - 188.0,
                               child: Text(
                                 history.hotel.name,
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontWeight: FW.bold,
-                                  color: AppColors.dark,
+                                  color: context.color.textPrimary,
                                 ),
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
@@ -150,12 +152,12 @@ class TransactionHistoryDetail extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        Text(
                           "Customer",
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FW.semibold,
-                            color: AppColors.dark,
+                            color: context.color.textPrimary,
                           ),
                         ),
                         16.0.height,
@@ -183,12 +185,12 @@ class TransactionHistoryDetail extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        Text(
                           "Detail Reservasi",
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FW.semibold,
-                            color: AppColors.dark,
+                            color: context.color.textPrimary,
                           ),
                         ),
                         16.0.height,
@@ -223,12 +225,12 @@ class TransactionHistoryDetail extends StatelessWidget {
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        const Text(
+                        Text(
                           "Detail Pembayaran",
                           style: TextStyle(
                             fontSize: 16.0,
                             fontWeight: FW.semibold,
-                            color: AppColors.dark,
+                            color: context.color.textPrimary,
                           ),
                         ),
                         16.0.height,

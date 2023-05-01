@@ -9,15 +9,18 @@ class SplashPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(
-      const Duration(milliseconds: 3000),
-      () => context.pushReplacementNamed(WelcomePage.routeName),
-    );
+    Future.delayed(const Duration(milliseconds: 3000), () {
+      if (context.mounted) {
+        context.pushReplacementNamed(WelcomePage.routeName);
+      }
+    });
 
     return Scaffold(
       body: Center(
         child: Image.asset(
-          AppImages.logoLight,
+          AppThemes.isDarkMode(context)
+              ? AppImages.logoDark
+              : AppImages.logoLight,
           width: 200.0,
         ),
       ),

@@ -44,11 +44,11 @@ class NearbyCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
-                color: AppColors.white,
+                color: context.color.background,
                 borderRadius: const BorderRadius.vertical(
                   bottom: Radius.circular(AppSizes.radius),
                 ),
-                boxShadow: AppBoxShadow.primary,
+                boxShadow: AppBoxShadow.primary(context),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,9 +59,9 @@ class NearbyCard extends StatelessWidget {
                         width: context.fullWidth - 232.5,
                         child: Text(
                           item.name,
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontWeight: FW.bold,
-                            color: AppColors.dark,
+                            color: context.color.textPrimary,
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -75,9 +75,9 @@ class NearbyCard extends StatelessWidget {
                       8.0.width,
                       Text(
                         item.rating.toString().substring(0, 3),
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FW.bold,
-                          color: AppColors.dark,
+                          color: context.color.textPrimary,
                           fontSize: 12.0,
                         ),
                       ),

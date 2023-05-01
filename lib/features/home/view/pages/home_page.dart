@@ -39,21 +39,27 @@ class HomePage extends StatelessWidget {
                         color: AppColors.primary,
                       ),
                       8.0.width,
-                      const Text(
+                      Text(
                         "Jember, Jawa Timur",
                         style: TextStyle(
-                          color: AppColors.dark,
+                          color: context.color.textPrimary,
                         ),
                       ),
                     ],
                   ),
                 ],
               ),
-              IconButton(
-                onPressed: () {
-                  mainStorage.clear();
+              BlocBuilder<ThemeModeCubit, ThemeMode>(
+                builder: (context, state) {
+                  return IconButton(
+                    onPressed: () async {
+                      await context.read<ThemeModeCubit>().change();
+                    },
+                    icon: state != ThemeMode.light
+                        ? const Icon(Icons.dark_mode)
+                        : const Icon(Icons.light_mode),
+                  );
                 },
-                icon: const ImageIcon(AppIcons.theme),
               ),
             ],
           ),

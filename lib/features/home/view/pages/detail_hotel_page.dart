@@ -63,11 +63,11 @@ class DetailHotelPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 if (item.features.isNotEmpty)
-                  const Text(
+                  Text(
                     "Features",
                     style: TextStyle(
                       fontWeight: FW.bold,
-                      color: AppColors.dark,
+                      color: context.color.textPrimary,
                     ),
                   ),
                 if (item.features.isNotEmpty) 12.0.height,
@@ -91,20 +91,20 @@ class DetailHotelPage extends StatelessWidget {
                       6.0.width,
                       Text(
                         item.features[index],
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 12.0,
-                          color: AppColors.dark,
+                          color: context.color.textPrimary,
                         ),
                       ),
                     ],
                   ),
                 ),
                 if (item.features.isNotEmpty) 24.0.height,
-                const Text(
+                Text(
                   "Preview",
                   style: TextStyle(
                     fontWeight: FW.bold,
-                    color: AppColors.dark,
+                    color: context.color.textPrimary,
                   ),
                 ),
               ],

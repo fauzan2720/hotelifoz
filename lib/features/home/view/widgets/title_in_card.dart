@@ -20,8 +20,8 @@ class TitleInCard extends StatelessWidget {
         children: [
           Text(
             title,
-            style: const TextStyle(
-              color: AppColors.dark,
+            style: TextStyle(
+              color: context.color.textPrimary,
               fontSize: 16.0,
               fontWeight: FW.bold,
             ),
