@@ -99,7 +99,9 @@ class SearchHotelPage extends StatelessWidget {
               } else if (state is SearchError) {
                 return FozError(message: state.error);
               } else if (state is SearchEmpty) {
-                return const FozEmpty();
+                return const FozEmpty(
+                  message: "Oppsss.. Pencarian tidak ditemukan",
+                );
               } else if (state is SearchResult) {
                 return Column(
                   children: state.result

@@ -16,6 +16,9 @@ class CheckoutDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Pesanan Kamu"),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(AppSizes.primary),
         child: ListView(
