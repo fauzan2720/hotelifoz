@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
+import 'package:hotelifoz/features/home/view/pages/photo_view_page.dart';
 import 'package:hotelifoz/features/home/view/widgets/header_detail_home.dart';
 import 'package:hotelifoz/features/reservation/view/pages/checkout_schedule.dart';
 
@@ -119,15 +120,19 @@ class DetailHotelPage extends StatelessWidget {
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemCount: item.images.length,
-              itemBuilder: (context, index) => Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(4.0),
-                  child: CachedNetworkImage(
-                    imageUrl: item.images[index],
-                    fit: BoxFit.cover,
-                    width: 98.0,
-                    height: 82.0,
+              itemBuilder: (context, index) => InkWell(
+                onTap: () => context.push(
+                    PhotoViewPage(initialIndex: index, images: item.images)),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(4.0),
+                    child: CachedNetworkImage(
+                      imageUrl: item.images[index],
+                      fit: BoxFit.cover,
+                      width: 98.0,
+                      height: 82.0,
+                    ),
                   ),
                 ),
               ),
