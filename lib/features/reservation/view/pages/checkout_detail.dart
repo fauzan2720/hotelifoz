@@ -16,6 +16,9 @@ class CheckoutDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Pesanan Kamu"),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(AppSizes.primary),
         child: ListView(
@@ -35,15 +38,18 @@ class CheckoutDetail extends StatelessWidget {
                     borderRadius: BorderRadius.circular(4.0),
                     child: Stack(
                       children: [
-                        CachedNetworkImage(
-                          imageUrl: query.hotel.imageUrl,
-                          width: 84.0,
-                          height: 84.0,
-                          fit: BoxFit.cover,
-                          placeholder: (context, url) =>
-                              const CircularProgressIndicator(),
-                          errorWidget: (context, url, error) =>
-                              const Icon(Icons.error),
+                        Hero(
+                          tag: query.id,
+                          child: CachedNetworkImage(
+                            imageUrl: query.hotel.imageUrl,
+                            width: 84.0,
+                            height: 84.0,
+                            fit: BoxFit.cover,
+                            placeholder: (context, url) =>
+                                const CircularProgressIndicator(),
+                            errorWidget: (context, url, error) =>
+                                const Icon(Icons.error),
+                          ),
                         ),
                         Container(
                           alignment: Alignment.topRight,
