@@ -26,6 +26,6 @@ class FozEmpty extends StatelessWidget {
           ),
         ),
       ],
-    );
+    ).animate(delay: 800.ms).fadeIn();
   }
 }

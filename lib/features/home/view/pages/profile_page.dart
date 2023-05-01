@@ -67,6 +67,6 @@ class ProfilePage extends StatelessWidget {
           }
         },
       ),
-    );
+    ).animate(delay: 500.ms).fadeIn();
   }
 }

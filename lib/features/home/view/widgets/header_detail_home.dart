@@ -22,11 +22,14 @@ class HeaderDetailHome extends StatelessWidget {
           padding: const EdgeInsets.all(10.0),
           child: ClipRRect(
             borderRadius: BorderRadius.circular(20.0),
-            child: CachedNetworkImage(
-              imageUrl: item.imageUrl,
-              fit: BoxFit.cover,
-              width: context.fullWidth,
-              height: 495.0,
+            child: Hero(
+              tag: item.id,
+              child: CachedNetworkImage(
+                imageUrl: item.imageUrl,
+                fit: BoxFit.cover,
+                width: context.fullWidth,
+                height: 495.0,
+              ),
             ),
           ),
         ),
@@ -45,7 +48,7 @@ class HeaderDetailHome extends StatelessWidget {
                   borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(20.0),
                   ),
-                  color: AppColors.dark.withOpacity(0.1),
+                  color: context.color.textPrimary!.withOpacity(0.1),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,

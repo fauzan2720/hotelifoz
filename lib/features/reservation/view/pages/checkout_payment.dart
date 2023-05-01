@@ -92,7 +92,7 @@ class CheckoutPayment extends StatelessWidget {
             paymentMethods[index],
           ),
         ),
-      ),
+      ).animate(delay: 500.ms).scale(),
     );
   }
 }
@@ -142,7 +142,7 @@ class _PaymentCard extends StatelessWidget {
               ),
             ],
           ),
-        );
+        ).animate(delay: 300.ms).fadeIn();
       },
     );
   }

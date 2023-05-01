@@ -119,6 +119,6 @@ class BookmarkCard extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ).animate(delay: 300.ms).fadeIn();
   }
 }

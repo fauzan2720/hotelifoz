@@ -77,6 +77,6 @@ class SeeAllHotelPage extends StatelessWidget {
           30.0.height,
         ],
       ),
-    );
+    ).animate(delay: 300.ms).fadeIn();
   }
 }

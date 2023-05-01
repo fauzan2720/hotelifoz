@@ -182,6 +182,6 @@ class DetailHotelPage extends StatelessWidget {
           ],
         ),
       ),
-    );
+    ).animate(delay: 300.ms).scale();
   }
 }
