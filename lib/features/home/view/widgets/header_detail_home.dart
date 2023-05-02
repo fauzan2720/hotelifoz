@@ -20,10 +20,10 @@ class HeaderDetailHome extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(20.0),
-            child: Hero(
-              tag: item.id,
+          child: Hero(
+            tag: item.id,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20.0),
               child: CachedNetworkImage(
                 imageUrl: item.imageUrl,
                 fit: BoxFit.cover,

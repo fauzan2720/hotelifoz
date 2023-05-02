@@ -29,10 +29,10 @@ class BookmarkCard extends StatelessWidget {
           ),
           child: Row(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(AppSizes.radius),
-                child: Hero(
-                  tag: item.id,
+              Hero(
+                tag: item.id,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(AppSizes.radius),
                   child: CachedNetworkImage(
                     imageUrl: item.imageUrl,
                     width: 84.0,

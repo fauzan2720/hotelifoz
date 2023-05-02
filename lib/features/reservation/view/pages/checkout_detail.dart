@@ -34,13 +34,13 @@ class CheckoutDetail extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(4.0),
-                    child: Stack(
-                      children: [
-                        Hero(
-                          tag: query.id,
-                          child: CachedNetworkImage(
+                  Hero(
+                    tag: query.id,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(4.0),
+                      child: Stack(
+                        children: [
+                          CachedNetworkImage(
                             imageUrl: query.hotel.imageUrl,
                             width: 84.0,
                             height: 84.0,
@@ -50,42 +50,44 @@ class CheckoutDetail extends StatelessWidget {
                             errorWidget: (context, url, error) =>
                                 const Icon(Icons.error),
                           ),
-                        ),
-                        Container(
-                          alignment: Alignment.topRight,
-                          width: 84.0,
-                          child: Container(
-                            height: 30.0,
-                            width: 45.0,
-                            decoration: BoxDecoration(
-                              borderRadius: const BorderRadius.only(
-                                bottomLeft: Radius.circular(12.0),
+                          Container(
+                            alignment: Alignment.topRight,
+                            width: 84.0,
+                            child: Container(
+                              height: 30.0,
+                              width: 45.0,
+                              decoration: BoxDecoration(
+                                borderRadius: const BorderRadius.only(
+                                  bottomLeft: Radius.circular(12.0),
+                                ),
+                                color: context.color.background,
                               ),
-                              color: context.color.background,
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                const ImageIcon(
-                                  AppIcons.star,
-                                  color: AppColors.yellow,
-                                  size: 16.0,
-                                ),
-                                4.0.width,
-                                Text(
-                                  query.hotel.rating.toString().substring(0, 3),
-                                  style: TextStyle(
-                                    fontWeight: FW.bold,
-                                    color: context.color.textPrimary,
-                                    fontSize: 12.0,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  const ImageIcon(
+                                    AppIcons.star,
+                                    color: AppColors.yellow,
+                                    size: 16.0,
                                   ),
-                                ),
-                              ],
+                                  4.0.width,
+                                  Text(
+                                    query.hotel.rating
+                                        .toString()
+                                        .substring(0, 3),
+                                    style: TextStyle(
+                                      fontWeight: FW.bold,
+                                      color: context.color.textPrimary,
+                                      fontSize: 12.0,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   16.0.width,
