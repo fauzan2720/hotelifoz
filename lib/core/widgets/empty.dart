@@ -9,11 +9,23 @@ class FozEmpty extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 200.0,
-      child: Center(
-        child: Text(message ?? "Empty Data"),
-      ),
-    );
+    return Column(
+      children: [
+        50.0.height,
+        Center(
+          child: Image.asset(
+            AppImages.empty,
+            width: context.fullWidth / 1.5,
+          ),
+        ),
+        Text(
+          message ?? "Oppss.. Data kosong",
+          style: TextStyle(
+            color: context.color.textPrimary,
+            fontSize: 16.0,
+          ),
+        ),
+      ],
+    ).animate().fadeIn();
   }
 }

@@ -23,22 +23,26 @@ class BookmarkCard extends StatelessWidget {
         onTap: () => onSelectedItem(item),
         child: Container(
           decoration: BoxDecoration(
-            color: AppColors.white,
+            color: context.color.background,
             borderRadius: BorderRadius.circular(AppSizes.radius),
-            boxShadow: AppBoxShadow.primary,
+            boxShadow: AppBoxShadow.primary(context),
           ),
           child: Row(
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(AppSizes.radius),
-                child: CachedNetworkImage(
-                  imageUrl: item.imageUrl,
-                  width: 84.0,
-                  height: 84.0,
-                  fit: BoxFit.cover,
-                  placeholder: (context, url) =>
-                      const CircularProgressIndicator(),
-                  errorWidget: (context, url, error) => const Icon(Icons.error),
+              Hero(
+                tag: item.id,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(AppSizes.radius),
+                  child: CachedNetworkImage(
+                    imageUrl: item.imageUrl,
+                    width: 84.0,
+                    height: 84.0,
+                    fit: BoxFit.cover,
+                    placeholder: (context, url) =>
+                        const CircularProgressIndicator(),
+                    errorWidget: (context, url, error) =>
+                        const Icon(Icons.error),
+                  ),
                 ),
               ),
               16.0.width,
@@ -88,9 +92,9 @@ class BookmarkCard extends StatelessWidget {
                       4.0.width,
                       Text(
                         item.rating.toString().substring(0, 3),
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FW.bold,
-                          color: AppColors.dark,
+                          color: context.color.textPrimary,
                           fontSize: 12.0,
                         ),
                       ),
@@ -119,6 +123,6 @@ class BookmarkCard extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ).animate().fadeIn();
   }
 }

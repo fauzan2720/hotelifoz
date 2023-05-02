@@ -20,9 +20,9 @@ class FormDatePicker extends StatelessWidget {
       children: [
         Text(
           title,
-          style: const TextStyle(
+          style: TextStyle(
             fontWeight: FW.medium,
-            color: AppColors.dark,
+            color: context.color.textPrimary,
           ),
         ),
         8.0.height,
@@ -56,7 +56,7 @@ class FormDatePicker extends StatelessWidget {
                     style: TextStyle(
                         color: dateFormatted == null
                             ? AppColors.secondary
-                            : AppColors.dark),
+                            : context.color.textPrimary),
                   ),
                   const ImageIcon(
                     AppIcons.calendar,

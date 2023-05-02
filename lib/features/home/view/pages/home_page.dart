@@ -39,25 +39,31 @@ class HomePage extends StatelessWidget {
                         color: AppColors.primary,
                       ),
                       8.0.width,
-                      const Text(
+                      Text(
                         "Jember, Jawa Timur",
                         style: TextStyle(
-                          color: AppColors.dark,
+                          color: context.color.textPrimary,
                         ),
                       ),
                     ],
                   ),
                 ],
               ),
-              IconButton(
-                onPressed: () {
-                  mainStorage.clear();
+              BlocBuilder<ThemeModeCubit, ThemeMode>(
+                builder: (context, state) {
+                  return IconButton(
+                    onPressed: () async {
+                      await context.read<ThemeModeCubit>().change();
+                    },
+                    icon: state != ThemeMode.light
+                        ? const Icon(Icons.dark_mode)
+                        : const Icon(Icons.light_mode),
+                  );
                 },
-                icon: const ImageIcon(AppIcons.theme),
               ),
             ],
           ),
-        ),
+        ).animate().fadeIn(),
         24.0.height,
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: AppSizes.primary),
@@ -69,7 +75,7 @@ class HomePage extends StatelessWidget {
             ),
             onTap: () => context.pushNamed(SearchHotelPage.routeName),
           ),
-        ),
+        ).animate().fadeIn(),
         30.0.height,
         BlocBuilder<HotelCubit, HotelState>(
           builder: (context, state) {
@@ -116,7 +122,7 @@ class HomePage extends StatelessWidget {
               return Container();
             }
           },
-        ),
+        ).animate().fadeIn(),
         24.0.height,
         BlocBuilder<HotelCubit, HotelState>(
           builder: (context, state) {
@@ -160,7 +166,7 @@ class HomePage extends StatelessWidget {
               return Container();
             }
           },
-        ),
+        ).animate().fadeIn(),
       ],
     );
   }

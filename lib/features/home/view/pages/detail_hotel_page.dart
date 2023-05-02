@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
+import 'package:hotelifoz/features/home/view/pages/photo_view_page.dart';
 import 'package:hotelifoz/features/home/view/widgets/header_detail_home.dart';
 import 'package:hotelifoz/features/reservation/view/pages/checkout_schedule.dart';
 
@@ -28,7 +29,7 @@ class DetailHotelPage extends StatelessWidget {
               context.read<BookmarkCubit>().saveBookmark(value);
               context.read<IsBookmarkCubit>().isBookmark(item);
             },
-          ),
+          ).animate().scale(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: AppSizes.primary),
             child: SizedBox(
@@ -63,11 +64,11 @@ class DetailHotelPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 if (item.features.isNotEmpty)
-                  const Text(
+                  Text(
                     "Features",
                     style: TextStyle(
                       fontWeight: FW.bold,
-                      color: AppColors.dark,
+                      color: context.color.textPrimary,
                     ),
                   ),
                 if (item.features.isNotEmpty) 12.0.height,
@@ -91,20 +92,20 @@ class DetailHotelPage extends StatelessWidget {
                       6.0.width,
                       Text(
                         item.features[index],
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontSize: 12.0,
-                          color: AppColors.dark,
+                          color: context.color.textPrimary,
                         ),
                       ),
                     ],
                   ),
                 ),
                 if (item.features.isNotEmpty) 24.0.height,
-                const Text(
+                Text(
                   "Preview",
                   style: TextStyle(
                     fontWeight: FW.bold,
-                    color: AppColors.dark,
+                    color: context.color.textPrimary,
                   ),
                 ),
               ],
@@ -119,15 +120,19 @@ class DetailHotelPage extends StatelessWidget {
               shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemCount: item.images.length,
-              itemBuilder: (context, index) => Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 4.0),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(4.0),
-                  child: CachedNetworkImage(
-                    imageUrl: item.images[index],
-                    fit: BoxFit.cover,
-                    width: 98.0,
-                    height: 82.0,
+              itemBuilder: (context, index) => InkWell(
+                onTap: () => context.push(
+                    PhotoViewPage(initialIndex: index, images: item.images)),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 4.0),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(4.0),
+                    child: CachedNetworkImage(
+                      imageUrl: item.images[index],
+                      fit: BoxFit.cover,
+                      width: 98.0,
+                      height: 82.0,
+                    ),
                   ),
                 ),
               ),

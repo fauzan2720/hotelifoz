@@ -20,13 +20,16 @@ class HeaderDetailHome extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.all(10.0),
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(20.0),
-            child: CachedNetworkImage(
-              imageUrl: item.imageUrl,
-              fit: BoxFit.cover,
-              width: context.fullWidth,
-              height: 495.0,
+          child: Hero(
+            tag: item.id,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(20.0),
+              child: CachedNetworkImage(
+                imageUrl: item.imageUrl,
+                fit: BoxFit.cover,
+                width: context.fullWidth,
+                height: 495.0,
+              ),
             ),
           ),
         ),
@@ -45,7 +48,7 @@ class HeaderDetailHome extends StatelessWidget {
                   borderRadius: const BorderRadius.vertical(
                     top: Radius.circular(20.0),
                   ),
-                  color: AppColors.dark.withOpacity(0.1),
+                  color: context.color.textPrimary!.withOpacity(0.1),
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -58,30 +61,30 @@ class HeaderDetailHome extends StatelessWidget {
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           border: Border.all(
-                            width: 2,
+                            width: 1,
                             color: AppColors.white,
                           ),
                         ),
                         child: ClipPath(
                           child: Container(
                             color: const Color(0x4DFFFFFF),
-                            child: const Center(
+                            child: Center(
                               child: Icon(
                                 Icons.chevron_left,
-                                color: AppColors.white,
+                                color: context.color.background,
                               ),
                             ),
                           ),
                         ),
                       ),
                     ),
-                    const Text(
+                    Text(
                       "Details",
                       style: TextStyle(
                         fontSize: 16.0,
                         fontWeight: FW.bold,
-                        color: AppColors.white,
-                        shadows: [
+                        color: context.color.background,
+                        shadows: const [
                           Shadow(
                             color: AppColors.secondary,
                             offset: Offset(0, 1),
@@ -99,8 +102,9 @@ class HeaderDetailHome extends StatelessWidget {
                             return ImageIcon(
                               state ? AppIcons.saved : AppIcons.notSaved,
                               size: 18.0,
-                              color:
-                                  state ? AppColors.primary : AppColors.white,
+                              color: state
+                                  ? AppColors.primary
+                                  : context.color.background,
                             );
                           },
                         ),
@@ -114,7 +118,7 @@ class HeaderDetailHome extends StatelessWidget {
                 padding: const EdgeInsets.all(14.0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(AppSizes.radius),
-                  color: AppColors.white,
+                  color: context.color.background,
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -126,9 +130,9 @@ class HeaderDetailHome extends StatelessWidget {
                           width: context.fullWidth - 156.0,
                           child: Text(
                             item.name,
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontWeight: FW.bold,
-                              color: AppColors.dark,
+                              color: context.color.textPrimary,
                               fontSize: 16.0,
                             ),
                             overflow: TextOverflow.ellipsis,
@@ -171,8 +175,8 @@ class HeaderDetailHome extends StatelessWidget {
                         8.0.width,
                         Text(
                           item.rating.toString().substring(0, 3),
-                          style: const TextStyle(
-                            color: AppColors.dark,
+                          style: TextStyle(
+                            color: context.color.textPrimary,
                             fontSize: 12.0,
                           ),
                         ),

@@ -22,8 +22,8 @@ class PopularCard extends StatelessWidget {
         padding: const EdgeInsets.all(12.0),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(AppSizes.radius),
-          boxShadow: AppBoxShadow.primary,
-          color: AppColors.white,
+          boxShadow: AppBoxShadow.primary(context),
+          color: context.color.background,
         ),
         child: Row(
           children: [
@@ -47,11 +47,11 @@ class PopularCard extends StatelessWidget {
                     child: Container(
                       height: 30.0,
                       width: 45.0,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
+                      decoration: BoxDecoration(
+                        borderRadius: const BorderRadius.only(
                           bottomLeft: Radius.circular(12.0),
                         ),
-                        color: AppColors.white,
+                        color: context.color.background,
                       ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -65,9 +65,9 @@ class PopularCard extends StatelessWidget {
                           4.0.width,
                           Text(
                             item.rating.toString().substring(0, 3),
-                            style: const TextStyle(
+                            style: TextStyle(
                               fontWeight: FW.bold,
-                              color: AppColors.dark,
+                              color: context.color.textPrimary,
                               fontSize: 12.0,
                             ),
                           ),
@@ -86,9 +86,9 @@ class PopularCard extends StatelessWidget {
                   width: context.fullWidth - 156.0,
                   child: Text(
                     item.name,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontWeight: FW.bold,
-                      color: AppColors.dark,
+                      color: context.color.textPrimary,
                     ),
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -139,7 +139,7 @@ class PopularCard extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      ).animate().fadeIn(),
     );
   }
 }

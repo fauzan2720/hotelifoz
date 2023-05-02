@@ -26,58 +26,61 @@ class SeeAllHotelCard extends StatelessWidget {
         width: width,
         height: height,
         decoration: BoxDecoration(
-          color: Colors.white,
+          color: context.color.background,
           borderRadius: BorderRadius.circular(AppSizes.radius),
-          boxShadow: AppBoxShadow.primary,
+          boxShadow: AppBoxShadow.primary(context),
         ),
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.vertical(
-                top: Radius.circular(AppSizes.radius),
-              ),
-              child: Stack(
-                children: [
-                  CachedNetworkImage(
-                    imageUrl: item.imageUrl,
-                    fit: BoxFit.cover,
-                    width: context.fullWidth,
-                    height: height - 50.0,
-                  ),
-                  Container(
-                    alignment: Alignment.topRight,
-                    child: Container(
-                      height: 30.0,
-                      width: 45.0,
-                      decoration: const BoxDecoration(
-                        borderRadius: BorderRadius.only(
-                          bottomLeft: Radius.circular(12.0),
+            Hero(
+              tag: item.id,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(AppSizes.radius),
+                ),
+                child: Stack(
+                  children: [
+                    CachedNetworkImage(
+                      imageUrl: item.imageUrl,
+                      fit: BoxFit.cover,
+                      width: context.fullWidth,
+                      height: height - 50.0,
+                    ),
+                    Container(
+                      alignment: Alignment.topRight,
+                      child: Container(
+                        height: 30.0,
+                        width: 45.0,
+                        decoration: BoxDecoration(
+                          borderRadius: const BorderRadius.only(
+                            bottomLeft: Radius.circular(12.0),
+                          ),
+                          color: context.color.background,
                         ),
-                        color: AppColors.white,
-                      ),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        crossAxisAlignment: CrossAxisAlignment.center,
-                        children: [
-                          const ImageIcon(
-                            AppIcons.star,
-                            color: AppColors.yellow,
-                            size: 16.0,
-                          ),
-                          4.0.width,
-                          Text(
-                            item.rating.toString().substring(0, 3),
-                            style: const TextStyle(
-                              fontWeight: FW.bold,
-                              color: AppColors.dark,
-                              fontSize: 12.0,
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.center,
+                          children: [
+                            const ImageIcon(
+                              AppIcons.star,
+                              color: AppColors.yellow,
+                              size: 16.0,
                             ),
-                          ),
-                        ],
+                            4.0.width,
+                            Text(
+                              item.rating.toString().substring(0, 3),
+                              style: TextStyle(
+                                fontWeight: FW.bold,
+                                color: context.color.textPrimary,
+                                fontSize: 12.0,
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
             Container(
@@ -88,9 +91,9 @@ class SeeAllHotelCard extends StatelessWidget {
                 children: <Widget>[
                   Text(
                     item.name,
-                    style: const TextStyle(
+                    style: TextStyle(
                       fontWeight: FW.semibold,
-                      color: AppColors.dark,
+                      color: context.color.textPrimary,
                     ),
                     overflow: TextOverflow.ellipsis,
                   ),

@@ -40,8 +40,8 @@ class SeeAllHotelPage extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: AppSizes.primary),
             child: Text(
               title,
-              style: const TextStyle(
-                color: AppColors.dark,
+              style: TextStyle(
+                color: context.color.textPrimary,
                 fontSize: 16.0,
                 fontWeight: FW.bold,
               ),
@@ -77,6 +77,6 @@ class SeeAllHotelPage extends StatelessWidget {
           30.0.height,
         ],
       ),
-    );
+    ).animate().fadeIn();
   }
 }

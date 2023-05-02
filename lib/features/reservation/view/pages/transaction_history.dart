@@ -37,63 +37,67 @@ class TransactionHistory extends StatelessWidget {
                     padding: const EdgeInsets.all(12.0),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(AppSizes.radius),
-                      boxShadow: AppBoxShadow.primary,
-                      color: AppColors.white,
+                      boxShadow: AppBoxShadow.primary(context),
+                      color: context.color.background,
                     ),
                     child: Row(
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(4.0),
-                          child: Stack(
-                            children: [
-                              CachedNetworkImage(
-                                imageUrl: history.hotel.imageUrl,
-                                width: 84.0,
-                                height: 84.0,
-                                fit: BoxFit.cover,
-                                placeholder: (context, url) =>
-                                    const CircularProgressIndicator(),
-                                errorWidget: (context, url, error) =>
-                                    const Icon(Icons.error),
-                              ),
-                              Container(
-                                alignment: Alignment.topRight,
-                                width: 84.0,
-                                child: Container(
-                                  height: 30.0,
-                                  width: 45.0,
-                                  decoration: const BoxDecoration(
-                                    borderRadius: BorderRadius.only(
-                                      bottomLeft: Radius.circular(12.0),
+                        Hero(
+                          tag: history.id,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(4.0),
+                            child: Stack(
+                              children: [
+                                CachedNetworkImage(
+                                  imageUrl: history.hotel.imageUrl,
+                                  width: 84.0,
+                                  height: 84.0,
+                                  fit: BoxFit.cover,
+                                  placeholder: (context, url) =>
+                                      const CircularProgressIndicator(),
+                                  errorWidget: (context, url, error) =>
+                                      const Icon(Icons.error),
+                                ),
+                                Container(
+                                  alignment: Alignment.topRight,
+                                  width: 84.0,
+                                  child: Container(
+                                    height: 30.0,
+                                    width: 45.0,
+                                    decoration: BoxDecoration(
+                                      borderRadius: const BorderRadius.only(
+                                        bottomLeft: Radius.circular(12.0),
+                                      ),
+                                      color: context.color.background,
                                     ),
-                                    color: AppColors.white,
-                                  ),
-                                  child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.center,
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    children: [
-                                      const ImageIcon(
-                                        AppIcons.star,
-                                        color: AppColors.yellow,
-                                        size: 16.0,
-                                      ),
-                                      4.0.width,
-                                      Text(
-                                        history.hotel.rating
-                                            .toString()
-                                            .substring(0, 3),
-                                        style: const TextStyle(
-                                          fontWeight: FW.bold,
-                                          color: AppColors.dark,
-                                          fontSize: 12.0,
+                                    child: Row(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.center,
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        const ImageIcon(
+                                          AppIcons.star,
+                                          color: AppColors.yellow,
+                                          size: 16.0,
                                         ),
-                                      ),
-                                    ],
+                                        4.0.width,
+                                        Text(
+                                          history.hotel.rating
+                                              .toString()
+                                              .substring(0, 3),
+                                          style: TextStyle(
+                                            fontWeight: FW.bold,
+                                            color: context.color.textPrimary,
+                                            fontSize: 12.0,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
                                   ),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                         16.0.width,
@@ -104,9 +108,9 @@ class TransactionHistory extends StatelessWidget {
                               width: context.fullWidth - 188.0,
                               child: Text(
                                 history.hotel.name,
-                                style: const TextStyle(
+                                style: TextStyle(
                                   fontWeight: FW.bold,
-                                  color: AppColors.dark,
+                                  color: context.color.textPrimary,
                                 ),
                                 maxLines: 2,
                                 overflow: TextOverflow.ellipsis,
@@ -137,10 +141,13 @@ class TransactionHistory extends StatelessWidget {
                             ),
                           ],
                         ),
-                        const Icon(Icons.chevron_right),
+                        Icon(
+                          Icons.chevron_right,
+                          color: context.color.textPrimary,
+                        ),
                       ],
                     ),
-                  ),
+                  ).animate().fadeIn(),
                 );
               },
             );

@@ -122,7 +122,7 @@ class CheckoutCustomerDetail extends StatelessWidget {
             ],
           ),
         ),
-      ),
+      ).animate().scale(),
     );
   }
 }

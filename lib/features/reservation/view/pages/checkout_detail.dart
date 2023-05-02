@@ -16,6 +16,9 @@ class CheckoutDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: const Text("Pesanan Kamu"),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(AppSizes.primary),
         child: ListView(
@@ -26,60 +29,65 @@ class CheckoutDetail extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(AppSizes.radius),
-                boxShadow: AppBoxShadow.primary,
-                color: AppColors.white,
+                boxShadow: AppBoxShadow.primary(context),
+                color: context.color.background,
               ),
               child: Row(
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(4.0),
-                    child: Stack(
-                      children: [
-                        CachedNetworkImage(
-                          imageUrl: query.hotel.imageUrl,
-                          width: 84.0,
-                          height: 84.0,
-                          fit: BoxFit.cover,
-                          placeholder: (context, url) =>
-                              const CircularProgressIndicator(),
-                          errorWidget: (context, url, error) =>
-                              const Icon(Icons.error),
-                        ),
-                        Container(
-                          alignment: Alignment.topRight,
-                          width: 84.0,
-                          child: Container(
-                            height: 30.0,
-                            width: 45.0,
-                            decoration: const BoxDecoration(
-                              borderRadius: BorderRadius.only(
-                                bottomLeft: Radius.circular(12.0),
+                  Hero(
+                    tag: query.id,
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(4.0),
+                      child: Stack(
+                        children: [
+                          CachedNetworkImage(
+                            imageUrl: query.hotel.imageUrl,
+                            width: 84.0,
+                            height: 84.0,
+                            fit: BoxFit.cover,
+                            placeholder: (context, url) =>
+                                const CircularProgressIndicator(),
+                            errorWidget: (context, url, error) =>
+                                const Icon(Icons.error),
+                          ),
+                          Container(
+                            alignment: Alignment.topRight,
+                            width: 84.0,
+                            child: Container(
+                              height: 30.0,
+                              width: 45.0,
+                              decoration: BoxDecoration(
+                                borderRadius: const BorderRadius.only(
+                                  bottomLeft: Radius.circular(12.0),
+                                ),
+                                color: context.color.background,
                               ),
-                              color: AppColors.white,
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                const ImageIcon(
-                                  AppIcons.star,
-                                  color: AppColors.yellow,
-                                  size: 16.0,
-                                ),
-                                4.0.width,
-                                Text(
-                                  query.hotel.rating.toString().substring(0, 3),
-                                  style: const TextStyle(
-                                    fontWeight: FW.bold,
-                                    color: AppColors.dark,
-                                    fontSize: 12.0,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  const ImageIcon(
+                                    AppIcons.star,
+                                    color: AppColors.yellow,
+                                    size: 16.0,
                                   ),
-                                ),
-                              ],
+                                  4.0.width,
+                                  Text(
+                                    query.hotel.rating
+                                        .toString()
+                                        .substring(0, 3),
+                                    style: TextStyle(
+                                      fontWeight: FW.bold,
+                                      color: context.color.textPrimary,
+                                      fontSize: 12.0,
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
                   16.0.width,
@@ -90,9 +98,9 @@ class CheckoutDetail extends StatelessWidget {
                         width: context.fullWidth - 164.0,
                         child: Text(
                           query.hotel.name,
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontWeight: FW.bold,
-                            color: AppColors.dark,
+                            color: context.color.textPrimary,
                           ),
                           maxLines: 2,
                           overflow: TextOverflow.ellipsis,
@@ -133,18 +141,18 @@ class CheckoutDetail extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(AppSizes.radius),
-                boxShadow: AppBoxShadow.primary,
-                color: AppColors.white,
+                boxShadow: AppBoxShadow.primary(context),
+                color: context.color.background,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
+                  Text(
                     "Detail Reservasi",
                     style: TextStyle(
                       fontSize: 16.0,
                       fontWeight: FW.semibold,
-                      color: AppColors.dark,
+                      color: context.color.textPrimary,
                     ),
                   ),
                   DetailInfoCard(
@@ -167,8 +175,8 @@ class CheckoutDetail extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(AppSizes.radius),
-                boxShadow: AppBoxShadow.primary,
-                color: AppColors.white,
+                boxShadow: AppBoxShadow.primary(context),
+                color: context.color.background,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,8 +199,8 @@ class CheckoutDetail extends StatelessWidget {
               padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(AppSizes.radius),
-                boxShadow: AppBoxShadow.primary,
-                color: AppColors.white,
+                boxShadow: AppBoxShadow.primary(context),
+                color: context.color.background,
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -200,12 +208,12 @@ class CheckoutDetail extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      const Text(
+                      Text(
                         "Detail Pembayaran",
                         style: TextStyle(
                           fontSize: 16.0,
                           fontWeight: FW.semibold,
-                          color: AppColors.dark,
+                          color: context.color.textPrimary,
                         ),
                       ),
                       InkWell(
@@ -259,7 +267,7 @@ class CheckoutDetail extends StatelessWidget {
             ),
           ],
         ),
-      ),
+      ).animate().scale(),
       bottomNavigationBar: FozFormButton(
         label: "Selesaikan Pesanan",
         onPressed: () async {

@@ -24,31 +24,34 @@ class NearbyCard extends StatelessWidget {
         height: 310.0,
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.vertical(
-                top: Radius.circular(AppSizes.radius),
-              ),
-              child: CachedNetworkImage(
-                imageUrl: item.imageUrl,
-                width: context.fullWidth,
-                height: 200.0,
-                fit: BoxFit.cover,
-                placeholder: (context, url) => Container(
-                  padding: const EdgeInsets.symmetric(
-                      vertical: 80.0, horizontal: 100.0),
-                  child: const CircularProgressIndicator(),
+            Hero(
+              tag: item.id,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(AppSizes.radius),
                 ),
-                errorWidget: (context, url, error) => const Icon(Icons.error),
+                child: CachedNetworkImage(
+                  imageUrl: item.imageUrl,
+                  width: context.fullWidth,
+                  height: 200.0,
+                  fit: BoxFit.cover,
+                  placeholder: (context, url) => Container(
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 80.0, horizontal: 100.0),
+                    child: const CircularProgressIndicator(),
+                  ),
+                  errorWidget: (context, url, error) => const Icon(Icons.error),
+                ),
               ),
             ),
             Container(
               padding: const EdgeInsets.all(12.0),
               decoration: BoxDecoration(
-                color: AppColors.white,
+                color: context.color.background,
                 borderRadius: const BorderRadius.vertical(
                   bottom: Radius.circular(AppSizes.radius),
                 ),
-                boxShadow: AppBoxShadow.primary,
+                boxShadow: AppBoxShadow.primary(context),
               ),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -59,9 +62,9 @@ class NearbyCard extends StatelessWidget {
                         width: context.fullWidth - 232.5,
                         child: Text(
                           item.name,
-                          style: const TextStyle(
+                          style: TextStyle(
                             fontWeight: FW.bold,
-                            color: AppColors.dark,
+                            color: context.color.textPrimary,
                           ),
                           overflow: TextOverflow.ellipsis,
                         ),
@@ -75,9 +78,9 @@ class NearbyCard extends StatelessWidget {
                       8.0.width,
                       Text(
                         item.rating.toString().substring(0, 3),
-                        style: const TextStyle(
+                        style: TextStyle(
                           fontWeight: FW.bold,
-                          color: AppColors.dark,
+                          color: context.color.textPrimary,
                           fontSize: 12.0,
                         ),
                       ),

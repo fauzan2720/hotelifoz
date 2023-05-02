@@ -32,20 +32,27 @@ class ProfilePage extends StatelessWidget {
                 16.0.height,
                 Text(
                   state.data.name,
-                  style: const TextStyle(
+                  style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
+                    color: context.color.textPrimary,
                   ),
                 ),
                 8.0.height,
                 Text(
                   state.data.email,
-                  style: const TextStyle(fontSize: 16),
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: context.color.textPrimary,
+                  ),
                 ),
                 8.0.height,
                 Text(
                   state.data.phoneNumber ?? "",
-                  style: const TextStyle(fontSize: 16),
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: context.color.textPrimary,
+                  ),
                 ),
                 const Spacer(),
                 FozFormButton(
@@ -60,6 +67,6 @@ class ProfilePage extends StatelessWidget {
           }
         },
       ),
-    );
+    ).animate().fadeIn();
   }
 }

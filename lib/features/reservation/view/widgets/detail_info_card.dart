@@ -25,15 +25,15 @@ class DetailInfoCard extends StatelessWidget {
           6.0.width,
           Text(
             label,
-            style: const TextStyle(
-              color: AppColors.dark,
+            style: TextStyle(
+              color: context.color.textPrimary,
             ),
           ),
           const Spacer(),
           Text(
             value,
-            style: const TextStyle(
-              color: AppColors.dark,
+            style: TextStyle(
+              color: context.color.textPrimary,
               fontWeight: FW.semibold,
             ),
           ),
