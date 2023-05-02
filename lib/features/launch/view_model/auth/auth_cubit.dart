@@ -31,23 +31,31 @@ class AuthCubit extends Cubit<AuthState> {
 
   void doLoginWithGoogle(BuildContext context) async {
     context.loading();
-    if (await _firebaseAuthService.signInWithGoogle()) {
-      await _userService.createUserIfNotExists();
-      if (context.mounted) {
-        context.pushNamedAndRemoveUntil(MainPage.routeName, (route) => false);
-        "Yeay! Login berhasil".succeedBar(context);
-        context.read<PageCubit>().setPage(0);
+    final response = await _firebaseAuthService.signInWithGoogle();
+    response.fold((failed) {
+      context.pop();
+      failed.failedBar(context);
+    }, (result) async {
+      if (result) {
+        await _userService.createUserIfNotExists();
+        if (context.mounted) {
+          context.pushNamedAndRemoveUntil(MainPage.routeName, (route) => false);
+          "Yeay! Login berhasil".succeedBar(context);
+          context.read<PageCubit>().setPage(0);
+        }
+      } else {
+        if (context.mounted) {
+          context.pop();
+          "Oppsss! Login gagal".failedBar(context);
+        }
       }
-    } else {
-      if (context.mounted) {
-        context.pop();
-        "Oppsss! Login gagal".failedBar(context);
-      }
-    }
+    });
   }
 
-  void doLogout(BuildContext context) {
-    _firebaseAuthService.signOut();
-    context.pushNamedAndRemoveUntil(SplashPage.routeName, (route) => false);
+  void doLogout(BuildContext context) async {
+    await _firebaseAuthService.signOut();
+    if (context.mounted) {
+      context.pushNamedAndRemoveUntil(SplashPage.routeName, (route) => false);
+    }
   }
 }

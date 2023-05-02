@@ -26,7 +26,7 @@ class App extends StatelessWidget {
           onGenerateRoute: Routes.generateRoute,
           themeMode: value,
           home: StreamBuilder<User?>(
-            stream: FirebaseAuthService().authState,
+            stream: FirebaseAuthService().authStateChanges,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return const Center(
