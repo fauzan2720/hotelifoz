@@ -1,42 +1,48 @@
+import 'package:dartz/dartz.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class FirebaseAuthService {
   final FirebaseAuth _auth = FirebaseAuth.instance;
 
-  User get user => _auth.currentUser!;
+  User get currentUser => _auth.currentUser!;
 
-  Stream<User?> get authState => _auth.authStateChanges();
+  Stream<User?> get authStateChanges => _auth.authStateChanges();
 
-  Future<bool> signInWithGoogle() async {
-    GoogleSignIn googleSignIn = GoogleSignIn(
-      scopes: [
-        'email',
-      ],
-    );
+  final GoogleSignIn googleSignIn = GoogleSignIn(
+    scopes: [
+      'email',
+    ],
+  );
 
+  Future<Either<String, bool>> signInWithGoogle() async {
     try {
-      await googleSignIn.disconnect();
-    } catch (_) {}
+      final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
 
-    try {
-      GoogleSignInAccount? googleSignInAccount = await googleSignIn.signIn();
-      GoogleSignInAuthentication googleSignInAuthentication =
-          await googleSignInAccount!.authentication;
+      if (googleUser != null) {
+        final GoogleSignInAuthentication googleAuth =
+            await googleUser.authentication;
 
-      final AuthCredential credential = GoogleAuthProvider.credential(
-        accessToken: googleSignInAuthentication.accessToken,
-        idToken: googleSignInAuthentication.idToken,
-      );
-      await FirebaseAuth.instance.signInWithCredential(credential);
+        final AuthCredential credential = GoogleAuthProvider.credential(
+          accessToken: googleAuth.accessToken,
+          idToken: googleAuth.idToken,
+        );
 
-      return Future.value(true);
-    } catch (_) {
-      return Future.value(false);
+        await _auth.signInWithCredential(credential);
+
+        return const Right(true);
+      } else {
+        return const Right(false);
+      }
+    } catch (e) {
+      return Left("Error signInWithGoogle: $e");
     }
   }
 
   Future<void> signOut() async {
-    _auth.signOut();
+    try {
+      await googleSignIn.disconnect();
+      _auth.signOut();
+    } catch (_) {}
   }
 }
