@@ -26,20 +26,20 @@ void main() {
       images: ["image1", "image2"],
     );
 
-    final List<HotelModel> contacts = [query];
+    final List<HotelModel> bookmarks = [query];
 
-    test('get all contacts success', () async {
+    test('get all bookmark success', () async {
       when(bookmarkLocalServiceImpl.getBookmarks())
-          .thenAnswer((realInvocation) async => Right(contacts));
+          .thenAnswer((realInvocation) async => Right(bookmarks));
 
       final response = await bookmarkLocalServiceImpl.getBookmarks();
       response.fold(
         (failed) => null,
-        (result) => expect(result, contacts),
+        (result) => expect(result, bookmarks),
       );
     });
 
-    test('create contact success', () async {
+    test('create bookmark success', () async {
       when(bookmarkLocalServiceImpl.saveBookmark(query))
           .thenAnswer((realInvocation) async => Right(query));
 
@@ -50,7 +50,7 @@ void main() {
       );
     });
 
-    test('check contact success', () {
+    test('check bookmark success', () {
       when(bookmarkLocalServiceImpl.isBookmark(query))
           .thenAnswer((realInvocation) => true);
 
