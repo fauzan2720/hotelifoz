@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotelifoz/core.dart';
 import 'package:hotelifoz/features/home/model/models/hotel_model.dart';
+import 'package:hotelifoz/features/launch/model/models/user_model.dart';
 import 'package:hotelifoz/features/reservation/model/models/selecting_customer_status.dart';
 import 'package:hotelifoz/features/reservation/view/pages/checkout_payment.dart';
 import 'package:hotelifoz/features/reservation/view/widgets/scaffold_checkout_info.dart';
@@ -16,9 +18,13 @@ class CheckoutCustomerDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     GlobalKey<FormState> formKey = GlobalKey<FormState>();
-    final TextEditingController nameController = TextEditingController();
-    final TextEditingController phoneController = TextEditingController();
-    final TextEditingController emailController = TextEditingController();
+    final UserModel userLogin = context.read<AuthCubit>().user!;
+    final TextEditingController nameController =
+        TextEditingController(text: userLogin.name);
+    final TextEditingController phoneController =
+        TextEditingController(text: userLogin.phoneNumber);
+    final TextEditingController emailController =
+        TextEditingController(text: userLogin.email);
 
     final List<SelectingCustomerStatus> customerStatus = [
       SelectingCustomerStatus(index: 0, status: "Tuan"),

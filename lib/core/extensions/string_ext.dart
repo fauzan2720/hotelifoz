@@ -31,7 +31,7 @@ extension DialogExt on String {
         backgroundColor: Colors.red.withOpacity(0.8),
         behavior: SnackBarBehavior.floating,
         content: Text(this, textAlign: TextAlign.center),
-        duration: const Duration(seconds: 1),
+        duration: const Duration(seconds: 2),
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
       ),
     );

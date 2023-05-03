@@ -29,6 +29,35 @@ class AuthCubit extends Cubit<AuthState> {
     }
   }
 
+  void doLoginWithEmailAndPassword(
+    BuildContext context, {
+    required String email,
+    required String password,
+  }) async {
+    context.loading();
+    final response =
+        await _firebaseAuthService.signInWithEmailAndPassword(email, password);
+    response.fold((failed) {
+      context.pop();
+      failed.failedBar(context);
+    }, (result) async {
+      if (result) {
+        await _userService.createUserIfNotExists();
+        if (context.mounted) {
+          context.read<AuthCubit>().initData();
+          context.pushNamedAndRemoveUntil(MainPage.routeName, (route) => false);
+          "Yeay! Login berhasil".succeedBar(context);
+          context.read<PageCubit>().setPage(0);
+        }
+      } else {
+        if (context.mounted) {
+          context.pop();
+          "Oppsss! Login gagal".failedBar(context);
+        }
+      }
+    });
+  }
+
   void doLoginWithGoogle(BuildContext context) async {
     context.loading();
     final response = await _firebaseAuthService.signInWithGoogle();
@@ -37,6 +66,7 @@ class AuthCubit extends Cubit<AuthState> {
       failed.failedBar(context);
     }, (result) async {
       if (result) {
+        context.read<AuthCubit>().initData();
         await _userService.createUserIfNotExists();
         if (context.mounted) {
           context.pushNamedAndRemoveUntil(MainPage.routeName, (route) => false);

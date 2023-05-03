@@ -2,6 +2,7 @@ import 'package:hotelifoz/features/home/view/pages/detail_hotel_page.dart';
 import 'package:hotelifoz/features/home/view/pages/main_page.dart';
 import 'package:hotelifoz/features/home/view/pages/search_hotel_page.dart';
 import 'package:hotelifoz/features/home/view/pages/see_all_hotel_page.dart';
+import 'package:hotelifoz/features/launch/view/pages/login_page.dart';
 import 'package:hotelifoz/features/launch/view/pages/splash_page.dart';
 import 'package:hotelifoz/features/launch/view/pages/welcome_page.dart.dart';
 import 'package:hotelifoz/routes/routes.dart';
@@ -15,6 +16,10 @@ class Nav {
     RouteConfig(
       path: WelcomePage.routeName,
       builder: (state) => const WelcomePage(),
+    ),
+    RouteConfig(
+      path: LoginPage.routeName,
+      builder: (state) => const LoginPage(),
     ),
     RouteConfig(
       path: MainPage.routeName,
