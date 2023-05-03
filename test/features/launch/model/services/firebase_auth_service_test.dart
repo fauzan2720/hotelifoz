@@ -11,6 +11,19 @@ void main() {
   group('firebase auth service ...', () {
     final FirebaseAuthService firebaseAuthService = MockFirebaseAuthService();
 
+    test('register by email & password success', () async {
+      when(firebaseAuthService.registerUserWithEmailAndPassword(
+              "fauzan@gmail.com", "123123"))
+          .thenAnswer((realInvocation) async => const Right(true));
+
+      final response = await firebaseAuthService
+          .registerUserWithEmailAndPassword("fauzan@gmail.com", "123123");
+      response.fold(
+        (failed) => null,
+        (result) => expect(result, true),
+      );
+    });
+
     test('sign in by email & password success', () async {
       when(firebaseAuthService.signInWithEmailAndPassword(
               "fauzan@gmail.com", "123123"))
