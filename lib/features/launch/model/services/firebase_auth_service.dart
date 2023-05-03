@@ -20,6 +20,32 @@ class FirebaseAuthService {
     try {
       await _auth.signInWithEmailAndPassword(email: email, password: password);
       return const Right(true);
+    } on FirebaseAuthException catch (e) {
+      return Left(e.message.toString());
+    }
+  }
+
+  Future<Either<String, UserCredential>> registerUserWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      if (!email.endsWith('@gmail.com')) {
+        return const Left('The email must end in \'@gmail.com\'');
+      } else {
+        UserCredential userCredential =
+            await _auth.createUserWithEmailAndPassword(
+          email: email,
+          password: password,
+        );
+        return Right(userCredential);
+      }
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'weak-password') {
+        return const Left('The password provided is too weak.');
+      } else if (e.code == 'email-already-in-use') {
+        return const Left('The account already exists for that email.');
+      } else {
+        return Left(e.message.toString());
+      }
     } catch (e) {
       return Left(e.toString());
     }
@@ -44,8 +70,8 @@ class FirebaseAuthService {
       } else {
         return const Right(false);
       }
-    } catch (e) {
-      return Left("Error signInWithGoogle: $e");
+    } on FirebaseAuthException catch (e) {
+      return Left(e.message.toString());
     }
   }
 
