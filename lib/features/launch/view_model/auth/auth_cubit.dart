@@ -42,6 +42,7 @@ class AuthCubit extends Cubit<AuthState> {
       failed.failedBar(context);
     }, (result) async {
       if (result) {
+        context.read<AuthCubit>().initData();
         await _userService.createUserIfNotExists();
         if (context.mounted) {
           context.read<AuthCubit>().initData();
@@ -58,26 +59,24 @@ class AuthCubit extends Cubit<AuthState> {
     });
   }
 
-  void doLoginWithGoogle(BuildContext context) async {
+  void doRegisterUserWithEmailAndPassword(
+    BuildContext context, {
+    required String email,
+    required String password,
+  }) async {
     context.loading();
-    final response = await _firebaseAuthService.signInWithGoogle();
+    final response = await _firebaseAuthService
+        .registerUserWithEmailAndPassword(email, password);
     response.fold((failed) {
       context.pop();
       failed.failedBar(context);
     }, (result) async {
-      if (result) {
+      await _userService.createUserIfNotExists();
+      if (context.mounted) {
         context.read<AuthCubit>().initData();
-        await _userService.createUserIfNotExists();
-        if (context.mounted) {
-          context.pushNamedAndRemoveUntil(MainPage.routeName, (route) => false);
-          "Yeay! Login berhasil".succeedBar(context);
-          context.read<PageCubit>().setPage(0);
-        }
-      } else {
-        if (context.mounted) {
-          context.pop();
-          "Oppsss! Login gagal".failedBar(context);
-        }
+        context.pushNamedAndRemoveUntil(MainPage.routeName, (route) => false);
+        "Yeay! Register berhasil".succeedBar(context);
+        context.read<PageCubit>().setPage(0);
       }
     });
   }

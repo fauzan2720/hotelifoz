@@ -1,18 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hotelifoz/core.dart';
-import 'package:hotelifoz/features/launch/view/pages/register_page.dart';
 
-class LoginPage extends StatefulWidget {
-  static const routeName = 'login_page';
+class RegisterPage extends StatefulWidget {
+  static const routeName = 'register_page';
 
-  const LoginPage({super.key});
+  const RegisterPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _RegisterPageState extends State<RegisterPage> {
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
@@ -34,23 +33,16 @@ class _LoginPageState extends State<LoginPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(
-                "Mari Kita Mulai 😁",
-                style: TextStyle(
-                  fontSize: 26.0,
-                  fontWeight: FW.medium,
-                  color: context.color.textPrimary,
+              80.0.height,
+              Center(
+                child: Text(
+                  "Daftar Akun Baru 😎",
+                  style: TextStyle(
+                    fontSize: 26.0,
+                    fontWeight: FW.medium,
+                    color: context.color.textPrimary,
+                  ),
                 ),
-              ),
-              14.0.height,
-              const Text(
-                "Yuk, login sekarang dan temukan penginapan impianmu dengan berbagai fasilitas istimewa yang kami sediakan!",
-                style: TextStyle(
-                  fontSize: 16.0,
-                  fontWeight: FW.medium,
-                  color: AppColors.secondary,
-                ),
-                textAlign: TextAlign.center,
               ),
               40.0.height,
               FozFormInput(
@@ -66,19 +58,20 @@ class _LoginPageState extends State<LoginPage> {
               ),
               20.0.height,
               FozFormButton(
-                label: 'Ayo Mulai',
-                onPressed: () =>
-                    context.read<AuthCubit>().doLoginWithEmailAndPassword(
-                          context,
-                          email: emailController.text,
-                          password: passwordController.text,
-                        ),
+                label: 'Daftar Sekarang',
+                onPressed: () => context
+                    .read<AuthCubit>()
+                    .doRegisterUserWithEmailAndPassword(
+                      context,
+                      email: emailController.text,
+                      password: passwordController.text,
+                    ),
               ),
               (context.fullHeight / 5).height,
             ],
-          ),
+          ).animate().fade(),
         ),
-      ).animate().fade(),
+      ),
       bottomNavigationBar: Container(
         alignment: Alignment.topCenter,
         height: 50.0,
@@ -86,15 +79,15 @@ class _LoginPageState extends State<LoginPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "Belum punya akun? ",
+              "Sudah punya akun? ",
               style: TextStyle(
                 color: context.color.textPrimary,
               ),
             ),
             InkWell(
-              onTap: () => context.pushNamed(RegisterPage.routeName),
+              onTap: () => context.pop(),
               child: Text(
-                "Daftar yuk",
+                "Login yuk",
                 style: TextStyle(
                   color: context.color.textPrimary,
                   decoration: TextDecoration.underline,
