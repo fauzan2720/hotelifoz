@@ -11,19 +11,42 @@ void main() {
   group('firebase auth service ...', () {
     final FirebaseAuthService firebaseAuthService = MockFirebaseAuthService();
 
-    test('sign in by email & password success', () {
+    test('sign in by email & password success', () async {
       when(firebaseAuthService.signInWithEmailAndPassword(
               "fauzan@gmail.com", "123123"))
           .thenAnswer((realInvocation) async => const Right(true));
+
+      final response = await firebaseAuthService.signInWithEmailAndPassword(
+          "fauzan@gmail.com", "123123");
+      response.fold(
+        (failed) => null,
+        (result) => expect(result, true),
+      );
     });
 
-    test('sign in by google success', () {
+    test('sign in by google success', () async {
       when(firebaseAuthService.signInWithGoogle())
           .thenAnswer((realInvocation) async => const Right(true));
+
+      final response = await firebaseAuthService.signInWithGoogle();
+      response.fold(
+        (failed) => null,
+        (result) => expect(result, true),
+      );
     });
 
-    test('sign out success', () {
-      when(firebaseAuthService.signOut());
+    test('sign out success', () async {
+      when(firebaseAuthService.signOut())
+          .thenAnswer((realInvocation) async => true);
+
+      bool isSuccess = false;
+      try {
+        await firebaseAuthService.signOut();
+        isSuccess = true;
+      } catch (e) {
+        isSuccess = false;
+      }
+      expect(isSuccess, true);
     });
   });
 }

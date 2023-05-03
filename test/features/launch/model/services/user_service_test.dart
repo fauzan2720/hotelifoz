@@ -21,11 +21,11 @@ void main() {
       updatedAt: DateTime.now(),
     );
 
-    test('get user', () async {
+    test('get user success', () async {
       when(userService.getUser())
           .thenAnswer((realInvocation) => Stream.value(userModel));
 
-      final result = await userService.getUser().first;
+      final UserModel result = await userService.getUser().first;
       expect(result.id, userModel.id);
       expect(result.name, userModel.name);
       expect(result.email, userModel.email);
@@ -36,7 +36,17 @@ void main() {
     });
 
     test('create user if not exists success', () async {
-      when(await userService.createUserIfNotExists());
+      when(userService.createUserIfNotExists())
+          .thenAnswer((realInvocation) async => true);
+
+      bool isSuccess = false;
+      try {
+        await userService.createUserIfNotExists();
+        isSuccess = true;
+      } catch (e) {
+        isSuccess = false;
+      }
+      expect(isSuccess, true);
     });
   });
 }
