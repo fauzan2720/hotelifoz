@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hotelifoz/core.dart';
-import 'package:hotelifoz/features/launch/view/pages/welcome_page.dart.dart';
+import 'package:hotelifoz/features/launch/view/pages/welcome_page.dart';
 
 class SplashPage extends StatelessWidget {
   static const routeName = 'splash_screen';
