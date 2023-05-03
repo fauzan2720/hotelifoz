@@ -109,6 +109,31 @@ class MockFirebaseAuthService extends _i1.Mock
         )),
       ) as _i6.Future<_i4.Either<String, bool>>);
   @override
+  _i6.Future<_i4.Either<String, bool>> registerUserWithEmailAndPassword(
+    String? email,
+    String? password,
+  ) =>
+      (super.noSuchMethod(
+        Invocation.method(
+          #registerUserWithEmailAndPassword,
+          [
+            email,
+            password,
+          ],
+        ),
+        returnValue: _i6.Future<_i4.Either<String, bool>>.value(
+            _FakeEither_2<String, bool>(
+          this,
+          Invocation.method(
+            #registerUserWithEmailAndPassword,
+            [
+              email,
+              password,
+            ],
+          ),
+        )),
+      ) as _i6.Future<_i4.Either<String, bool>>);
+  @override
   _i6.Future<_i4.Either<String, bool>> signInWithGoogle() =>
       (super.noSuchMethod(
         Invocation.method(
