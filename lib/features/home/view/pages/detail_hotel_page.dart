@@ -29,7 +29,7 @@ class DetailHotelPage extends StatelessWidget {
               context.read<BookmarkCubit>().saveBookmark(value);
               context.read<IsBookmarkCubit>().isBookmark(item);
             },
-          ).animate().scale(),
+          ),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: AppSizes.primary),
             child: SizedBox(

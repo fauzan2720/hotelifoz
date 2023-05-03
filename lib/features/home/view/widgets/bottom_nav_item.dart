@@ -4,12 +4,14 @@ import 'package:hotelifoz/core.dart';
 
 class BottomNavItem extends StatelessWidget {
   final int index;
-  final AssetImage imageIcon;
+  final AssetImage? imageIcon;
+  final String? imageNetworkIcon;
 
   const BottomNavItem({
     super.key,
     required this.index,
-    required this.imageIcon,
+    this.imageIcon,
+    this.imageNetworkIcon,
   });
 
   @override
@@ -21,13 +23,21 @@ class BottomNavItem extends StatelessWidget {
           onPressed: () {
             context.read<PageCubit>().setPage(index);
           },
-          icon: ImageIcon(
-            imageIcon,
-            size: 20.0,
-            color: context.watch<PageCubit>().state == index
-                ? AppColors.primary
-                : AppColors.secondary,
-          ),
+          icon: imageIcon != null
+              ? ImageIcon(
+                  imageIcon!,
+                  size: 20.0,
+                  color: context.watch<PageCubit>().state == index
+                      ? AppColors.primary
+                      : AppColors.secondary,
+                )
+              : SizedBox(
+                  width: 20.0,
+                  height: 20.0,
+                  child: CircleAvatar(
+                    backgroundImage: NetworkImage(imageNetworkIcon!),
+                  ),
+                ),
         ),
         const Spacer(),
         if (context.read<PageCubit>().state == index)

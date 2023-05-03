@@ -15,6 +15,16 @@ class FirebaseAuthService {
     ],
   );
 
+  Future<Either<String, bool>> signInWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      await _auth.signInWithEmailAndPassword(email: email, password: password);
+      return const Right(true);
+    } catch (e) {
+      return Left(e.toString());
+    }
+  }
+
   Future<Either<String, bool>> signInWithGoogle() async {
     try {
       final GoogleSignInAccount? googleUser = await googleSignIn.signIn();
