@@ -31,9 +31,15 @@ void main() {
       ),
     ];
 
-    test('get all hotels success', () {
+    test('get all hotels success', () async {
       when(hotelRepositoryImpl.getHotels())
           .thenAnswer((realInvocation) async => Right(hotels));
+
+      final response = await hotelRepositoryImpl.getHotels();
+      response.fold(
+        (failed) => null,
+        (result) => expect(result, hotels),
+      );
     });
   });
 }

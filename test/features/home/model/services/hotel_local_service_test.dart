@@ -51,9 +51,13 @@ void main() {
       ),
     ];
 
-    test('get all hotel response api success', () {
+    test('get all hotel response api success', () async {
       when(hotelLocalServiceImpl.getHotels())
           .thenAnswer((realInvocation) async => hotelResponseAPI);
+
+      final List<HotelResponseModel> result =
+          await hotelLocalServiceImpl.getHotels();
+      expect(result, hotelResponseAPI);
     });
   });
 }
