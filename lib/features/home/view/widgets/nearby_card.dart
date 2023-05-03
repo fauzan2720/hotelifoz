@@ -24,12 +24,12 @@ class NearbyCard extends StatelessWidget {
         height: 310.0,
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.vertical(
-                top: Radius.circular(AppSizes.radius),
-              ),
-              child: Hero(
-                tag: item.id,
+            Hero(
+              tag: item.id,
+              child: ClipRRect(
+                borderRadius: const BorderRadius.vertical(
+                  top: Radius.circular(AppSizes.radius),
+                ),
                 child: CachedNetworkImage(
                   imageUrl: item.imageUrl,
                   width: context.fullWidth,

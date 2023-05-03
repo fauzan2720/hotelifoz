@@ -3,7 +3,7 @@ part of 'package:hotelifoz/core.dart';
 late Box mainStorage;
 
 class ChangeThemeMode {
-  bool get isDark => mainStorage.get("dark_moode") ?? false;
+  bool get isDark => mainStorage.get("dark_moode") ?? true;
 
   ThemeMode get myTheme {
     if (isDark) {

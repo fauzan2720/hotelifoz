@@ -21,14 +21,19 @@ class UserService {
   }
 
   Future<void> createUserIfNotExists() async {
-    var snapshot = await _userCollection.get();
+    final User currentUser = FirebaseAuth.instance.currentUser!;
+    final DocumentSnapshot<Map<String, dynamic>> snapshot =
+        await _userCollection.get();
+    final String displayName = currentUser.email!.replaceAll("@gmail.com", "");
+
     if (!snapshot.exists) {
       await _userCollection.set(UserModel(
-        id: FirebaseAuth.instance.currentUser!.uid,
-        name: FirebaseAuth.instance.currentUser!.displayName!,
-        email: FirebaseAuth.instance.currentUser!.email!,
-        phoneNumber: FirebaseAuth.instance.currentUser!.phoneNumber,
-        photo: FirebaseAuth.instance.currentUser!.photoURL!,
+        id: currentUser.uid,
+        name: displayName,
+        email: currentUser.email!,
+        phoneNumber: currentUser.phoneNumber,
+        photo: currentUser.photoURL ??
+            "https://ui-avatars.com/api/?name=$displayName",
         createdAt: DateTime.now(),
         updatedAt: DateTime.now(),
       ).toMap());

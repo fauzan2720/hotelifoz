@@ -8,6 +8,7 @@ class FozFormInput extends StatelessWidget {
   final Widget? icon;
   final bool isBackPage;
   final bool autofocus;
+  final bool obscureText;
   final void Function()? onTap;
   final void Function(String value)? onChanged;
 
@@ -20,6 +21,7 @@ class FozFormInput extends StatelessWidget {
     this.icon,
     this.isBackPage = false,
     this.autofocus = false,
+    this.obscureText = false,
     this.onTap,
     this.onChanged,
   });
@@ -38,6 +40,7 @@ class FozFormInput extends StatelessWidget {
         style: TextStyle(
           color: context.color.textPrimary,
         ),
+        obscureText: obscureText,
         decoration: InputDecoration(
           contentPadding:
               const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),

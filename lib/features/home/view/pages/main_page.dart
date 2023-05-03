@@ -62,22 +62,33 @@ class MainPage extends StatelessWidget {
             ),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: const [
-                BottomNavItem(
+              children: [
+                const BottomNavItem(
                   index: 0,
                   imageIcon: AppIcons.home,
                 ),
-                BottomNavItem(
+                const BottomNavItem(
                   index: 1,
                   imageIcon: AppIcons.maps,
                 ),
-                BottomNavItem(
+                const BottomNavItem(
                   index: 2,
                   imageIcon: AppIcons.bookmark,
                 ),
-                BottomNavItem(
-                  index: 3,
-                  imageIcon: AppIcons.info,
+                BlocBuilder<AuthCubit, AuthState>(
+                  builder: (context, state) {
+                    if (state is AuthSuccess) {
+                      return BottomNavItem(
+                        index: 3,
+                        imageNetworkIcon: state.data.photo,
+                      );
+                    } else {
+                      return const BottomNavItem(
+                        index: 3,
+                        imageIcon: AppIcons.info,
+                      );
+                    }
+                  },
                 ),
               ],
             ),

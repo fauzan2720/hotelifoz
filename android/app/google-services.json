@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "89107206066-kjj9qckqr4am9c24dsfefd3ldb3efg43.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fauzan.hotelifoz",
+            "certificate_hash": "05fe1103be8c2fde20f5dfcebb2f2206962956d0"
+          }
+        },
+        {
           "client_id": "89107206066-saemp9n7oua9q982vk5fr70rugin67mg.apps.googleusercontent.com",
           "client_type": 3
         }
@@ -29,6 +37,13 @@
             {
               "client_id": "89107206066-ltlu1ofjg8n4h3ststttr205ddr4a73p.apps.googleusercontent.com",
               "client_type": 3
+            },
+            {
+              "client_id": "89107206066-vlthhs6k7h07qh9ikrqhrp7sbordsbjl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.fauzan.hotelifoz"
+              }
             }
           ]
         }
