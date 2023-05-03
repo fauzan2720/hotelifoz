@@ -28,30 +28,34 @@ void main() {
 
     final List<HotelModel> contacts = [query];
 
-    test('get all contacts success', () {
+    test('get all contacts success', () async {
       when(bookmarkLocalServiceImpl.getBookmarks())
           .thenAnswer((realInvocation) async => Right(contacts));
+
+      final response = await bookmarkLocalServiceImpl.getBookmarks();
+      response.fold(
+        (failed) => null,
+        (result) => expect(result, contacts),
+      );
     });
 
-    test('create contact success', () {
+    test('create contact success', () async {
       when(bookmarkLocalServiceImpl.saveBookmark(query))
-          .thenAnswer((realInvocation) async => Right(HotelModel(
-                id: query.id,
-                name: query.name,
-                address: query.address,
-                price: query.price,
-                rating: query.rating,
-                totalReviews: query.totalReviews,
-                imageUrl: query.imageUrl,
-                facilities: query.facilities,
-                features: query.features,
-                images: query.images,
-              )));
+          .thenAnswer((realInvocation) async => Right(query));
+
+      final response = await bookmarkLocalServiceImpl.saveBookmark(query);
+      response.fold(
+        (failed) => null,
+        (result) => expect(result, query),
+      );
     });
 
     test('check contact success', () {
       when(bookmarkLocalServiceImpl.isBookmark(query))
           .thenAnswer((realInvocation) => true);
+
+      final bool isBookmark = bookmarkLocalServiceImpl.isBookmark(query);
+      expect(isBookmark, true);
     });
   });
 }
