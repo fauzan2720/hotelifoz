@@ -22,6 +22,14 @@
           }
         },
         {
+          "client_id": "89107206066-m88r9btaufq4gc2scbpf0kk9qllq4dt0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fauzan.hotelifoz",
+            "certificate_hash": "c4bbba712ccea4d92a8a2e53e986306d1833e27e"
+          }
+        },
+        {
           "client_id": "89107206066-saemp9n7oua9q982vk5fr70rugin67mg.apps.googleusercontent.com",
           "client_type": 3
         }

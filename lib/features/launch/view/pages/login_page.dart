@@ -74,7 +74,18 @@ class _LoginPageState extends State<LoginPage> {
                           password: passwordController.text,
                         ),
               ),
-              (context.fullHeight / 5).height,
+              const SizedBox(
+                height: 80.0,
+                child: Divider(
+                  color: AppColors.secondary,
+                ),
+              ),
+              FozFormButton(
+                backgroundColor: AppColors.primary,
+                label: 'Lanjutkan dengan Google',
+                onPressed: () =>
+                    context.read<AuthCubit>().doLoginWithGoogle(context),
+              ),
             ],
           ),
         ),
