@@ -21,9 +21,14 @@ class AuthCubit extends Cubit<AuthState> {
   void initData() async {
     emit(AuthLoading());
     try {
-      final UserModel response = await _userService.getUser().first;
-      user = response;
-      emit(AuthSuccess(user!));
+      final response = await _userService.getUser().first;
+      response.fold(
+        (failed) => emit(AuthError(failed)),
+        (result) {
+          user = result;
+          emit(AuthSuccess(user!));
+        },
+      );
     } catch (e) {
       emit(AuthError(e.toString()));
     }
@@ -35,20 +40,12 @@ class AuthCubit extends Cubit<AuthState> {
     response.fold((failed) {
       context.pop();
       failed.failedBar(context);
-    }, (result) async {
+    }, (result) {
       if (result) {
-        await _userService.createUserIfNotExists();
-        if (context.mounted) {
-          context.read<AuthCubit>().initData();
-          context.pushNamedAndRemoveUntil(MainPage.routeName, (route) => false);
-          "Yeay! Login berhasil".succeedBar(context);
-          context.read<PageCubit>().setPage(0);
-        }
+        _createUserIfNotExists(context, messageSuccess: "Yeay! Login berhasil");
       } else {
-        if (context.mounted) {
-          context.pop();
-          "Oppsss! Login gagal".failedBar(context);
-        }
+        context.pop();
+        "Oppsss! Ada yang salah nih".failedBar(context);
       }
     });
   }
@@ -64,20 +61,12 @@ class AuthCubit extends Cubit<AuthState> {
     response.fold((failed) {
       context.pop();
       failed.failedBar(context);
-    }, (result) async {
+    }, (result) {
       if (result) {
-        await _userService.createUserIfNotExists();
-        if (context.mounted) {
-          context.read<AuthCubit>().initData();
-          context.pushNamedAndRemoveUntil(MainPage.routeName, (route) => false);
-          "Yeay! Login berhasil".succeedBar(context);
-          context.read<PageCubit>().setPage(0);
-        }
+        _createUserIfNotExists(context, messageSuccess: "Yeay! Login berhasil");
       } else {
-        if (context.mounted) {
-          context.pop();
-          "Oppsss! Login gagal".failedBar(context);
-        }
+        context.pop();
+        "Oppsss! Ada yang salah nih".failedBar(context);
       }
     });
   }
@@ -93,13 +82,34 @@ class AuthCubit extends Cubit<AuthState> {
     response.fold((failed) {
       context.pop();
       failed.failedBar(context);
-    }, (result) async {
-      await _userService.createUserIfNotExists();
-      if (context.mounted) {
+    }, (result) {
+      if (result) {
+        _createUserIfNotExists(context,
+            messageSuccess: "Yeay! Register berhasil");
+      } else {
+        context.pop();
+        "Oppsss! Ada yang salah nih".failedBar(context);
+      }
+    });
+  }
+
+  void _createUserIfNotExists(
+    BuildContext context, {
+    required String messageSuccess,
+  }) async {
+    final response = await _userService.createUserIfNotExists();
+    response.fold((failed) {
+      context.pop();
+      failed.failedBar(context);
+    }, (result) {
+      if (result) {
         context.read<AuthCubit>().initData();
         context.pushNamedAndRemoveUntil(MainPage.routeName, (route) => false);
-        "Yeay! Register berhasil".succeedBar(context);
+        messageSuccess.succeedBar(context);
         context.read<PageCubit>().setPage(0);
+      } else {
+        context.pop();
+        "function createUserIfNotExists fail".failedBar(context);
       }
     });
   }

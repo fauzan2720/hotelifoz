@@ -1,6 +1,5 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:hotelifoz/features/launch/model/models/user_model.dart';
 import 'package:hotelifoz/features/launch/model/services/user_service.dart';
 import 'package:hotelifoz/features/reservation/model/models/reservation_model.dart';
 import 'package:hotelifoz/features/reservation/model/services/reservation_service.dart';
@@ -18,11 +17,17 @@ class ReservationCubit extends Cubit<ReservationState> {
 
   void initData() async {
     emit(ReservationLoading());
-    final UserModel session = await _userService.getUser().first;
-    final response = await _reservationService.getReservation(session.id).first;
-    response.fold(
+    final sessionResponse = await _userService.getUser().first;
+    sessionResponse.fold(
       (failed) => emit(ReservationError(failed)),
-      (result) => emit(ReservationSuccess(result)),
+      (result) async {
+        final response =
+            await _reservationService.getReservation(result.id).first;
+        response.fold(
+          (failed) => emit(ReservationError(failed)),
+          (result) => emit(ReservationSuccess(result)),
+        );
+      },
     );
   }
 

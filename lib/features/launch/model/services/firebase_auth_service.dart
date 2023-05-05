@@ -28,15 +28,11 @@ class FirebaseAuthService {
   Future<Either<String, bool>> registerUserWithEmailAndPassword(
       String email, String password) async {
     try {
-      if (!email.endsWith('@gmail.com')) {
-        return const Left('The email must end in \'@gmail.com\'');
-      } else {
-        await _auth.createUserWithEmailAndPassword(
-          email: email,
-          password: password,
-        );
-        return const Right(true);
-      }
+      await _auth.createUserWithEmailAndPassword(
+        email: email,
+        password: password,
+      );
+      return const Right(true);
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
         return const Left('The password provided is too weak.');
